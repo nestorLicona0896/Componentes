@@ -1,0 +1,441 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+body div {
+    padding: 0px;
+    margin: 0px;
+    float: none;
+}
+
+/*HEADER*/
+header {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #409b7a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #d9d9d9;
+}
+
+header .box {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    float: none;
+    /*border: solid #f9f9f9 1px;*/
+}
+
+/* MAIN NAVBAR */
+
+header .navbar-menu {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+header .navbar-menu ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    column-gap: 10px;
+}
+
+header .navbar-menu ul li {
+    min-width: fit-content;
+    min-height: fit-content;
+    padding: 0;
+    margin: 0;
+}
+
+header .navbar-menu ul li a {
+    padding: 8px;
+    margin: 0;
+    color: #000000;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+header .navbar-menu ul li a:hover {
+    color: #f9f9f9f9;
+    background: #000000;
+}
+
+header.navbar-menu .menu-btn  {
+    cursor: pointer;
+    display: none;
+}
+
+header input[type="checkbox"] {
+    display: none;
+}
+
+header .navbar-main-menu li a img {
+    margin: 0px 0px 0px 5px;
+    padding: 0px;
+    width: 12px;
+    filter: invert(100%) sepia(45%) saturate(163%) hue-rotate(60deg) brightness(111%) contrast(95%);
+}
+
+
+/* CATALOGUE MENU */
+
+.catalogue-menu-btn .navbar-catalogue-menu {
+   display: none; 
+
+}
+
+.catalogue-menu-btn .navbar-catalogue-menu li{
+    margin: 5px 0px 5px 0px;
+ }
+
+.drop .navbar-catalogue-menu{
+    width: fit-content;
+    height: fit-content;
+    border: none;
+    margin: 15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 55px;
+    row-gap: 10px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(4px) saturate(180%);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+/* ABOUT MENU */
+
+.about-menu-btn .navbar-about-menu {
+    display: none; 
+ 
+ }
+ 
+ .about-menu-btn .navbar-about-menu li{
+     margin: 5px 0px 5px 0px;
+  }
+ 
+ .drop .navbar-about-menu {
+     width: fit-content;
+     height: fit-content;
+     border: none;
+     margin: 15px;
+     padding: 10px;
+     display: flex;
+     flex-direction: column;
+     position: absolute;
+     top: 55px;
+     row-gap: 10px;
+     background: rgba(255, 255, 255, 0.4);
+     backdrop-filter: blur(4px) saturate(180%);
+     border-radius: 25px;
+     transition: all 0.3s ease;
+ }
+
+ .drop .navbar-about-menu::after{
+    opacity: 0;
+ }
+
+
+/* SESSION NAV CSS*/
+
+header .navbar-session ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    column-gap: 8px;
+}
+
+header .navbar-session ul li {
+    list-style:none;
+    width: 50px;
+    height: 50px;
+    padding: 0px;
+    margin: 0px;
+    
+}
+
+header .navbar-session ul li a {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+header .navbar-session ul li a img{
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 25px;
+}
+
+header .navbar-session ul li a img:hover {
+    background: #f9f9f9f9;
+}
+
+header .quantity {
+    margin-right: 5px;
+    padding: 8px;
+    color: #f9f9f9;
+    top: -8px;
+    left: -5px;
+    font-size: x-small;
+    position: relative;
+    font-weight: bold;
+}
+
+header .amount {
+    margin-right: 5px;
+    padding: 8px;
+    color: #f9f9f9;
+    top: 15px;
+    left: -80px;
+    font-size: x-small;
+    position: relative;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+
+/* SEARCH NAV CSS*/
+
+header .box .search-bar {
+    width: 90%;
+    height: 55px;
+    margin: 0px;
+    padding: 15px 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(4px) saturate(180%);
+}
+
+header .box .search-bar input{
+    margin: 0px;
+    padding: 15px 8px;
+    padding-left: 15px;
+    flex: 1;
+    border: 0;
+    border-radius: 60px;
+    background: transparent;
+    outline: none;
+    font-size: 16px;
+    color: #283832;
+}
+
+::placeholder{
+    color: #283832;
+}
+
+header .box .search-bar button{
+    margin-right: 30px;
+    padding: 10px 10px;
+    border: 0;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+    background: #000000;
+}
+
+header .box .search-bar button img{
+    margin: 0px;
+    padding: 0px;
+    width: 25px;
+    height: 25px;
+}
+
+header .box .search-bar button:hover{
+    background: #283832;
+    
+}
+
+header .box .search-bar button img:hover{
+    filter: invert(69%) sepia(46%) saturate(3425%) hue-rotate(74deg) brightness(95%) contrast(99%);
+
+}
+
+/* MEDIA NAV CSS*/
+
+header .navbar-media ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    column-gap: 15px;
+}
+
+header .navbar-media ul li {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+    
+}
+
+header .navbar-media ul li a {
+    padding: 0;
+    margin: 0;
+    display: block;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+header .navbar-media ul li a img{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}
+
+header .navbar-media ul li a img:hover {
+    background: #f9f9f9f9;
+}
+
+
+/*-----------------------------------------------------------*/
+
+/*MAIN*/
+main {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 600px;
+    background-color: #283832;
+}
+
+/*FOOTER*/
+footer {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 200px;
+    background-color: #000000;
+}
+
+/*-----------------------------------------------------------*/
+
+
+
+
+/*CSS RESPONSIVE NAVBAR*/
+
+@media (max-width: 720px) {
+
+    header {
+        display: flex;
+        width: 100%;
+        text-align: center;
+        transition: all 0.3s ease;
+        flex-direction: column;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    .navbar-menu ul {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background: #111;
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        display: block;
+        transition: all 0.3s ease;
+    }
+
+    .navbar-menu .menu-btn  {
+        display: block;
+    }
+
+    .navbar-menu .menu-btn  .bar1, .navbar-menu .menu-btn .bar2, .navbar-menu .menu-btn .bar3{
+        width: 35px;
+        height: 5px;
+        background-color: #f9f9f9;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+
+    .change .bar1 {
+        transform: translate(0, 11px) rotate(-45deg);
+    }
+      
+    .change .bar2 {
+        opacity: 0;
+    }
+      
+    .change .bar3 {
+        transform: translate(0, -11px) rotate(45deg);
+    }
+
+
+    #click:checked~ul {
+        left: 0;
+    }
+
+    .navbar-menu ul li {
+        width: 100%;
+        margin: 40px 0;
+    }
+
+    .navbar-menu ul li a {
+        width: 100%;
+        margin-left: -100%;
+        display: block;
+        font-size: 20px;
+        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    #click:checked~ul li a {
+        margin-left: 0px;
+    }
+
+    .navbar-menu ul li a.active,
+    .navbar-menu ul li a:hover {
+        background: none;
+        color: #1cd425;
+    }
+
+
+}
