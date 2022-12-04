@@ -80,12 +80,13 @@ header .navbar-menu ul li a {
     transition: all 0.3s ease;
 }
 
-header .navbar-menu ul li a:hover {
-    color: #f9f9f9f9;
+header .navbar-main-menu .active,
+header ul li a:hover {
+    color: #f9f9f9;
     background: #000000;
 }
 
-header.navbar-menu .menu-btn  {
+header .navbar-menu .menu-btn {
     cursor: pointer;
     display: none;
 }
@@ -101,71 +102,58 @@ header .navbar-main-menu li a img {
     filter: invert(100%) sepia(45%) saturate(163%) hue-rotate(60deg) brightness(111%) contrast(95%);
 }
 
-
 /* CATALOGUE MENU */
 
-.catalogue-menu-btn .navbar-catalogue-menu {
-   display: none; 
 
+header .navbar-main-menu .navbar-catalogue-menu li {
+    margin: 5px 0px 5px 0px;
 }
 
-.catalogue-menu-btn .navbar-catalogue-menu li{
-    margin: 5px 0px 5px 0px;
- }
-
-.drop .navbar-catalogue-menu{
+header .navbar-main-menu .navbar-catalogue-menu {
     width: fit-content;
     height: fit-content;
-    border: none;
+    border: solid darkgray 1px;
     margin: 15px;
     padding: 10px;
     display: flex;
     flex-direction: column;
     position: absolute;
     top: 55px;
-    row-gap: 10px;
+    row-gap: 15px;
     background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(4px) saturate(180%);
     border-radius: 25px;
     transition: all 0.3s ease;
 }
 
+
 /* ABOUT MENU */
 
-.about-menu-btn .navbar-about-menu {
-    display: none; 
- 
- }
- 
- .about-menu-btn .navbar-about-menu li{
-     margin: 5px 0px 5px 0px;
-  }
- 
- .drop .navbar-about-menu {
-     width: fit-content;
-     height: fit-content;
-     border: none;
-     margin: 15px;
-     padding: 10px;
-     display: flex;
-     flex-direction: column;
-     position: absolute;
-     top: 55px;
-     row-gap: 10px;
-     background: rgba(255, 255, 255, 0.4);
-     backdrop-filter: blur(4px) saturate(180%);
-     border-radius: 25px;
-     transition: all 0.3s ease;
- }
+header .navbar-main-menu .navbar-about-menu li {
+    margin: 5px 0px 5px 0px;
+}
 
- .drop .navbar-about-menu::after{
-    opacity: 0;
- }
+header .navbar-main-menu .navbar-about-menu {
+    width: fit-content;
+    height: fit-content;
+    border: solid darkgray 1px;
+    margin: 15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 55px;
+    row-gap: 15px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(4px) saturate(180%);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
 
 
 /* SESSION NAV CSS*/
 
-header .navbar-session ul{
+header .navbar-session ul {
     padding: 0;
     margin: 0;
     display: flex;
@@ -176,12 +164,12 @@ header .navbar-session ul{
 }
 
 header .navbar-session ul li {
-    list-style:none;
+    list-style: none;
     width: 50px;
     height: 50px;
     padding: 0px;
     margin: 0px;
-    
+
 }
 
 header .navbar-session ul li a {
@@ -193,7 +181,7 @@ header .navbar-session ul li a {
     text-decoration: none;
 }
 
-header .navbar-session ul li a img{
+header .navbar-session ul li a img {
     width: 100%;
     height: 100%;
     padding: 0px;
@@ -226,7 +214,6 @@ header .amount {
     position: relative;
     font-weight: bold;
     text-decoration: none;
-
 }
 
 
@@ -244,7 +231,7 @@ header .box .search-bar {
     backdrop-filter: blur(4px) saturate(180%);
 }
 
-header .box .search-bar input{
+header .box .search-bar input {
     margin: 0px;
     padding: 15px 8px;
     padding-left: 15px;
@@ -257,11 +244,11 @@ header .box .search-bar input{
     color: #283832;
 }
 
-::placeholder{
+::placeholder {
     color: #283832;
 }
 
-header .box .search-bar button{
+header .box .search-bar button {
     margin-right: 30px;
     padding: 10px 10px;
     border: 0;
@@ -274,19 +261,19 @@ header .box .search-bar button{
     background: #000000;
 }
 
-header .box .search-bar button img{
+header .box .search-bar button img {
     margin: 0px;
     padding: 0px;
     width: 25px;
     height: 25px;
 }
 
-header .box .search-bar button:hover{
+header .box .search-bar button:hover {
     background: #283832;
-    
+
 }
 
-header .box .search-bar button img:hover{
+header .box .search-bar button img:hover {
     filter: invert(69%) sepia(46%) saturate(3425%) hue-rotate(74deg) brightness(95%) contrast(99%);
 
 }
@@ -308,7 +295,7 @@ header .navbar-media ul li {
     height: 50px;
     padding: 0;
     margin: 0;
-    
+
 }
 
 header .navbar-media ul li a {
@@ -319,7 +306,7 @@ header .navbar-media ul li a {
     transition: all 0.3s ease;
 }
 
-header .navbar-media ul li a img{
+header .navbar-media ul li a img {
     padding: 0;
     margin: 0;
     width: 100%;
@@ -340,7 +327,7 @@ main {
     margin: 0;
     width: 100%;
     height: 600px;
-    background-color: #283832;
+    background-color: #f9f9f9;
 }
 
 /*FOOTER*/
@@ -367,29 +354,32 @@ footer {
         text-align: center;
         transition: all 0.3s ease;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     header h1 {
         font-size: 22px;
     }
 
-    .navbar-menu ul {
+    header .navbar-menu ul {
         position: fixed;
-        top: 80px;
         left: -100%;
-        background: #111;
+        top: 80px;
+        background: #000000;
         height: 100vh;
         width: 100%;
-        text-align: center;
         display: block;
         transition: all 0.3s ease;
     }
 
-    .navbar-menu .menu-btn  {
+    header .navbar-menu .menu-btn {
         display: block;
     }
 
-    .navbar-menu .menu-btn  .bar1, .navbar-menu .menu-btn .bar2, .navbar-menu .menu-btn .bar3{
+    header .navbar-menu .menu-btn .bar1,
+    header .navbar-menu .menu-btn .bar2,
+    header .navbar-menu .menu-btn .bar3 {
         width: 35px;
         height: 5px;
         background-color: #f9f9f9;
@@ -397,29 +387,31 @@ footer {
         transition: 0.4s;
     }
 
-    .change .bar1 {
+    header .change .bar1 {
         transform: translate(0, 11px) rotate(-45deg);
     }
-      
-    .change .bar2 {
+
+    header .change .bar2 {
         opacity: 0;
     }
-      
-    .change .bar3 {
+
+    header .change .bar3 {
         transform: translate(0, -11px) rotate(45deg);
     }
 
 
-    #click:checked~ul {
-        left: 0;
+    header #click:checked~ul {
+        left: 0;  
     }
 
-    .navbar-menu ul li {
+    header .navbar-menu ul li {
         width: 100%;
-        margin: 40px 0;
+        margin: 40px 0px;
+
     }
 
-    .navbar-menu ul li a {
+    header .navbar-menu ul li a {
+        color: #f9f9f9;
         width: 100%;
         margin-left: -100%;
         display: block;
@@ -427,15 +419,21 @@ footer {
         transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
 
-    #click:checked~ul li a {
+    header #click:checked~ul li a {
         margin-left: 0px;
+        
     }
 
-    .navbar-menu ul li a.active,
-    .navbar-menu ul li a:hover {
+    header .navbar-menu ul li a.active,
+    header .navbar-menu ul li a:hover {
         background: none;
-        color: #1cd425;
+        color: #409b7a;
     }
 
+    header #logo-box .logo-btn, header .navbar-session, header .navbar-media, header #search-box .search-bar {
+        display: none;
+    }
+
+    /*--END RESPONSIVE HEADER-*/
 
 }
