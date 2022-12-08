@@ -15,41 +15,57 @@
 
     <!--HEADER-->
     <header class="header-container" id="header1">
+    
         <!--LOGO-->
         <div class="box" id="logo-box">
             <label for="" class="logo-btn" onclick="">
                 <a class="header-link" href="#"><img src="../IMAGENES/logo.png" alt="" width="125px" height="55px"></a>
             </label>
         </div>
-        
+
         <!--NAVBAR-->
         <div class="box" id="nav-box">
             <nav class="navbar-menu" id="main-menu">
                 <input type="checkbox" id="click">
                 <label for="click" class="menu-btn" onclick="showMenuIcon(this)">
+                    <h3>MENÚ</h3>
                     <div class="bar1"></div>
                     <div class="bar2"></div>
                     <div class="bar3"></div>
-                        
                 </label>
                 <ul class="navbar-main-menu" id="navbar-main">
                     <li><a class="btn active" href="#">Inicio</a></li>
-                    <li><a class="btn" href="#" id = "catalogue-btn">Catalolgo<img src="../IMAGENES/dropdown_icon.png" alt=""></a>
+                    <li><a class="btn" href="#" id="catalogue-btn">Catalolgo<img src="../IMAGENES/dropdown_icon.png"
+                                alt=""></a>
                         <ul class="navbar-catalogue-menu" id="catalogue-menu" style="display: none">
-                            <li><a class="btn" href="#">Categoria 1</a></li>
-                            <li><a class="btn" href="#">Categoria 2</a></li>
-                            <li><a class="btn" href="#">Categoria 3</a></li>
-                            <li><a class="btn" href="#">Categoria 4</a></li>
+                            <div>
+                                <li><a class="btn" href="#">Categoria 1</a></li>
+                                <li><a class="btn" href="#">Categoria 2</a></li>
+                                <li><a class="btn" href="#">Categoria 3</a></li>
+                            </div>
+                            <div>
+                                <li><a class="btn" href="#">Categoria 4</a></li>
+                                <li><a class="btn" href="#">Categoria 5</a></li>
+                                <li><a class="btn" href="#">Categoria 6</a></li>
+                            </div>
+                            <div>
+                                <li><a class="btn" href="#">Categoria 7</a></li>
+                                <li><a class="btn" href="#">Categoria 8</a></li>
+                                <li><a class="btn" href="#">Categoria 9</a></li>
+                                <li><a class="btn" href="#">Categoria 10</a></li>
+                            </div>
                         </ul>
-                    
+    
                     </li>
                     <li><a class="btn" href="#">Contacto</a></li>
                     <li><a class="btn" href="#">Registro</a></li>
                     <li><a class="btn" href="#" id="about-btn">Acerca de<img src="../IMAGENES/dropdown_icon.png" alt=""></a>
                         <ul class="navbar-about-menu" id="about-menu" style="display: none">
-                            <li><a class="btn" href="#">Empresa</a></li>
-                            <li><a class="btn" href="#">Negocio</a></li>
-                            <li><a class="btn" href="#">Ofertas</a></li>
+                            <div>
+                                <li><a class="btn" href="#">Empresa</a></li>
+                                <li><a class="btn" href="#">Negocio</a></li>
+                                <li><a class="btn" href="#">Ofertas</a></li>
+                            </div>
                         </ul>
                     </li>
                 </ul>
@@ -60,21 +76,21 @@
                 dropdownDisplay();
             </script>
         </div>
-
-        <!--MEDIA-->
+    
+        <!--SESSION-->
         <div class="box" id="session-box">
             <nav class="navbar-session" id="session-menu">
-                <ul class="navbar-media-menu" id="media-navbar">
+                <ul class="navbar-session-menu" id="session-navbar">
                     <li><a class="nav-link" href="#"><img src="../IMAGENES/user.png" alt=""></a></li>
                     <li><a class="nav-link" href="#"><img src="../IMAGENES/cart_logo.png" alt=""></a></li>
                     <li>
-                        <span class="quantity">Articulo(s): 0</span>
-                        <span class="amount">Total: ₡0.00</span>
+                        <span>Articulo(s):<div></div>0</span>
+                        <span>Total:<div></div>₡0.00</span>
                     </li>
                 </ul>
             </nav>
         </div>
-
+    
         <!--SEARCH-->
         <div class="box" id="search-box">
             <form action="https://www.google.com/search" method="get" class="search-bar">
@@ -82,14 +98,14 @@
                 <button type="submit"> <img src="../IMAGENES/search.png" alt=""> </button>
             </form>
         </div>
-
+    
         <!--MEDIA-->
         <div class="box" id="media-box">
             <nav class="navbar-media" id="media-menu">
                 <ul class="navbar-media-menu" id="media-navbar">
-                    <li><a class="nav-link" href="#"><img src="../IMAGENES/facebook_logo.png" alt="" ></a></li>
-                    <li><a class="nav-link" href="#"><img src="../IMAGENES/insta_logo.png" alt="" ></a></li>
-                    <li><a class="nav-link" href="#"><img src="../IMAGENES/whatsapp_logo.png" alt="" ></a></li>
+                    <li><a class="nav-link" href="#"><img src="../IMAGENES/facebook_logo.png" alt=""></a></li>
+                    <li><a class="nav-link" href="#"><img src="../IMAGENES/insta_logo.png" alt=""></a></li>
+                    <li><a class="nav-link" href="#"><img src="../IMAGENES/whatsapp_logo.png" alt=""></a></li>
                 </ul>
             </nav>
         </div>

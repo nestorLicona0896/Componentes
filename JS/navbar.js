@@ -27,6 +27,7 @@ function focusMenuOption() {
               document.getElementById("about-menu").style.display = "flex";
             } else {
               document.getElementById("about-menu").style.display = "none";
+
             }
             document.getElementById("catalogue-menu").style.display = "none";
           } else {
