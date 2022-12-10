@@ -83,7 +83,7 @@ header .navbar-menu ul li a {
     font-size: 18px;
     font-weight: 500;
     border-radius: 25px;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
 }
 
 header .navbar-main-menu .active,
@@ -94,6 +94,7 @@ header ul li a:hover {
 
 header .navbar-main-menu .active img,
 header ul li a:hover img {
+    transition: all 0.3s ease;
     filter: invert(98%) sepia(9%) saturate(130%) hue-rotate(254deg) brightness(113%) contrast(95%);
 }
  
@@ -143,15 +144,12 @@ header .navbar-main-menu .navbar-catalogue-menu {
     background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(4px) saturate(180%);
     border-radius: 25px;
-    transition: all 0.4s ease;
     row-gap: 8px;
 }
-
 
 /* ABOUT MENU */
 
 header .navbar-main-menu .navbar-about-menu li {
-    
     margin: 5px 0px 5px 0px;
 }
 
@@ -181,7 +179,6 @@ header .navbar-main-menu .navbar-about-menu {
     background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(4px) saturate(180%);
     border-radius: 25px;
-    transition: all 0.4s ease;
 }
 
 
@@ -215,12 +212,12 @@ header .navbar-session ul li a {
     margin: 0;
     display: flex;
     border-radius: 25px;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
     text-decoration: none;
 }
 
 header .navbar-session ul li a img {
-    width: 100%;
+    max-width: 100%;
     height: 100%;
     padding: 0px;
     margin: 0px;
@@ -298,16 +295,17 @@ header .box .search-bar button {
 header .box .search-bar button img {
     margin: 0px;
     padding: 0px;
-    width: 25px;
+    max-width: 100%;
     height: 25px;
 }
 
 header .box .search-bar button:hover {
     background: #125D98;
-
+    transition: all 0.3s ease;
 }
 
 header .box .search-bar button:hover img{
+    transition: all 0.3s ease;
     filter: invert(20%) sepia(73%) saturate(2194%) hue-rotate(248deg) brightness(87%) contrast(100%);
 }
 
@@ -340,7 +338,7 @@ header .navbar-media ul li a {
 }
 
 header .navbar-media ul li a img {
-    width: 100%;
+    max-width: 100%;
     height: 100%;
     padding: 0px;
     margin: 0px;
@@ -371,7 +369,6 @@ header .navbar-media ul li a:hover {
         width:100%;
         height: auto;
         text-align: center;
-        transition: all 0.4s ease;
     }
 
     header .box{
@@ -424,10 +421,11 @@ header .navbar-media ul li a:hover {
         width: 100%;
         display: flex;
         flex-direction: column;
-        transition: all 0.4s ease;
+        transition: all 0.3s ease;
         justify-content: center;
         align-items: center;
         border: none;
+        justify-items: center;
     }
 
     header .navbar-menu .menu-btn {
@@ -439,7 +437,7 @@ header .navbar-media ul li a:hover {
     }
 
     header .navbar-menu .menu-btn h3{
-        transition: 0.4s;
+        transition: all 0.3s ease;
         font-size: 10px;
         margin: 0px;
         padding: 0px;
@@ -457,7 +455,7 @@ header .navbar-media ul li a:hover {
         height: 4px;
         background-color: #000000;
         margin: 5px 0px;
-        transition: 0.4s;
+        transition: all 0.3s ease;
         border-radius: 2.5px;
     }
 
@@ -479,25 +477,22 @@ header .navbar-media ul li a:hover {
     }
 
     header .navbar-menu ul li {
-        width: fit-content;
-        margin: 25px 0px;
+        width: 100%;
+        margin: 5px 2px 5px 2px;
+        padding: 2px 8px 2px 8px;
     }
 
     header .navbar-menu ul li a {
         color: #f9f9f9;
-        width: 100%;
-        margin-left: -100%;
+        width: fit-content;
         display: block;
         font-size: 20px;
-        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    }
-
-    header #click:checked~ul li a {
-        margin-left: 0px;
+        transition: all 0.3s ease;
     }
 
     header .navbar-menu ul li a.active,
     header .navbar-menu ul li a:hover {
+        background: #f9f9f9;
         color: #5B2BAE;
     }
 
@@ -508,20 +503,21 @@ header .navbar-media ul li a:hover {
     header .navbar-main-menu .active img,
     header ul li a:hover img {
         filter: invert(20%) sepia(73%) saturate(2194%) hue-rotate(248deg) brightness(87%) contrast(100%);
+        transition: all 0.3s ease;
     }
 
     /* CATALOGUE MENU */
 
     header .navbar-main-menu .navbar-catalogue-menu div{
-        margin: 2px;
-        padding: 5px;
+        margin: 0px;
+        padding: 0px;
         width: fit-content;
         height: 100%;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        column-gap: 8px;
+        column-gap: 0px;
     }
 
     header .navbar-main-menu .navbar-catalogue-menu {
@@ -533,14 +529,16 @@ header .navbar-media ul li a:hover {
         display: flex;
         justify-content: center;
         align-items:center;
-        margin: -55px 0px 20px 100%;
+        margin: -50px 0px 45px 100%;
         border: none;
     }
 
     header .navbar-main-menu .navbar-catalogue-menu li a{
+        margin: 5px 0px 5px 0px;
+        padding: 2px 2px 2px 2px;
         padding: 5px;
         color: #f9f9f9;
-        
+        font-size: 18px;
     }
 
     header .navbar-main-menu .navbar-catalogue-menu li a:hover{
@@ -569,15 +567,19 @@ header .navbar-media ul li a:hover {
         width: 100%;
         height: fit-content;
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items:center;
-        margin: -55px 0px 20px 100%;
+        margin: -55px 0px 45px 100%;
+        padding: auto;
         border-radius: 2px;
     }
 
     header .navbar-main-menu .navbar-about-menu li a{
+        margin: 5px 0px 5px 0px;
+        padding: 2px 2px 2px 2px;
         padding: 5px;
         color: #f9f9f9;
+        font-size: 18px;
     }
 
     header .navbar-main-menu .navbar-about-menu li a:hover{
