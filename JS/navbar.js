@@ -4,27 +4,31 @@ function showMenuIcon(menuBtn) {
 }
 
 // ADD ACTIVE CLASS TO THE CURRENT MENU BUTTON (HIGHLIGHT IT):
-function focusMenuOption() {
+/* function focusMenuOption() {
   var header = document.getElementById("navbar-main");
   var btns = header.getElementsByClassName("btn");
   for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click",
       function () {
-
         var currentOption = document.getElementsByClassName("active");
         currentOption[0].className = currentOption[0].className.replace(" active", "");
         this.className += " active";
         if (currentOption[0].getAttribute('id') == "catalogue-btn") {
-          if(document.getElementById("catalogue-menu").style.display == 'none') {
+          if (document.getElementById("catalogue-menu").style.display == 'none') {
             document.getElementById("catalogue-menu").style.display = "flex";
+            document.getElementById("catalogue-menu").style.top = "58px";
+            document.getElementById("catalogue-menu").style.flexDirection = "column";
           } else {
             document.getElementById("catalogue-menu").style.display = "none";
+            
           }
           document.getElementById("about-menu").style.display = "none";
         } else {
           if (currentOption[0].getAttribute('id') == "about-btn") {
-            if(document.getElementById("about-menu").style.display == 'none'){
+            if (document.getElementById("about-menu").style.display == 'none') {
               document.getElementById("about-menu").style.display = "flex";
+              document.getElementById("about-menu").style.top = "58px";
+              document.getElementById("about-menu").style.flexDirection = "column";
             } else {
               document.getElementById("about-menu").style.display = "none";
 
@@ -37,6 +41,19 @@ function focusMenuOption() {
         }
       });
   }
+} */
+
+/* // GIVE CATALOGUE-BTN STYLE
+function unfocusBtn(elementId) {
+  document.getElementById(elementId).style.background = "#DDDDDD";
+  document.getElementById(elementId).style.color = "#000000";
+  document.getElementById(elementId).style.outline = "none";
 }
 
+function focusBtn(elementId) {
+  document.getElementById(elementId).style.background = "#000000";
+  document.getElementById(elementId).style.color = "#f9f9f9";
+  document.getElementById(elementId).style.outline = "solid #5B2BAE 2.5px";
+  document.getElementById(elementId).style.outline-offset = " outline-offset: 0.3vh";
 
+} */

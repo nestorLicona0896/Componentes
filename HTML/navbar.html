@@ -19,12 +19,12 @@
     
         <!--LOGO-->
         <div class="box" id="logo-box">
-            <label for="" class="logo-btn" onclick="">
-                <a class="header-link" href="#"><img src="../IMAGENES/logo.png" alt="" width="125px" height="55px"></a>
+            <label for="" class="logo-btn">
+                <a class="header-link" href="#"><img src="../IMAGENES/logo.png" alt="" width="100px" height="55px"></a>
             </label>
         </div>
 
-        <!--NAVBAR-->
+        <!--MAIN MENU-->
         <div class="box" id="nav-box">
             <nav class="navbar-menu" id="main-menu">
                 <input type="checkbox" id="click">
@@ -36,46 +36,36 @@
                 </label>
                 <ul class="navbar-main-menu" id="navbar-main">
                     <li><a class="btn active" href="#">Inicio</a></li>
-                    <li><a class="btn" href="#" id="catalogue-btn">Catalolgo<img src="../IMAGENES/dropdown_icon.png"
-                                alt=""></a>
-                        <ul class="navbar-catalogue-menu" id="catalogue-menu" style="display: none">
-                            <div>
-                                <li><a class="btn" href="#">Categoria 1</a></li>
-                                <li><a class="btn" href="#">Categoria 2</a></li>
-                                <li><a class="btn" href="#">Categoria 3</a></li>
-                            </div>
-                            <div>
-                                <li><a class="btn" href="#">Categoria 4</a></li>
-                                <li><a class="btn" href="#">Categoria 5</a></li>
-                                <li><a class="btn" href="#">Categoria 6</a></li>
-                            </div>
-                            <div>
-                                <li><a class="btn" href="#">Categoria 7</a></li>
-                                <li><a class="btn" href="#">Categoria 8</a></li>
-                                <li><a class="btn" href="#">Categoria 9</a></li>
-                                <li><a class="btn" href="#">Categoria 10</a></li>
-                            </div>
+                    <li class="dropdown dropdown-6"><a class="btn" href="#" id="catalogue-btn">Catalolgo<img src="../IMAGENES/dropdown_icon.png" alt=""></a>
+                        <ul class="dropdown_menu dropdown_menu--animated dropdown_menu-6" id="catalogue-menu" style="display:none;">
+                            <li class="dropdown-item-1"><a class="btn" href="#">Categoria 1</a></li>
+                            <li class="dropdown-item-2"><a class="btn" href="#">Categoria 2</a></li>
+                            <li class="dropdown-item-3"><a class="btn" href="#">Categoria 3</a></li>
+                            <li class="dropdown-item-4"><a class="btn" href="#">Categoria 4</a></li>
+                            <li class="dropdown-item-5"><a class="btn" href="#">Categoria 5</a></li>
+                            <li class="dropdown-item-6"><a class="btn" href="#">Categoria 6</a></li>
+                            <li class="dropdown-item-7"><a class="btn" href="#">Categoria 7</a></li>
+                            <li class="dropdown-item-8"><a class="btn" href="#">Categoria 8</a></li>
+                            <li class="dropdown-item-9"><a class="btn" href="#">Categoria 9</a></li>
+                            <li class="dropdown-item-10"><a class="btn" href="#">Categoria 10</a></li>
                         </ul>
     
                     </li>
                     <li><a class="btn" href="#">Contacto</a></li>
                     <li><a class="btn" href="#">Registro</a></li>
-                    <li><a class="btn" href="#" id="about-btn">Acerca de<img src="../IMAGENES/dropdown_icon.png" alt=""></a>
-                        <ul class="navbar-about-menu" id="about-menu" style="display: none">
-                            <div>
-                                <li><a class="btn" href="#">Empresa</a></li>
-                                <li><a class="btn" href="#">Negocio</a></li>
-                                <li><a class="btn" href="#">Ofertas</a></li>
-                            </div>
+                    <li class="dropdown dropdown-6"><a class="btn" href="#" id="about-btn">Acerca de<img src="../IMAGENES/dropdown_icon.png" alt=""></a>
+                        <ul class="dropdown_menu dropdown_menu--animated dropdown_menu-6" id="about-menu" style="display:none;">
+                            <li class="dropdown-item-1"><a class="btn" href="#">Empresa</a></li>
+                            <li class="dropdown-item-2"><a class="btn" href="#">Negocio</a></li>
+                            <li class="dropdown-item-3"><a class="btn" href="#">Ofertas</a></li>
                         </ul>
                     </li>
                 </ul>
             </nav>
             <!--FUNCTION TO HIGHLIGHT THE CURRENT MENU OPTION-->
-            <script>
+            <!-- <script>
                 focusMenuOption();
-                dropdownDisplay();
-            </script>
+            </script> -->
         </div>
     
         <!--SESSION-->
@@ -85,8 +75,8 @@
                     <li><a class="nav-link" href="#"><img src="../IMAGENES/user.png" alt=""></a></li>
                     <li><a class="nav-link" href="#"><img src="../IMAGENES/cart_logo.png" alt=""></a></li>
                     <li>
-                        <span>Articulo(s):<div></div>0</span>
-                        <span>Total:<div></div>₡0.00</span>
+                        <p>Articulo(s): 0</p>
+                        <p>Total: ₡0.00</p>
                     </li>
                 </ul>
             </nav>
