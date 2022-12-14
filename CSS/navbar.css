@@ -9,6 +9,7 @@ body {
     padding: 0;
     margin: 0;
     background-color: #2E323A;
+    
 }
 
 body div {
@@ -90,12 +91,19 @@ header .navbar-menu .navbar-main-menu li .btn {
     padding: 0px 8px 0px 8px;
 }
 
-header .navbar-main-menu li:hover .btn{
+header .navbar-menu .navbar-main-menu li:hover .btn, header .navbar-menu .navbar-main-menu li .active{
     color: #f9f9f9;
     background: #5B2BAE; 
 }
 
-header .navbar-main-menu li:hover img {
+header .navbar-menu .navbar-main-menu li:hover img {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    filter: invert(99%) sepia(1%) saturate(0%) hue-rotate(127deg) brightness(99%) contrast(98%);
+}
+
+header .navbar-menu .navbar-main-menu li .active img{
+    transform: translate(0, 0px) rotate(-180deg);
     cursor: pointer;
     transition: all 0.3s ease;
     filter: invert(99%) sepia(1%) saturate(0%) hue-rotate(127deg) brightness(99%) contrast(98%);
@@ -120,37 +128,35 @@ header .navbar-main-menu li a img {
 /* CATALOGUE MENU  &  ABOUT MENU */
 
 header .navbar-main-menu .dropdown .dropdown_menu {
+    margin: 0px;
+    padding: 0px;
     position: absolute;
-    top: 100%;
-    width: fit-content;
+    top: 80px;
+    width: 180px;
     height: auto;
+    border: none;
+    display: flex;
+    flex-direction: column;
     background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(4px) saturate(180%);
-    border-radius: 25px;
-    border :solid #5B2BAE 1px;
-}
-
-header .navbar-main-menu .dropdown .dropdown_menu li {
-    width: fit-content;
-    display: none;
-    margin: 8px 5px 8px 5px;
-    padding: 5px 2px 5px 2px;
-    opacity: 0;
-}
-
-header .navbar-main-menu .dropdown .dropdown_menu--animated {
-    display: none;
-}
-
-header .navbar-main-menu .dropdown .dropdown_menu--animated li {
-    display: block;
-    opacity: 1;
-}
-
-header .navbar-main-menu .dropdown .dropdown_menu-6 {
     animation: growDown 350ms ease-in-out forwards;
     transform-origin: top center
 }
+
+header .navbar-main-menu .dropdown .dropdown_menu li {
+    height: 40px;
+    border-bottom: solid #64676b 1px;
+}
+
+header .navbar-main-menu .dropdown .dropdown_menu li .btn {
+    background: none;
+    color: #f9f9f9;
+}
+
+header .navbar-main-menu .dropdown .dropdown_menu li:last-child {
+    border-bottom: none;
+}
+
 
 @keyframes growDown {
     0% {
@@ -193,7 +199,6 @@ header .navbar-session .navbar-session-menu {
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1.5fr;
-    /*grid-template-columns: repeat(3, 1fr);*/
     justify-content: center;
     align-items: center;
     list-style: none;
@@ -258,21 +263,21 @@ header .search-bar {
 }
 
 header .search-bar input {
-    margin: 0px 2px 0px 15px;
-    padding: 0px 2px 0px 8px;
+    margin: 0px 5px 0px 8px;
+    padding: 0px 5px 0px 8px;
+    height: 35px;
     flex: 1;
-    border: 0;
+    border: solid transparent 1.5px;
     border-radius: 60px;
     background: transparent;
     outline: none;
     font-size: 16px;
     color: #000000;
-    height: 30px;
 }
 
-header .search-bar:hover input {
-    outline-offset: 0.3vh;
-    outline: solid rgba(110, 108, 108, 0.623) 2.5px;
+header .search-bar:hover input, header .search-bar input:focus {
+    outline-offset: 0.2vh;
+    border: solid rgba(110, 108, 108, 0.623) 1.5px;
 }
 
 ::placeholder {
@@ -280,8 +285,9 @@ header .search-bar:hover input {
 }
 
 header .search-bar button {
-    margin: 0px 8px 0px 8px;
-    padding: 0px 5px 0px 5px;
+    display: block;
+    margin: 0px 8px 0px 2px;
+    padding: 0px 3px 0px 3px;
     border: 0;
     width: 40px;
     height: 40px;
@@ -294,9 +300,7 @@ header .search-bar button {
 }
 
 header .search-bar button img {
-    margin: 0px;
-    padding: 0px;
-    max-width: 20px;
+    width: 20px;
     height: 20px;
 }
 
@@ -480,20 +484,19 @@ footer {
 
     /* MAIN MENU */
 
-    header .navbar-menu ul {
-        position: fixed;
-        left: -100%;
-        top: 205px;
-        background: #000000;
-        height: fit-content;
-        width: fit-content;
+    header .navbar-menu .navbar-main-menu {
+        width: 50%;
+        height: auto;
         display: flex;
         flex-direction: column;
         transition: all 0.55s ease;
         justify-content: center;
         align-items: center;
         border: none;
-        justify-items: center;
+        position: fixed;
+        left: -100%;
+        top: 192px;
+        background: #000000;
     }
 
     header .navbar-menu .menu-btn {
@@ -515,7 +518,7 @@ footer {
         color: #000000;
     }
 
-    header .navbar-menu .navbar-main-menu .menu-btn:hover h3 {
+    header .navbar-menu .menu-btn:hover h3 {
         color: #5B2BAE;
     }
 
@@ -542,36 +545,41 @@ footer {
         transform: translate(0, -9px) rotate(45deg);
     }
 
-
     header #click:checked~ul {
         left: 0px;
     }
 
     header .navbar-menu .navbar-main-menu li {
-        width: 100%;
-        margin: 5px 2px 5px 2px;
-        padding: 2px 8px 2px 8px;
+        height: 55px;
+        border-bottom: solid #64676b 1px;
     }
 
-    header .navbar-menu .navbar-main-menu li a {
+    header .navbar-menu .navbar-main-menu li:last-child {
+        border: none;
+    }
+
+    header .navbar-menu .navbar-main-menu li .btn {
         color: #f9f9f9;
-        display: block;
-        font-size: 20px;
-        transition: all 0.3s ease;
+        font-size: 18px;
     }
 
     header .navbar-menu .navbar-main-menu li .btn:hover {
-        background: #f9f9f9;
+        background: #64676b;
         color: #5B2BAE;
     }
 
     header .navbar-menu .navbar-main-menu li .btn img {
+        transform: translate(0px, 0px) rotate(-90deg);
         transition: all 0.3s ease;
         filter: invert(98%) sepia(9%) saturate(130%) hue-rotate(254deg) brightness(113%) contrast(95%);
     }
 
     header .navbar-menu .navbar-main-menu li .btn:hover img {
         filter: invert(20%) sepia(73%) saturate(2194%) hue-rotate(248deg) brightness(87%) contrast(100%);
+    }
+
+    header .navbar-menu .navbar-main-menu li .active img{
+        transform: translate(0, 0px) rotate(90deg);
     }
 
     /* CATALOGUE MENU */
@@ -584,22 +592,11 @@ footer {
 
     /* SEARCH-BOX */
 
-    header .box .search-bar {
-        margin: 0px 5px 0px 0px;
-        padding: 0px 2px 0px 2px;
-        border: solid #5B2BAE 1px;
+    header .search-bar {
+        height: 52px;
+        margin: 0px 15px 0px -5px;
     }
 
-    header .box .search-bar input {
-        margin: 0px 5px 0px 15px;
-        padding: 0px 5px 0px 8px;
-    }
-
-
-    header .box .search-bar button {
-        margin: 0px 8px 0px 5px;
-        padding: 0px 2px 0px 2px;
-    }
 }
 
 /* END RESPONSIVE HEADER 768 */
