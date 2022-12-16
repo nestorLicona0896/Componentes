@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<HTML lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <!--responsive tag-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Navbar</title>
+
+    <link rel="stylesheet" type="text/css" href="../CSS/button.css">
+    <script src="../JS/button.js"></script>
+</head>
+
+<body>
+
+    <!--HEADER-->
+    <header>
+        <!--MAIN MENU-->
+        <div class="menu-box">
+            <nav class="navbar-menu" id="navbar-main"> 
+                <ul class="main-menu">
+                    <input type="checkbox" id="click" not-checked>
+                    <input type="checkbox" id="click2" not-checked>
+
+                    <li><a class="btn active" href="#">Inicio</a></li>
+                    <li><a class="btn" href="#" id="catalogue-btn"><label for="click" class="menu-btn">Catalogo-></label></a></li>
+                    <li><a class="btn" href="#">Contacto</a></li>
+                    <li><a class="btn" href="#" id="about-btn"><label for="click2" class="menu-btn">Acerca de-></label></a></li>
+                    <li><a class="btn" href="#">Registro</a></li>
+                </ul>
+            </nav>
+            <!--FUNCTION TO HIGHLIGHT THE CURRENT MENU OPTION-->
+            <script>
+                focusMenuOption();
+            </script>
+        </div>
+    </header>
+
+</body>
+
+</HTML>

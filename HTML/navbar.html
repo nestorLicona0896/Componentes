@@ -16,7 +16,7 @@
 
     <!--HEADER-->
     <header class="header-container" id="header1">
-    
+
         <!--LOGO-->
         <div class="box" id="logo-box">
             <label for="" class="logo-btn">
@@ -35,9 +35,11 @@
                     <div class="bar3"></div>
                 </label>
                 <ul class="navbar-main-menu" id="navbar-main">
-                    <li><a class="btn active" href="#">Inicio</a></li>
-                    <li class="dropdown"><a class="btn" href="#" id="catalogue-btn">Catalolgo<img src="../IMAGENES/dropdown_icon.png" alt=""></a>
-                        <ul class="dropdown_menu" id="catalogue-menu">
+                    <li><a class="btn active" href="#">Inicio</a></li>                
+                    <li class="dropdown">
+                        <a class="btn" href="#" id="catalogue-btn">Catalolgo<img id="arrow"
+                            src="../IMAGENES/dropdown_icon.png" alt=""></a>
+                        <ul class="dropdown_menu" id="catalogue-menu" style="display:none;">
                             <li class="dropdown-item-1"><a class="btn" href="#">Categoria 1</a></li>
                             <li class="dropdown-item-2"><a class="btn" href="#">Categoria 2</a></li>
                             <li class="dropdown-item-3"><a class="btn" href="#">Categoria 3</a></li>
@@ -52,8 +54,10 @@
                     </li>
                     <li><a class="btn" href="#">Contacto</a></li>
                     <li><a class="btn" href="#">Registro</a></li>
-                    <li class="dropdown"><a class="btn" href="#" id="about-btn">Acerca de<img src="../IMAGENES/dropdown_icon.png" alt=""></a>
-                        <ul class="dropdown_menu" id="about-menu">
+                    <li class="dropdown">
+                        <a class="btn" href="#" id="about-btn">Acerca de<img id="arrow"
+                                src="../IMAGENES/dropdown_icon.png" alt=""></a>
+                        <ul class="dropdown_menu" id="about-menu" style="display:none;">
                             <li class="dropdown-item-1"><a class="btn" href="#">Empresa</a></li>
                             <li class="dropdown-item-2"><a class="btn" href="#">Negocio</a></li>
                             <li class="dropdown-item-3"><a class="btn" href="#">Ofertas</a></li>
@@ -66,7 +70,7 @@
                 focusMenuOption();
             </script>
         </div>
-    
+
         <!--SESSION-->
         <div class="box" id="session-box">
             <nav class="navbar-session" id="session-menu">
@@ -80,7 +84,7 @@
                 </ul>
             </nav>
         </div>
-    
+
         <!--SEARCH-->
         <div class="box" id="search-box">
             <form action="https://www.google.com/search" method="get" class="search-bar">
@@ -88,7 +92,7 @@
                 <button type="submit"> <img src="../IMAGENES/search.png" alt=""> </button>
             </form>
         </div>
-    
+
         <!--MEDIA-->
         <div class="box" id="media-box">
             <nav class="navbar-media" id="media-menu">
@@ -110,4 +114,5 @@
     </footer>
 
 </body>
+
 </HTML>

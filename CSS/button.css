@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+} 
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #2E323A;
+}
+
+body div {
+    float: none;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/************************************/
+
+header .menu-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .menu-box .navbar-menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .menu-box .navbar-menu .main-menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+header .menu-box .navbar-menu .main-menu li {
+    width: 200px;
+    height: 100%;
+    background: #f9f9f9;
+    border: solid #000000 1px;
+}
+
+header .menu-box .navbar-menu .main-menu li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color:#000000;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+/********************************************/
+
+header .menu-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+header input[type="checkbox"] {
+    display: none;
+}
+
+header .menu-box .navbar-menu .main-menu li .active {
+    background: gold;
+}
+
+
+
+
+
+
+
+

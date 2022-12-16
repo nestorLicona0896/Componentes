@@ -1,4 +1,4 @@
-// SHOW MENU ICON WHEN SCREEN GO BELLOW 720PX WIDTH:
+// SHOW MENU BUTTON WHEN SCREEN GO UNDER/BELOWS 720PX WIDTH:
 function showMenuIcon(menuBtn) {
   menuBtn.classList.toggle("change");
 }
@@ -13,31 +13,33 @@ function focusMenuOption() {
         var currentOption = document.getElementsByClassName("active");
         currentOption[0].className = currentOption[0].className.replace(" active", "");
         this.className += " active";
-        if (currentOption[0].getAttribute('id') == "catalogue-btn") {
-          if (document.getElementById("catalogue-menu").style.display == 'none') {
-            /* document.getElementById("catalogue-menu").style.display = "flex";
-            document.getElementById("catalogue-menu").style.top = "58px";
-            document.getElementById("catalogue-menu").style.flexDirection = "column"; */
-          } else {
-            document.getElementById("catalogue-menu").style.display = "none";
-          }
+        if (currentOption[0].getAttribute('id') != "catalogue-btn" && currentOption[0].getAttribute('id') != "about-btn") {
+          document.getElementById("catalogue-menu").style.display = "none";
           document.getElementById("about-menu").style.display = "none";
-        } else {
-          if (currentOption[0].getAttribute('id') == "about-btn") {
-            if (document.getElementById("about-menu").style.display == 'none') {
-              /* document.getElementById("about-menu").style.display = "flex";
-              document.getElementById("about-menu").style.top = "58px";
-              document.getElementById("about-menu").style.flexDirection = "column"; */
-            } else {
-              document.getElementById("about-menu").style.display = "none";
 
-            }
-            document.getElementById("catalogue-menu").style.display = "none";
-          } else {
-            document.getElementById("catalogue-menu").style.display = "none";
-            document.getElementById("about-menu").style.display = "none";
-          }
+        } else {
+          showSubmenu(currentOption[0].getAttribute('id'));
         }
       });
+  }
+}
+
+// SHOW MAIN NAVBAR SUBMENU:
+function showSubmenu(submenuBtn) {
+  if (submenuBtn == "catalogue-btn") {
+    if (document.getElementById("catalogue-menu").style.display == 'none') {
+      document.getElementById("catalogue-menu").style.display = "flex";
+    } else {
+      document.getElementById("catalogue-menu").style.display = "none";
+    }
+    document.getElementById("about-menu").style.display = "none";
+  } 
+  if (submenuBtn == "about-btn") {
+    if (document.getElementById("about-menu").style.display == 'none') {
+      document.getElementById("about-menu").style.display = "flex";
+    } else {
+      document.getElementById("about-menu").style.display = "none";
+    }
+    document.getElementById("catalogue-menu").style.display = "none";
   }
 }

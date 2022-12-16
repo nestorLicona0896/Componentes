@@ -9,7 +9,6 @@ body {
     padding: 0;
     margin: 0;
     background-color: #2E323A;
-    
 }
 
 body div {
@@ -72,7 +71,7 @@ header .navbar-menu .navbar-main-menu {
 header .navbar-menu .navbar-main-menu li {
     width: 100%;
     height: 100%;
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
 }
@@ -96,14 +95,7 @@ header .navbar-menu .navbar-main-menu li:hover .btn, header .navbar-menu .navbar
     background: #5B2BAE; 
 }
 
-header .navbar-menu .navbar-main-menu li:hover img {
-    cursor: pointer;
-    transition: all 0.3s ease;
-    filter: invert(99%) sepia(1%) saturate(0%) hue-rotate(127deg) brightness(99%) contrast(98%);
-}
-
-header .navbar-menu .navbar-main-menu li .active img{
-    transform: translate(0, 0px) rotate(-180deg);
+header .navbar-menu .navbar-main-menu li:hover img, header .navbar-menu .navbar-main-menu li .active img {
     cursor: pointer;
     transition: all 0.3s ease;
     filter: invert(99%) sepia(1%) saturate(0%) hue-rotate(127deg) brightness(99%) contrast(98%);
@@ -114,16 +106,17 @@ header .navbar-menu .menu-btn {
     display: none;
 }
 
-header input[type="checkbox"] {
-    display: none;
-}
-
 header .navbar-main-menu li a img {
     margin: 0px 0px 0px 5px;
     padding: 0px;
     width: 12px;
     transition: all 0.3s ease;
 }
+
+header .navbar-menu input[type="checkbox"] {
+    display: none;
+}
+
 
 /* CATALOGUE MENU  &  ABOUT MENU */
 
@@ -150,13 +143,17 @@ header .navbar-main-menu .dropdown .dropdown_menu li {
 
 header .navbar-main-menu .dropdown .dropdown_menu li .btn {
     background: none;
-    color: #f9f9f9;
+    color: #000000;
+}
+
+header .navbar-main-menu .dropdown .dropdown_menu li:hover .btn {
+    background: #000000;
+    color: gold;
 }
 
 header .navbar-main-menu .dropdown .dropdown_menu li:last-child {
     border-bottom: none;
 }
-
 
 @keyframes growDown {
     0% {
@@ -311,7 +308,6 @@ header .search-bar button:hover {
     outline: solid #5B2BAE 2.5px;
 }
 
-
 /* MEDIA NAV */
 
 header .navbar-media {
@@ -370,7 +366,8 @@ header .navbar-media .navbar-media-menu li a:hover {
     outline: solid #5B2BAE 2.5px;
 }
 
-/* MAIN CONTAINER*/
+/* MAIN CONTAINER */
+
 main {
     padding: 0;
     margin: 0;
@@ -383,6 +380,7 @@ main {
 }
 
 /* FOOTER CONTAINER */
+
 footer {
     padding: 0;
     margin: 0;
@@ -548,6 +546,7 @@ footer {
     header #click:checked~ul {
         left: 0px;
     }
+    
 
     header .navbar-menu .navbar-main-menu li {
         height: 55px;
