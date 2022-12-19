@@ -28,6 +28,7 @@ function styleSubmenuBtn(idBtn){
     } else {
       document.getElementById(idBtn).style.background = "gold";
     }
+    document.getElementById("about-btn").style.background = "none";
   } 
 
   if (idBtn == "about-btn") {
@@ -36,5 +37,6 @@ function styleSubmenuBtn(idBtn){
     } else {
       document.getElementById(idBtn).style.background = "gold";
     }
+    document.getElementById("catalogue-btn").style.background = "none";
   }
 }

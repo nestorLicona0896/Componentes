@@ -35,11 +35,17 @@
                     <div class="bar3"></div>
                 </label>
                 <ul class="navbar-main-menu" id="navbar-main">
-                    <li><a class="btn active" href="#">Inicio</a></li>                
+
+                    <input type="checkbox" id="catalogue">
+                    <input type="checkbox" id="about">
+
+                    <li><a class="btn active" href="#">Inicio</a></li>
                     <li class="dropdown">
-                        <a class="btn" href="#" id="catalogue-btn">Catalolgo<img id="arrow"
-                            src="../IMAGENES/dropdown_icon.png" alt=""></a>
-                        <ul class="dropdown_menu" id="catalogue-menu" style="display:none;">
+                        <a class="btn" href="#" id="catalogue-btn"><label for="catalogue"
+                                class="submenu-btn">Catalogo<img src="../IMAGENES/dropdown_icon.png" alt=""
+                                    id="arrow"></label></a>
+                        <ul class="dropdown_menu" id="catalogue-menu">
+
                             <li class="dropdown-item-1"><a class="btn" href="#">Categoria 1</a></li>
                             <li class="dropdown-item-2"><a class="btn" href="#">Categoria 2</a></li>
                             <li class="dropdown-item-3"><a class="btn" href="#">Categoria 3</a></li>
@@ -55,9 +61,9 @@
                     <li><a class="btn" href="#">Contacto</a></li>
                     <li><a class="btn" href="#">Registro</a></li>
                     <li class="dropdown">
-                        <a class="btn" href="#" id="about-btn">Acerca de<img id="arrow"
-                                src="../IMAGENES/dropdown_icon.png" alt=""></a>
-                        <ul class="dropdown_menu" id="about-menu" style="display:none;">
+                        <a class="btn" href="#" id="about-btn"><label for="about" class="submenu-btn">Acerca de<img
+                                    id="arrow" src="../IMAGENES/dropdown_icon.png" alt=""></label></a>
+                        <ul class="dropdown_menu" id="about-menu">
                             <li class="dropdown-item-1"><a class="btn" href="#">Empresa</a></li>
                             <li class="dropdown-item-2"><a class="btn" href="#">Negocio</a></li>
                             <li class="dropdown-item-3"><a class="btn" href="#">Ofertas</a></li>

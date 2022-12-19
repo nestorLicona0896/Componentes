@@ -10,36 +10,35 @@ function focusMenuOption() {
   for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click",
       function () {
-        var currentOption = document.getElementsByClassName("active");
-        currentOption[0].className = currentOption[0].className.replace(" active", "");
-        this.className += " active";
-        if (currentOption[0].getAttribute('id') != "catalogue-btn" && currentOption[0].getAttribute('id') != "about-btn") {
-          document.getElementById("catalogue-menu").style.display = "none";
-          document.getElementById("about-menu").style.display = "none";
+        var activeOption = document.getElementsByClassName("btn active");
 
-        } else {
-          showSubmenu(currentOption[0].getAttribute('id'));
+        if (activeOption.length > 0) { // THERE'S AN ACTIVE BUTTON: 
+          if (this == document.getElementById("catalogue-btn") || this == document.getElementById("about-btn")) {
+            if (this.classList == "btn") {
+              activeOption[0].className = "btn";
+              this.className = "btn active";
+              if (this == document.getElementById("catalogue-btn")) {
+                document.getElementById("about").checked = false;
+              } else {
+                document.getElementById("catalogue").checked = false;
+              }
+            } else {
+              this.className = "btn";
+            }
+          } else {
+            activeOption[0].className = "btn";
+            this.className = "btn active";
+            document.getElementById("catalogue").checked = false;
+            document.getElementById("about").checked = false;
+          }
+        } else { // tHERE ISN'T ACTIVE BUTTON:
+          this.className = "btn active";
+          document.getElementById("catalogue").checked = false;
+          document.getElementById("about").checked = false;
         }
       });
   }
 }
 
-// SHOW MAIN NAVBAR SUBMENU:
-function showSubmenu(submenuBtn) {
-  if (submenuBtn == "catalogue-btn") {
-    if (document.getElementById("catalogue-menu").style.display == 'none') {
-      document.getElementById("catalogue-menu").style.display = "flex";
-    } else {
-      document.getElementById("catalogue-menu").style.display = "none";
-    }
-    document.getElementById("about-menu").style.display = "none";
-  } 
-  if (submenuBtn == "about-btn") {
-    if (document.getElementById("about-menu").style.display == 'none') {
-      document.getElementById("about-menu").style.display = "flex";
-    } else {
-      document.getElementById("about-menu").style.display = "none";
-    }
-    document.getElementById("catalogue-menu").style.display = "none";
-  }
-}
+
+

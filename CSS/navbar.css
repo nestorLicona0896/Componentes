@@ -17,8 +17,6 @@ body div {
 
 /* HEADER */
 header {
-    padding: 0;
-    margin: 0;
     width: 100%;
     height: 80px;
     background-color: #DDDDDD;
@@ -28,12 +26,10 @@ header {
 }
 
 header .box {
-    padding: 0;
-    margin: 0;
     width: fit-content;
     height: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
 
@@ -45,9 +41,21 @@ header #logo-box img {
 
 /* MAIN NAVBAR */
 
+header .navbar-menu .menu-btn {
+    cursor: pointer;
+    display: none;
+}
+
 header .navbar-menu {
-    padding: 0;
-    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+header .navbar-menu .navbar-main-menu {
     width: 100%;
     height: 100%;
     display: flex;
@@ -56,27 +64,13 @@ header .navbar-menu {
     list-style: none;
 }
 
-header .navbar-menu .navbar-main-menu {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-}
-
 header .navbar-menu .navbar-main-menu li {
-    width: 100%;
+    width: 110px;
     height: 100%;
-    display: block;
-    justify-content: center;
-    align-items: center;
+    transition: all 0.33s ease;
 }
 
-header .navbar-menu .navbar-main-menu li .btn {
+header .navbar-menu .navbar-main-menu li a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,39 +78,64 @@ header .navbar-menu .navbar-main-menu li .btn {
     height: 100%;
     color: #000000;
     text-decoration: none;
-    font-size: 16px;
-    font-weight: bolder;
-    transition: all 0.3s ease;
-    padding: 0px 8px 0px 8px;
+    font-size: 18px;
 }
 
-header .navbar-menu .navbar-main-menu li:hover .btn, header .navbar-menu .navbar-main-menu li .active{
+header .navbar-menu .navbar-main-menu li:hover {
+    background: #5B2BAE;
+}
+
+header .navbar-menu .navbar-main-menu li:hover .btn {
     color: #f9f9f9;
-    background: #5B2BAE; 
-}
-
-header .navbar-menu .navbar-main-menu li:hover img, header .navbar-menu .navbar-main-menu li .active img {
-    cursor: pointer;
-    transition: all 0.3s ease;
-    filter: invert(99%) sepia(1%) saturate(0%) hue-rotate(127deg) brightness(99%) contrast(98%);
-}
-
-header .navbar-menu .menu-btn {
-    cursor: pointer;
-    display: none;
 }
 
 header .navbar-main-menu li a img {
     margin: 0px 0px 0px 5px;
     padding: 0px;
     width: 12px;
-    transition: all 0.3s ease;
+    filter: none;
+}
+
+header .navbar-menu .navbar-main-menu li .active {
+    color: #f9f9f9;
+    background: #261247;
+}
+
+header .submenu-btn:hover img {
+    filter: invert(99%) sepia(1%) saturate(0%) hue-rotate(127deg) brightness(99%) contrast(98%);
+}
+
+header .active .submenu-btn img {
+    filter: invert(99%) sepia(1%) saturate(0%) hue-rotate(127deg) brightness(99%) contrast(98%);
+}
+
+header .submenu-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+header .submenu-btn:hover {
+    color: #f9f9f9;
 }
 
 header .navbar-menu input[type="checkbox"] {
     display: none;
 }
 
+header #catalogue:checked~.dropdown #catalogue-menu,
+header #about:checked~.dropdown #about-menu {
+    display: flex;
+}
+
+header #catalogue:checked~.dropdown #catalogue-btn img ,
+header #about:checked~.dropdown #about-btn  img {
+    transform: translate(0px, 0px) rotate(-180deg);
+    transition: all 0.33s ease;
+}
 
 /* CATALOGUE MENU  &  ABOUT MENU */
 
@@ -128,26 +147,30 @@ header .navbar-main-menu .dropdown .dropdown_menu {
     width: 180px;
     height: auto;
     border: none;
-    display: flex;
+    display: none;
     flex-direction: column;
     background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(4px) saturate(180%);
     animation: growDown 350ms ease-in-out forwards;
-    transform-origin: top center
+    transform-origin: top center;
+    list-style: none;
 }
 
 header .navbar-main-menu .dropdown .dropdown_menu li {
+    width: 100%;
     height: 40px;
     border-bottom: solid #64676b 1px;
 }
 
 header .navbar-main-menu .dropdown .dropdown_menu li .btn {
-    background: none;
-    color: #000000;
+    color: #f9f9f9;
 }
 
-header .navbar-main-menu .dropdown .dropdown_menu li:hover .btn {
+header .navbar-main-menu .dropdown .dropdown_menu li:hover {
     background: #000000;
+}
+
+header .navbar-main-menu .dropdown .dropdown_menu li:hover a {
     color: gold;
 }
 
@@ -180,8 +203,6 @@ header .navbar-main-menu .dropdown .dropdown_menu li:last-child {
 /* SESSION NAV */
 
 header .navbar-session {
-    padding: 0px;
-    margin: 0px;
     width: 100%;
     height: 100%;
     display: flex;
@@ -190,12 +211,9 @@ header .navbar-session {
 }
 
 header .navbar-session .navbar-session-menu {
-    padding: 0px;
-    margin: 0px;
     width: 100%;
     height: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1.5fr;
+    display: flex;
     justify-content: center;
     align-items: center;
     list-style: none;
@@ -210,9 +228,8 @@ header .navbar-session .navbar-session-menu li {
 }
 
 header .navbar-session .navbar-session-menu li a {
-    display: block;
+    display: flex;
     border-radius: 25px;
-    transition: all 0.3s ease;
 }
 
 header .navbar-session ul li a img {
@@ -221,10 +238,8 @@ header .navbar-session ul li a img {
     min-height: 25px;
     width: 50px;
     height: 50px;
-    padding: 0px;
-    margin: 0px;
     border-radius: 25px;
-    transition: all 0.2s ease;
+    transition: all 0.33s ease;
 }
 
 header .navbar-session .navbar-session-menu li p {
@@ -242,6 +257,7 @@ header .navbar-session .navbar-session-menu li a:hover img {
 header .navbar-session .navbar-session-menu li:hover a {
     outline-offset: 0.3vh;
     outline: solid #5B2BAE 2.5px;
+    transition: all 0.33s ease;
 }
 
 /* SEARCH NAV */
@@ -249,8 +265,6 @@ header .navbar-session .navbar-session-menu li:hover a {
 header .search-bar {
     width: 100%;
     height: 55px;
-    margin: 0px;
-    padding: 0px;
     display: flex;
     align-items: center;
     border-radius: 60px;
@@ -272,13 +286,15 @@ header .search-bar input {
     color: #000000;
 }
 
-header .search-bar:hover input, header .search-bar input:focus {
+header .search-bar:hover input,
+header .search-bar input:focus {
     outline-offset: 0.2vh;
     border: solid rgba(110, 108, 108, 0.623) 1.5px;
+    transition: all 0.33s ease;
 }
 
-::placeholder {
-    color: #000000;
+header .search-bar input::placeholder {
+    color: #261247;
 }
 
 header .search-bar button {
@@ -293,26 +309,24 @@ header .search-bar button {
     outline: none;
     cursor: pointer;
     background: #000000;
-    transition: all 0.3s ease;
 }
 
 header .search-bar button img {
     width: 20px;
     height: 20px;
+    transition: all 0.33s ease;
 }
 
 header .search-bar button:hover {
     background: #5B2BAE;
-    transition: all 0.3s ease;
     outline-offset: 0.3vh;
     outline: solid #5B2BAE 2.5px;
+    transition: all 0.33s ease;
 }
 
 /* MEDIA NAV */
 
 header .navbar-media {
-    padding: 0px;
-    margin: 0px;
     width: 100%;
     height: 100%;
     display: flex;
@@ -325,8 +339,7 @@ header .navbar-media .navbar-media-menu {
     margin: 0px;
     width: 100%;
     height: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     justify-content: center;
     align-items: center;
     list-style: none;
@@ -334,27 +347,21 @@ header .navbar-media .navbar-media-menu {
 }
 
 header .navbar-media .navbar-media-menu li {
-    display: block;
-    justify-content: center;
-    align-items: center;
     border-radius: 25px;
 }
 
 header .navbar-media .navbar-media-menu li a {
-    display: block;
+    display: flex;
     border-radius: 25px;
-    transition: all 0.3s ease;
 }
 
 header .navbar-media .navbar-media-menu li a img {
     display: block;
     width: 50px;
     height: 50px;
-    padding: 0px;
-    margin: 0px;
     border-radius: 25px;
     filter: invert(0%) sepia(1%) saturate(7499%) hue-rotate(319deg) brightness(94%) contrast(100%);
-    transition: all 0.2s ease;
+    transition: all 0.33s ease;
 }
 
 header .navbar-media .navbar-media-menu li a:hover img {
@@ -364,6 +371,7 @@ header .navbar-media .navbar-media-menu li a:hover img {
 header .navbar-media .navbar-media-menu li a:hover {
     outline-offset: 0.3vh;
     outline: solid #5B2BAE 2.5px;
+    transition: all 0.33s ease;
 }
 
 /* MAIN CONTAINER */
@@ -394,7 +402,7 @@ footer {
 
 /*---------------------------MEDIA QUERY-----------------------------*/
 
-/* RESPONSIVE HEADER 768*/
+/* RESPONSIVE HEADER 768PX */
 
 @media (max-width: 768px) {
 
@@ -416,7 +424,7 @@ footer {
         width: 100%;
         height: auto;
         margin: 0px;
-        padding:  0px;
+        padding: 0px;
     }
 
     header .box:nth-of-type(1) {
@@ -509,7 +517,6 @@ footer {
     }
 
     header .navbar-menu .menu-btn h3 {
-        transition: all 0.3s ease;
         font-size: 10px;
         margin: 0px;
         padding: 0px;
@@ -527,7 +534,6 @@ footer {
         height: 4px;
         background-color: #000000;
         margin: 5px 0px;
-        transition: all 0.3s ease;
         border-radius: 2.5px;
     }
 
@@ -546,7 +552,7 @@ footer {
     header #click:checked~ul {
         left: 0px;
     }
-    
+
 
     header .navbar-menu .navbar-main-menu li {
         height: 55px;
@@ -569,7 +575,6 @@ footer {
 
     header .navbar-menu .navbar-main-menu li .btn img {
         transform: translate(0px, 0px) rotate(-90deg);
-        transition: all 0.3s ease;
         filter: invert(98%) sepia(9%) saturate(130%) hue-rotate(254deg) brightness(113%) contrast(95%);
     }
 
@@ -577,17 +582,18 @@ footer {
         filter: invert(20%) sepia(73%) saturate(2194%) hue-rotate(248deg) brightness(87%) contrast(100%);
     }
 
-    header .navbar-menu .navbar-main-menu li .active img{
+    header .navbar-menu .navbar-main-menu li .active img {
         transform: translate(0, 0px) rotate(90deg);
     }
 
+
     /* CATALOGUE MENU */
 
-   
+
 
     /* ABOUT MENU */
 
-    
+
 
     /* SEARCH-BOX */
 
@@ -599,5 +605,3 @@ footer {
 }
 
 /* END RESPONSIVE HEADER 768 */
-
-
