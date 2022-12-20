@@ -8,7 +8,8 @@
 body {
     padding: 0;
     margin: 0;
-    background-color: crimson;
+    background-color: #f9f9f9;
+    overflow: scroll;
 }
 
 body div {
@@ -19,7 +20,7 @@ body div {
 header {
     width: 100%;
     height: 80px;
-    background-color: #DDDDDD;
+    background-color: #D8CFCE;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -37,7 +38,7 @@ header .box {
 /* LOGO-BOX */
 
 header #logo-box img {
-    filter: invert(10%) sepia(31%) saturate(7339%) hue-rotate(221deg) brightness(81%) contrast(102%);
+    filter: invert(15%) sepia(47%) saturate(1866%) hue-rotate(180deg) brightness(99%) contrast(86%);
 }
 
 /* MAIN NAVBAR */
@@ -77,13 +78,13 @@ header .navbar-menu .navbar-main-menu li a {
     align-items: center;
     width: 100%;
     height: 100%;
-    color: #000000;
+    color: #24AE99;
     text-decoration: none;
     font-size: 18px;
 }
 
 header .navbar-menu .navbar-main-menu li:hover {
-    background: #5B2BAE;
+    background: #24AE99;
 }
 
 header .navbar-menu .navbar-main-menu li:hover .btn {
@@ -99,7 +100,7 @@ header .navbar-main-menu li a img {
 
 header .navbar-menu .navbar-main-menu li .active {
     color: #f9f9f9;
-    background: #261247;
+    background: #153E5E;
 }
 
 header .submenu-btn:hover img {
@@ -147,10 +148,10 @@ header .navbar-main-menu .dropdown .dropdown_menu {
     top: 80px;
     width: 180px;
     height: auto;
-    border: none;
+    border: solid #153E5E 1px;
     display: none;
     flex-direction: column;
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.315);
     backdrop-filter: blur(4px) saturate(180%);
     animation: growDown 350ms ease-in-out forwards;
     transform-origin: top center;
@@ -160,19 +161,19 @@ header .navbar-main-menu .dropdown .dropdown_menu {
 header .navbar-main-menu .dropdown .dropdown_menu li {
     width: 100%;
     height: 40px;
-    border-bottom: solid #64676b 1px;
+    border-bottom: solid #153E5E 1px;
 }
 
 header .navbar-main-menu .dropdown .dropdown_menu li .btn {
-    color: #f9f9f9;
+    color: #24AE99;
 }
 
 header .navbar-main-menu .dropdown .dropdown_menu li:hover {
-    background: #000000;
+    background: #4FBFDD;
 }
 
-header .navbar-main-menu .dropdown .dropdown_menu li:hover a {
-    color: gold;
+header .navbar-main-menu .dropdown .dropdown_menu li:hover .btn {
+    color: #f9f9f9;
 }
 
 header .navbar-main-menu .dropdown .dropdown_menu li:last-child {
@@ -250,14 +251,14 @@ header .navbar-session .navbar-session-menu li p {
     width: fit-content;
     height: fit-content;
 }
-
-header .navbar-session .navbar-session-menu li a:hover img {
-    filter: invert(20%) sepia(73%) saturate(2194%) hue-rotate(248deg) brightness(87%) contrast(100%);
+header .navbar-session .navbar-session-menu li a img {
+    filter: invert(57%) sepia(8%) saturate(3918%) hue-rotate(75deg) brightness(80%) contrast(63%);
 }
+
 
 header .navbar-session .navbar-session-menu li:hover a {
     outline-offset: 0.3vh;
-    outline: solid #5B2BAE 2.5px;
+    outline: solid #438F4B 2.5px;
     transition: all 0.33s ease;
 }
 
@@ -364,14 +365,17 @@ header .navbar-media .navbar-media-menu li a img {
     filter: invert(0%) sepia(1%) saturate(7499%) hue-rotate(319deg) brightness(94%) contrast(100%);
     transition: all 0.33s ease;
 }
+header .navbar-media .navbar-media-menu li a img {
+    filter: invert(31%) sepia(31%) saturate(2781%) hue-rotate(342deg) brightness(90%) contrast(86%);
+}
 
 header .navbar-media .navbar-media-menu li a:hover img {
-    filter: invert(20%) sepia(73%) saturate(2194%) hue-rotate(248deg) brightness(87%) contrast(100%);
+
 }
 
 header .navbar-media .navbar-media-menu li a:hover {
     outline-offset: 0.3vh;
-    outline: solid #5B2BAE 2.5px;
+    outline: solid #AF442A  2.5px;
     transition: all 0.33s ease;
 }
 
@@ -438,7 +442,7 @@ footer {
     header .navbar-menu .menu-btn:hover .bar1,
     header .navbar-menu .menu-btn:hover .bar2,
     header .navbar-menu .menu-btn:hover .bar3 {
-        background-color: #5B2BAE;
+        background-color: #4FBFDD;
         transition: all 0.33s ease;
     }
 
@@ -450,7 +454,7 @@ footer {
     }
 
     header .navbar-menu .menu-btn:hover h3 {
-        color: #5B2BAE;
+        color: #4FBFDD;
         transition: all 0.33s ease;
     }
 
@@ -484,7 +488,7 @@ footer {
     header .navbar-menu .navbar-main-menu li {
         height: 65px;
         width: 100%;
-        border-bottom: solid #64676b 1px;
+        border-bottom: solid #153E5E 1px;
     }
 
     header .navbar-menu .navbar-main-menu li:last-child {
@@ -591,8 +595,8 @@ footer {
     /* MEDIA MENU */
 
     header .navbar-media {
-        border-top: solid #000000 2px;
-        border-bottom: solid #000000 2px;
+        border-top: solid #153E5E 2px;
+        border-bottom: solid #153E5E 2px;
     }
 
     header .navbar-media .navbar-media-menu {
@@ -604,8 +608,8 @@ footer {
     /* SESSION MENU */
 
     header .navbar-session {
-        border-top: solid #000000 2px;
-        border-bottom: solid #000000 2px;
+        border-top: solid #153E5E 2px;
+        border-bottom: solid #153E5E 2px;
     }
 
     header .navbar-session .navbar-session-menu {
@@ -632,7 +636,7 @@ footer {
         position: absolute;
         left: -100%;
         top: 128px;
-        background: #000000;
+        background: #070700;
     }
 
     header .navbar-menu .menu-btn {
@@ -643,7 +647,7 @@ footer {
     header .navbar-menu .menu-btn:hover .bar1,
     header .navbar-menu .menu-btn:hover .bar2,
     header .navbar-menu .menu-btn:hover .bar3 {
-        background-color: #5B2BAE;
+        background-color: #4FBFDD;
         transition: all 0.33s ease;
     }
 
@@ -651,11 +655,11 @@ footer {
         font-size: 12px;
         margin: 0px;
         padding: 0px;
-        color: #000000;
+        color: #153E5E;
     }
 
     header .navbar-menu .menu-btn:hover h3 {
-        color: #5B2BAE;
+        color: #4FBFDD;
         transition: all 0.33s ease;
     }
 
@@ -664,7 +668,7 @@ footer {
     header .navbar-menu .menu-btn .bar3 {
         width: 35px;
         height: 4px;
-        background-color: #000000;
+        background-color: #153E5E;
         margin: 5px 0px;
         border-radius: 2.5px;
     }
@@ -688,7 +692,7 @@ footer {
     header .navbar-menu .navbar-main-menu li {
         height: 65px;
         width: 100%;
-        border-bottom: solid #64676b 1px;
+        border-bottom: solid #153E5E 1px;
         overflow: visible;
     }
 
