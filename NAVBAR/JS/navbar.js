@@ -40,5 +40,18 @@ function focusMenuOption() {
   }
 }
 
+function displaySearch () {
+  var bar = document.getElementsByClassName("search-bar");
+  if(bar.length > 0) {
+    if( bar[0].style.display == "flex") {
+      bar[0].style.display="none";
+    } else {
+      bar[0].style.display="flex";
+    }
+    
+  }
+  
+}
+
 
 

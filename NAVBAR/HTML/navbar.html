@@ -6,9 +6,13 @@
     <!--responsive tag-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!--Title-->
+    <link rel="icon" href="../IMAGENES/logo.png" >
     <title>Navbar</title>
 
+    <!--Stylesheets-->
     <link rel="stylesheet" type="text/css" href="../CSS/navbar.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/slider.css">
     <script src="../JS/navbar.js"></script>
 </head>
 
@@ -93,16 +97,18 @@
 
         <!--SEARCH-->
         <div class="box" id="search-box">
+            <button type="button" id="button-header"  onclick="displaySearch()"> <img src="../IMAGENES/search.png" alt=""> </button>
+           
             <form action="https://www.google.com/search" method="get" class="search-bar">
                 <input type="text" placeholder="Buscar articulo..">
-                <button type="submit"> <img src="../IMAGENES/search.png" alt=""> </button>
-            </form>
+                <button type="submit" id="button-bar"> <img src="../IMAGENES/search.png" alt=""> </button>
+                 </form>
         </div>
 
         <!--MEDIA-->
         <div class="box" id="media-box">
             <nav class="navbar-media" id="media-menu">
-                <ul class="navbar-media-menu" id="media-navbar">
+                <ul class="navbar-media-menu" id="media-navbar" style="display:flex;">
                     <li><a class="nav-link" href="#"><img src="../IMAGENES/facebook_logo.png" alt=""></a></li>
                     <li><a class="nav-link" href="#"><img src="../IMAGENES/insta_logo.png" alt=""></a></li>
                     <li><a class="nav-link" href="#"><img src="../IMAGENES/whatsapp_logo.png" alt=""></a></li>
@@ -112,9 +118,41 @@
     </header>
 
     <!--MAIN-->
-    <main class="main-container" id="main">
-    </main>
+     <!--MAIN-->
+     <main class="main-container" id="main">
 
+        <!--SLIDER MAIN CONTAINER-->
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slides">
+                    <div id="slides__1" class="slide">
+                        <a class="slide__prev" href="#slides__4" title="Next"></a>
+                        <a class="slide__next" href="#slides__2" title="Next"></a>
+                    </div>
+                    <div id="slides__2" class="slide">
+                        <a class="slide__prev" href="#slides__1" title="Prev"></a>
+                        <a class="slide__next" href="#slides__3" title="Next"></a>
+                    </div>
+                    <div id="slides__3" class="slide">
+                        <a class="slide__prev" href="#slides__2" title="Prev"></a>
+                        <a class="slide__next" href="#slides__4" title="Next"></a>
+                    </div>
+                    <div id="slides__4" class="slide">
+                        <a class="slide__prev" href="#slides__3" title="Prev"></a>
+                        <a class="slide__next" href="#slides__1" title="Prev"></a>
+                    </div>
+                </div>
+                <div class="slider__nav">
+                    <a class="slider__navlink" href="#slides__1"></a>
+                    <a class="slider__navlink" href="#slides__2"></a>
+                    <a class="slider__navlink" href="#slides__3"></a>
+                    <a class="slider__navlink" href="#slides__4"></a>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
     <!--FOOTER-->
     <footer class="footer-container" id="footer">
     </footer>

@@ -1,15 +1,16 @@
-html,
-body, main {
-  height: 100%;
-  margin: 0px;
+ main {
+    width: 100%;
+    height: auto;
+    background-color: #D8CFCE;
 }
 
 .slider-container {
-  background: linear-gradient(
+  /* background: linear-gradient(
     149deg,
     rgba(7, 190, 236, 0.418) 0%,
     rgba(0, 26, 255, 0.993) 100%
-  );
+  ); */
+  background: #f9f9f9;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,7 +34,6 @@ body, main {
   position: relative;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
-  
 }
 
 .slide:nth-of-type(even) {
@@ -128,7 +128,7 @@ a.slide__next,
   position: absolute;
   top: 10px;
   left: 10px;
-  z-index: 999;
+  z-index: 1;
   color: #000;
   background: white;
   padding: 10px 20px;
