@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<HTML lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <!--responsive tag-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--browser tab icon & title-->
+    <link rel="icon" href="../IMAGENES/logo.png">
+    <title> Slider </title>
+
+    <link rel="stylesheet" type="text/css" href="../CSS/carousel.css">
+    <script src="../JS/slider.js"></script>
+</head>
+
+<body>
+
+
+    <!--MAIN-->
+    <main class="main-container" id="main">
+
+        <!--SLIDER MAIN CONTAINER-->
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slides">
+                    <div id="slides__1" class="slide">
+                        <a class="slide__prev" href="#slides__4" title="Next"></a>
+                            <div class ="card" id="card__1">
+                                <div class="card-head">
+                                    <span class="new">Articulo nuevo</span>
+                                    <img src="../imagenes/RGB-Ram-Transparent.png" class="product-img" alt="" width="100px">
+                                    <h2 class="description">Ram Tridentz 16 GB-RGB DDR4 3200</h2>
+                                    <p class="price">₡9.999 <i>iva incluido</i> </p>
+                                </div>
+                                <div class="card-body">
+                                    <div class="quantity-box" id="quantity-box__1">
+                                        <button id="less">-</button>
+                                        <input type="text" id="quantity1" value="cant">
+                                        <button id="more">+</button>
+                                    </div>
+                                   
+                                    <button id="agregar">Añadir al carrito</button>
+                                </div>
+                            </div>
+
+                            <div class ="card" id="card__2">
+                                <div class="card-head">
+                                    <span class="new">Articulo nuevo</span>
+                                    <img src="../imagenes/RGB-Ram-Transparent.png" class="product-img" alt=""  width="100px">
+                                    <h2 class="description">Ram Tridentz 16 GB-RGB DDR4 3200</h2>
+                                    <p class="price">₡9.999 <i>iva incluido</i></p>
+                                </div>
+                                <div class="card-body">
+                                    <div class="quantity-box" id="quantity-box__1">
+                                        <button id="less">-</button>
+                                        <input type="text" id="quantity1" value="cant">
+                                        <button id="more">+</button>
+                                    </div>
+                                    <button id="agregar">Añadir al carrito</button>
+                                </div>
+                            </div>
+
+                            <div class ="card" id="card__3">
+                                <div class="card-head">
+                                    <span class="new">Articulo nuevo</span>
+                                    <img src="../imagenes/RGB-Ram-Transparent.png" class="product-img" alt=""  width="100px">
+                                    <h2 class="description">Ram Tridentz 16 GB-RGB DDR4 3200</h2>
+                                    <p class="price">₡9.999<i>iva incluido</i></p>
+                                </div>
+                                <div class="card-body">
+                                    <div class="quantity-box" id="quantity-box__1">
+                                        <button id="less">-</button>
+                                        <input type="text" id="quantity1" value="cant">
+                                        <button id="more">+</button>
+                                    </div>
+                                    <button id="agregar">Añadir al carrito</button>
+                                </div>
+                            </div>
+                            <div class ="card" id="card__4">
+                                <div class="card-head">
+                                    <span class="new">Articulo nuevo</span>
+                                    <img src="../imagenes/RGB-Ram-Transparent.png" class="product-img" alt=""  width="100px">
+                                    <h2 class="description">Ram Tridentz 16 GB-RGB DDR4 3200</h2>
+                                    <p class="price">₡9.999<i>iva incluido</i></p>
+                                </div>
+                                <div class="card-body">
+                                    <div class="quantity-box" id="quantity-box__1">
+                                        <button id="less">-</button>
+                                        <input type="text" id="quantity1" value="cant">
+                                        <button id="more">+</button>
+                                    </div>
+                                    <button id="agregar">Añadir al carrito</button>
+                                </div>
+                            </div>
+
+                            <div class ="card" id="card__5">
+                                <div class="card-head">
+                                    <span class="new">Articulo nuevo</span>
+                                    <img src="../imagenes/RGB-Ram-Transparent.png" class="product-img" alt=""  width="100px">
+                                    <h2 class="description">Ram Tridentz 16 GB-RGB DDR4 3200</h2>
+                                    <p class="price">₡9.999<i>iva incluido</i></p>
+                                </div>
+                                <div class="card-body">
+                                    <div class="quantity-box" id="quantity-box__1">
+                                        <button id="less">-</button>
+                                        <input type="text" id="quantity1" value="cant">
+                                        <button id="more">+</button>
+                                    </div>
+                                    <button id="agregar">Añadir al carrito</button>
+                                </div>
+                            </div>
+                        <a class="slide__next" href="#slides__2" title="Next"></a>
+                    </div>
+                    <div id="slides__2" class="slide">
+                        <a class="slide__prev" href="#slides__1" title="Prev"></a>
+                        <a class="slide__next" href="#slides__3" title="Next"></a>
+                    </div>
+                    <div id="slides__3" class="slide">
+                        <a class="slide__prev" href="#slides__2" title="Prev"></a>
+                        <a class="slide__next" href="#slides__4" title="Next"></a>
+                    </div>
+                    <div id="slides__4" class="slide">
+                        <a class="slide__prev" href="#slides__3" title="Prev"></a>
+                        <a class="slide__next" href="#slides__1" title="Prev"></a>
+                    </div>
+                </div>
+                <div class="slider__nav">
+                    <a class="slider__navlink" href="#slides__1"></a>
+                    <a class="slider__navlink" href="#slides__2"></a>
+                    <a class="slider__navlink" href="#slides__3"></a>
+                    <a class="slider__navlink" href="#slides__4"></a>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+</body>
+
+</HTML>
