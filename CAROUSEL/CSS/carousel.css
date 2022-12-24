@@ -165,23 +165,37 @@ iframe[sandbox] .read-article{
     height: 300px;
     
   }
-}
+}*/
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width:900px) {
 
-  .slider {
+  .slider-container {
     height: auto;
+    display: flex;
+    width: 100%;
+    
+  }
+  .slider {
+    display: flex;
+    width: fit-content;
+    height: 2080px;
+    
   }
 
   .slides {
     overflow-x: hidden;
+    display: flex;
+    
   }
 
   .slide {
-    height: 200px;
+        
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr) ;
+    row-gap: 20px;
     
   }  
-}*/
+}
 
 /* CARD */
 
@@ -204,104 +218,125 @@ iframe[sandbox] .read-article{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 320px;
+  height: 350px;
 }
 
 .card .new{
   font-family: "Lucida console", "Currier new", monospace;
-  font-size: medium;
+  font-size: 14px;
   background: lightseagreen;
-  color: #f9f9f9;
-  width: 100%;
+  color: lightgreen;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
-  height: 40px;
+  top: 5px;
+  left: -60px;
+  z-index: 2;
+  display: none;
 }
 
 .card .card-head img {
   display: block;
-  height: 100%;
-  width: 165px;
+  width: 200px;
+  height: 230px;
 }
 
 .card .card-head .description {
-  font-size: 16px;
+  font-size: 12px;
   text-align: left;
   padding-left: 8px;
-  text-decoration: underline;
   width: 100%;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  bottom: -15px;
   color: darkblue;
 }
 
 .card .price {
   font-family: "Lucida console", "Currier new", monospace;
-  font-size: large;
+  font-size: 14px;
   background: dodgerblue;
   color: #f9f9f9;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 55px;
+  height: 40px;
+  position: relative;
 }
 
-.card .price i{
+.card .price i {
   font-family: "Lucida console", "Currier new", monospace;
-  font-size: small;
+  font-size: 10px;
   color: darkgray;
-  margin-left: 10px;
+  margin-left: 8px;
 }
 
 .card .card-body {
-  display:grid;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 70px;
-  gap: 5px;
-}
-
-.card .card-body .quantity-box {
+  display: grid;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  gap: 8px;
+  height: 50px;
+  position: relative;
+  gap: 5px;
+  top: -7px;
+}
+
+.card .card-body .quantity-box {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  align-items: center;
+  width: 55px;
+  height: 50px;
+  position: relative;
+  gap: 2.5px;
 }
 
 .card .card-body input {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 80px;
-  height: 18px;
+  width: 45px;
+  height: 10px;
   text-align: center;
 }
 
 .card .card-body button {
   cursor: pointer;
   font-family: "Lucida Console", "Courier New", monospace;
-  width: 25px;
-  height: 22px;
+  width: 52px;
+  height: 12px;
   background: darkgray;
   color: brown;
   border: solid transparent 1px;
   border-radius: 2.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card .card-body #agregar {
-  width: 155px;
-  height: 45px;
+  width: 150px;
+  height: 50px;
   background: darkslateblue;
-  color: aquamarine;
-  
+  color: azure;
+  font-size: 11px;
+}
+
+.card .card-body #agregar:hover {
+  background: purple;
+  color: #f9f9f9;
+  position: relative;
+  border-bottom: solid black 5.5px;
+  border-left: solid black 4.5px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5.5px;
 }
