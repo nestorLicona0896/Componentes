@@ -40,6 +40,8 @@ function focusMenuOption() {
   }
 }
 
+/* FUNCTION TO DISPLAY SEARCH BAR */
+
 function displaySearch () {
   var bar = document.getElementsByClassName("search-bar");
   if(bar.length > 0) {
@@ -48,9 +50,7 @@ function displaySearch () {
     } else {
       bar[0].style.display="flex";
     }
-    
   }
-  
 }
 
 

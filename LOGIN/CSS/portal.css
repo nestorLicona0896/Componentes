@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;*/
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #f9f9f9;
+    overflow: scroll;
+}
+
+body div {
+    float: none;
+}
+
+/* MAIN  */
+
+main {
+    width: 100%;
+    height: 800px;
+    background-color: #D8CFCE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* LOGIN */
+
+main #portal-box {
+    margin: 0px;
+    padding: 0px;
+    width: 400px;
+    height: 600px;
+    border-radius: 5.5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid #5B2BAE 1px;
+    /*box-shadow: -8.5px 8.5px 2.5px 1px #5B2BAE;*/
+    background: url(../IMAGENES/portal_bg.jpg);
+
+}
+
+main #portal-box #background-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: brightness(68%);
+}
+
+main #portal-box #background-container #logo {
+    position: relative;
+    width: 155px;
+    height: 65px;
+    display: block;
+    filter: invert(98%) sepia(0%) saturate(108%) hue-rotate(290deg) brightness(113%) contrast(95%);
+}
+
+main #portal-box .portal-form {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background: rgba(255, 255, 255, 0.60);
+    backdrop-filter: blur(2px) saturate(15%);
+    transition: all 0.33s ease;
+    gap: 25px;
+    position: relative;
+    top: 65px;
+    padding: 0px 2px 0px 2px;
+    border-radius: 5px;
+}
+
+main #portal-box h1 {
+    color: #f9f9f9;
+    position: relative;
+    text-shadow: -3px 3.5px 2.5px #070700;
+}
+
+main #portal-box .portal-form h2 {
+    position: relative;
+    color: #5B2BAE;    
+    align-self: center;
+    text-align: center;
+}
+
+main #portal-box .portal-form button {
+    display: block;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    width: 85%;
+    height: 50px;
+    border-radius: 5.5px;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+    background: royalblue;
+    border: none;
+    color: #f9f9f9;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+    align-self: center;
+}
+
+main #portal-box .portal-form #button-login:hover, main #portal-box .portal-form #button-signup:hover {
+    background: #f9f9f9;
+    outline-offset: 0.3vh;
+    outline: solid #5B2BAE 2.5px;
+    transition: all 0.33s ease;
+    color: #5B2BAE;
+    border: none;
+}
+
+main #portal-box .portal-form a { 
+    text-decoration: none;
+}
+
+main #portal-box .portal-form .spacer {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    gap: 5px;
+    align-self: center;
+    position: relative;
+    top: 15px;
+}
+
+main #portal-box .portal-form .spacer div {
+    width: 100px;
+    height: 0.65px;
+    background: #070700;
+}
+
+main #portal-box .portal-form .spacer p {
+    color: #070700;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+main #portal-box .portal-form .login-media {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    gap: 25px;
+    align-self: center;
+    position: relative;
+    top: 5px;
+}
+
+main #portal-box .portal-form .login-media a { 
+    text-decoration: none;
+    border-radius: 25px;
+}
+
+main #portal-box .portal-form .login-media img {
+    display: block;
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    filter: brightness(0%);
+}
+
+main #portal-box .portal-form .login-media a:hover {
+    outline-offset: 0.5vh;
+    outline: solid #5B2BAE 2.5px;
+    transition: all 0.33s ease;
+}
+
+main #portal-box .portal-form .login-media a:hover img {
+    filter: none;
+}
+
+/*---------------------------MEDIA QUERY-----------------------------*/
+
+/* RESPONSIVE 1200PX */
+
+@media (max-width: 1200px) {
+
+
+}
+
+/* END RESPONSIVE 1200 */
+
+/* RESPONSIVE 980PX */
+
+@media (max-width: 900px) {
+
+   
+}
+
+/* END RESPONSIVE 980 */
+
+/* RESPONSIVE 768PX */
+
+@media (max-width: 768px) {
+
+
+}
+/* END RESPONSIVE main 768 */
+
+
+

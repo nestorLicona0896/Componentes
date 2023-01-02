@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<HTML lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <!--responsive tag-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <!--Title-->
+    <link rel="icon" href="../IMAGENES/logo.png" >
+    <title>LOGIN</title>
+
+    <!--Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="../CSS/login.css">
+    <script src="../JS/login.js"></script>
+</head>
+
+<body>
+
+    <!--MAIN-->
+     <main class="main-container" id="main">
+
+        <!--LOGIN-->
+        <div class="box" id="login-box">
+
+            <form action="" method="get" class="login-form">
+                <h1>Welcome!</h1>
+                <h3>Sign in to continue</h3> 
+                <input type="email" placeholder="Email" id="login_email" >
+                <h6 class="error-message" id="">Wrong email address</h6>
+                <input type="password" placeholder="Password" id="login_password">
+                <h6 class="error-message" id="password-error-message1">Password must contain 8 character minimum and at least one number and one special character </h6>
+                <button type="submit" id="button-login"> Login </button>
+
+                <div class="password-option-container" id="password-option-container">
+                    <button type="url" id="button-forgot"><a href="#">Forgot password?</a></button>
+                
+                    <div class="remember-box">
+                        <input type="checkbox" title="remember account" value="no" id="remember-me" >
+                        <label for="remember-me" id="remember-label">Remember me?</label>
+                    </div>
+                </div>
+                
+
+                <div class="spacer">
+                    <div></div><p>or</p><div></div>
+                </div>
+                
+                <div class="login-media" id="login-media-box">
+                    <a class="social-media-link" href="#"><img src="../IMAGENES/facebook.png"></a>
+                    <a class="social-media-link" href="#"><img src="../IMAGENES/google.png"></a>
+                    <a class="social-media-link" href="#"><img src="../IMAGENES/twitter.png"></a>
+                    <a class="social-media-link" href="#"><img src="../IMAGENES/github.png"></a>
+                </div>
+               
+                <div class="signup-container" id="sign-up-container">
+                    <h4>Don't have an account? </h4>
+                    <button type="url" id="button-signup"><a href="#">Sign Up</a></button>
+                </div>
+                
+            </form>
+
+        </div>
+
+    </main>
+
+</body>
+
+</HTML>
