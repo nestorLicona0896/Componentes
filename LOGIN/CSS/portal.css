@@ -4,108 +4,119 @@
     box-sizing: border-box;
     /*font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;*/
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    
 }
 
 body {
     padding: 0;
     margin: 0;
     background-color: #f9f9f9;
-    overflow: scroll;
 }
 
 body div {
     float: none;
 }
 
+/* HEADER */
+
+header {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header #logo {
+    display: block;
+    width: 150px;
+    height: 100%;
+    margin: 0px;
+    padding: 5px 0px 5px 0px;
+    object-fit: contain;
+}
+
+header .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    right: 15px;
+}
+
+header .button .bar {
+    margin: 0px;
+    padding: 0px;
+    width: 25px;
+    height: 2.5px;
+    background-color: #696969;
+    border-radius: 2.5px;
+    cursor: pointer;
+}
+
+header .button #bar-1 {
+    transform:  translateX(13px) rotate(45deg);
+    
+}
+
+header .button #bar-2 {
+    transform:  translateX(-13px) rotate(-45deg);
+}
+
+
 /* MAIN  */
 
 main {
-    width: 100%;
-    height: 800px;
-    background-color: #D8CFCE;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* LOGIN */
-
-main #portal-box {
-    margin: 0px;
-    padding: 0px;
-    width: 400px;
-    height: 600px;
-    border-radius: 5.5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: solid #5B2BAE 1px;
-    /*box-shadow: -8.5px 8.5px 2.5px 1px #5B2BAE;*/
-    background: url(../IMAGENES/portal_bg.jpg);
-
-}
-
-main #portal-box #background-container {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    backdrop-filter: brightness(68%);
 }
 
-main #portal-box #background-container #logo {
-    position: relative;
-    width: 155px;
-    height: 65px;
-    display: block;
-    filter: invert(98%) sepia(0%) saturate(108%) hue-rotate(290deg) brightness(113%) contrast(95%);
-}
+/* LOGIN */
 
-main #portal-box .portal-form {
-    width: 300px;
-    height: 300px;
+
+main .portal-form {
+    width: 500px;
+    height: 450px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    background: rgba(255, 255, 255, 0.60);
+    align-items: center;
+    background: rgba(255, 255, 255, 0.55);
     backdrop-filter: blur(2px) saturate(15%);
     transition: all 0.33s ease;
-    gap: 25px;
-    position: relative;
-    top: 65px;
-    padding: 0px 2px 0px 2px;
-    border-radius: 5px;
+    gap: 35px;
+    border-radius: 15px;
+    border: solid #d3d3d3 1px;
+    box-shadow: -10.5px 12px 22px 5.5px #d3d3d3;
 }
 
-main #portal-box h1 {
-    color: #f9f9f9;
-    position: relative;
-    text-shadow: -3px 3.5px 2.5px #070700;
+main .portal-form #user-icon {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    object-fit: contain;
+    width: 85px;
+    filter: opacity(0.55);
 }
 
-main #portal-box .portal-form h2 {
-    position: relative;
-    color: #5B2BAE;    
-    align-self: center;
-    text-align: center;
-}
-
-main #portal-box .portal-form button {
+main .portal-form button {
     display: block;
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
-    width: 85%;
-    height: 50px;
+    width: 400px;
+    height: 55px;
     border-radius: 5.5px;
     background: transparent;
     outline: none;
     cursor: pointer;
-    background: royalblue;
+    background: #50e3c2;
     border: none;
     color: #f9f9f9;
     font-size: 20px;
@@ -114,20 +125,22 @@ main #portal-box .portal-form button {
     align-self: center;
 }
 
-main #portal-box .portal-form #button-login:hover, main #portal-box .portal-form #button-signup:hover {
+main .portal-form #button-login:hover, main .portal-form #button-signup:hover {
     background: #f9f9f9;
     outline-offset: 0.3vh;
-    outline: solid #5B2BAE 2.5px;
+    outline: solid #656d78 2.5px;
     transition: all 0.33s ease;
-    color: #5B2BAE;
-    border: none;
+    color: #50e3c2;
+    box-shadow: -5px 5px 12px 4px #d3d3d3;
+    transition: all 0.33s ease;
+    transform: translateY(-2.5px);
 }
 
-main #portal-box .portal-form a { 
+main .portal-form a { 
     text-decoration: none;
 }
 
-main #portal-box .portal-form .spacer {
+main .portal-form .spacer {
     width: 90%;
     display: flex;
     justify-content: center;
@@ -136,38 +149,47 @@ main #portal-box .portal-form .spacer {
     gap: 5px;
     align-self: center;
     position: relative;
-    top: 15px;
+    top: 10px;
 }
 
-main #portal-box .portal-form .spacer div {
-    width: 100px;
+main .portal-form .spacer div {
+    width: 150px;
     height: 0.65px;
-    background: #070700;
+    background: #656d78;
 }
 
-main #portal-box .portal-form .spacer p {
-    color: #070700;
+main .portal-form .spacer p {
+    color: #656d78;
     font-size: 16px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     
 }
 
-main #portal-box .portal-form .login-media {
+main .portal-form .login-media {
     width: fit-content;
     height: fit-content;
     display: flex;
-    gap: 25px;
+    gap: 35px;
     align-self: center;
     position: relative;
-    top: 5px;
 }
 
-main #portal-box .portal-form .login-media a { 
+main .portal-form .login-media button{
+    width: 55px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #d1e1e8;
+    
+}
+
+main .portal-form .login-media a { 
     text-decoration: none;
     border-radius: 25px;
 }
 
-main #portal-box .portal-form .login-media img {
+main .portal-form .login-media img {
     display: block;
     width: 30px;
     height: 30px;
@@ -175,14 +197,46 @@ main #portal-box .portal-form .login-media img {
     filter: brightness(0%);
 }
 
-main #portal-box .portal-form .login-media a:hover {
-    outline-offset: 0.5vh;
-    outline: solid #5B2BAE 2.5px;
+main .portal-form .login-media button:hover {
+    box-shadow: -5px 5px 12px 4px #d3d3d3;
+    background-color: azure;
+    border: solid #d3d3d3 0.5px;
     transition: all 0.33s ease;
+    transform: translateY(-2.5px);
 }
 
-main #portal-box .portal-form .login-media a:hover img {
+main .portal-form .login-media button:hover a img {
     filter: none;
+}
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    height: auto;
+    margin: 0px 0px 10px 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size: 14px;
+    color: #696969;
+    position: fixed;
+    bottom: 10px;
+    z-index: -1;
+}
+
+footer a {
+    color: #696969;
+
+}
+
+footer a:hover {
+    color: #48cfad;
+
 }
 
 /*---------------------------MEDIA QUERY-----------------------------*/
@@ -208,6 +262,16 @@ main #portal-box .portal-form .login-media a:hover img {
 /* RESPONSIVE 768PX */
 
 @media (max-width: 768px) {
+
+    main .portal-form{
+        border: none;
+        box-shadow: none;
+    }
+
+    header .button {
+
+        right: 35px;
+    }
 
 
 }

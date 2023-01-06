@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
     <!--Title-->
-    <link rel="icon" href="../IMAGENES/logo.png" >
-    <title>PORTAL</title>
+    <link rel="icon" href="../IMAGENES/logo.png">
+    <title>Portal</title>
 
     <!--Stylesheets-->
     <link rel="stylesheet" type="text/css" href="../CSS/portal.css">
@@ -17,35 +17,53 @@
 
 <body>
 
+    <!--HEADER -->
+    <header class="header-container">
+        <img src="../IMAGENES/logo.png" alt="" id="logo">
+        <div class="button" id="close-button">
+            <div class="bar" id="bar-1"></div>
+            <div class="bar" id="bar-2"></div>
+        </div>
+    </header>
+
     <!--MAIN-->
-     <main class="main-container" id="main">
+    <main class="main-container">
 
         <!--LOGIN-->
-        <div class="box" id="portal-box">
-            <div  id="background-container">
-                <img src="../IMAGENES/logo.png" alt="" id="logo">
-                <h1>Un Name</h1>
-                
-                <form action="" method="get" class="portal-form">                    
-                    
-                    <button type="button" id="button-signup"> Sign Up </button>
-                    <button type="button" id="button-login"> Login </button>
-                    
-                    <div class="spacer">
-                        <div></div><p>or use</p><div></div>
-                    </div>
-                    
-                    <div class="login-media" id="login-media-box">
-                        <a class="social-media-link" href="#"><img src="../IMAGENES/google.png"></a>
-                        <a class="social-media-link" href="#"><img src="../IMAGENES/facebook.png"></a>
-                        <a class="social-media-link" href="#"><img src="../IMAGENES/twitter.png"></a>
-                        <a class="social-media-link" href="#"><img src="../IMAGENES/github.png"></a>
-                    </div>
-                </form>
-            </div>    
-        </div>
+        <form action="" method="get" class="portal-form">
+            <img src="../IMAGENES/user.png" alt="" id="user-icon">
+            <button type="button" id="button-signup"> Registrarse </button>
+            <button type="button" id="button-login"> Iniciar sesion </button>
 
+            <div class="spacer">
+                <div></div>
+                <p>or use</p>
+                <div></div>
+            </div>
+
+            <div class="login-media" id="login-media-box">
+                <button>
+                    <a class="social-media-link" href="#"><img src="../IMAGENES/google.png"></a>
+                </button>
+                <button>
+                    <a class="social-media-link" href="#"><img src="../IMAGENES/facebook.png"></a>
+                </button>
+                <button>
+                    <a class="social-media-link" href="#"><img src="../IMAGENES/twitter.png"></a>
+                </button>
+                <button>
+                    <a class="social-media-link" href="#"><img src="../IMAGENES/github.png"></a>
+                </button>
+            </div>
+        </form>
+        
     </main>
+
+    <!--FOOTER-->
+    <footer>
+        <p>© 2023 <a href="#">Web Market</a>. Todos los derechos reservados. <a href="#">Poliza de cookies</a> , <a
+                href="#">Privacidad</a> y <a href="#">Terminos</a>.</p>
+    </footer>
 
 </body>
 

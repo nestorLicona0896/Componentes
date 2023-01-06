@@ -9,265 +9,206 @@ body {
     padding: 0;
     margin: 0;
     background-color: #f9f9f9;
-    overflow: scroll;
 }
 
 body div {
     float: none;
 }
 
+/* HEADER */
+
+header {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header #logo {
+    display: block;
+    width: 150px;
+    height: 100%;
+    margin: 0px;
+    padding: 5px 0px 5px 0px;
+    object-fit: contain;
+}
+
+header .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    right: 15px;
+}
+
+header .button .bar {
+    margin: 0px;
+    padding: 0px;
+    width: 25px;
+    height: 2.5px;
+    background-color: #696969;
+    border-radius: 2.5px;
+    cursor: pointer;
+}
+
+header .button #bar-1 {
+    transform:  translateX(13px) rotate(45deg);
+    
+}
+
+header .button #bar-2 {
+    transform:  translateX(-13px) rotate(-45deg);
+}
+
 /* MAIN  */
 
 main {
     width: 100%;
-    height: 800px;
-    background-color: #D8CFCE;
+    height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 /* LOGIN */
 
-main #login-box {
-    margin: 0px;
-    padding: 0px;
-    width: 400px;
-    height: 600px;
-    background: #f9f9f9;
-    border: solid #f9f9f9 1px;
-    border-radius: 2.5px;
+main .login-form {
+    width: 500px;
+    height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid #5B2BAE 1px;
-    box-shadow: -8.5px 8.5px 2.5px 1px lightseagreen;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(2px) saturate(15%);
+    transition: all 0.33s ease;
+    border-radius: 15px;
+    border: solid #d3d3d3 1px;
+    box-shadow: -10.5px 12px 22px 5.5px #d3d3d3;
 }
 
-main #login-box .login-form {
-    width: 300px;
-    height: 500px;
+main .login-form .container {
+    width: 400px;
+    height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    border-radius: 2.5px;
-    background: rgba(255, 255, 255, 0.55);
-    backdrop-filter: blur(4px) saturate(180%);
-    transition: all 0.33s ease;
-    gap: 10px;
-    color: #5B2BAE;
+    gap: 18px;
 }
 
-main #login-box .login-form h1 {
-    color: #261247;
+main .login-form .container h1 {
     letter-spacing: 3.5px;
-    position: relative;
-    top: -25px;
+    color: #50e3c2;
 }
 
-main #login-box .login-form h3 {
+main .login-form .container h3 {
+    color: #656d78;
     position: relative;
-    top: -35px;
-    color: lightslategrey;    
+    top: -12px;
 }
 
-main #login-box .login-form h6 {
+main .login-form .container h5:last-child {
+    color: #070707;
     position: relative;
-    top: 2.5px;
-    color: #5B2BAE;
-    text-align: justify;
-    padding: 2px 0px 2px 0px;
-    opacity: 0.0;
+    top: 50px;
 }
 
-main #login-box .login-form input {
-    margin: 0px 0px 0px 0px;
-    padding: 0px 5px 0px 8px;
-    height: 45px;
-    width: 100%;
-    border: solid transparent 1.5px;
+main .login-form .container #label-email,  main .login-form .container #label-password{
+    color: #656d78;
+    position: relative;
+    top: 10px;
+}
+
+main .login-form .container .password-option{
+    display: flex;
+    flex-direction: row;
+}
+
+main .login-form .container .password-option #label-remember {
+    color: #656d78;
+    position: absolute;
+    right: 50px;
+
+}
+
+main .login-form .container .password-option #label-remember:hover,
+main .login-form .container .password-option input[type=checkbox]:hover  {
+    color: #50e3c2;
+    cursor: pointer;
+}
+
+
+main .login-form .container input[type=email], main .login-form .container input[type=password] {
+    margin: 0px;
+    padding: 0px 5px 0px 12px;
+    width: 400px;
+    height: 55px;
     border-radius: 2.5px;
     background: transparent;
     outline: none;
     font-size: 16px;
-    color: #070700;
-    border: solid rgba(110, 108, 108, 0.623) 1.5px;
+    border: 1px solid #ccc;
     letter-spacing: 1.2px;
-    position: relative;
-    top: 8px;
 }
 
 
-main #login-box .login-form input:hover ,
-main #login-box .login-form input:focus {
-    outline-offset: 0.2vh;
-    border: solid rgba(110, 108, 108, 0.623) 1.5px;
+main .login-form .container input:hover ,
+main .login-form .container input:focus {
+    border: solid #50e3c2 0.2px;
+    background: #f9f9f9;
     transition: all 0.33s ease;
-    outline: solid #261247 0.2px;
-    background: #dddddd;
 }
 
-main #login-box .login-form input::placeholder {
-    color: #261247;
+main .login-form .container input::placeholder {
+    opacity: 85%;
 }
 
 
-main #login-box .login-form #button-login {
+main .login-form .container #button-login {
     display: block;
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
-    border: 0;
-    width: 100%;
-    height: 45px;
-    border-radius: 2.5px;
+    width: 400px;
+    height: 55px;
+    border-radius: 5.5px;
     background: transparent;
     outline: none;
     cursor: pointer;
-    background: #261247;
+    background: #50e3c2;
+    border: none;
     color: #f9f9f9;
-    font-size: 18px;
-    font-weight: bolder;
-    letter-spacing: 3.5px;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     position: relative;
-}
-
-main #login-box .login-form #button-login:hover {
-    background: #5B2BAE;
-    outline-offset: 0.3vh;
-    outline: solid #5B2BAE 2.5px;
-    transition: all 0.33s ease;
-}
-
-main #login-box .login-form  a { 
-    text-decoration: none;
-}
-
-main #login-box .login-form #button-forgot {
-    display: block;
-    border: 0;
-    width: fit-content;
-    height: fit-content;
-    background: transparent;
-    outline: none;
-    position: relative;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-main #login-box .login-form .remember-box {
-    width: auto;
-    height: 15px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 0px;
-    padding: 0px;
-    gap: 5px;
-}
-
-main #login-box .login-form .remember-box:hover #remember-label{
-    color: #5B2BAE;
-}
-
-main #login-box .login-form #remember-me {
-    width: 15px;
-    height: 15px;
-    margin: 0px;
-    padding: 0px;
-    cursor: pointer;
-    border: none;
-    position: sticky;
-}
-
-main #login-box .login-form #remember-label {
-    color: #261247;
-    cursor: pointer;
-}
-
-main #login-box .login-form .spacer {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: fit-content;
-    gap: 5px;
-}
-main #login-box .login-form .password-option-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-}
-
-main #login-box .login-form .spacer div{
-    width: 100%;
-    height: 0.5px;
-    background: lightslategray;
-    position: relative;
-    bottom: -25px
-}
-
-main #login-box .login-form .spacer p{
-    position: relative;
-    bottom: -25px;
-}
-
-main #login-box .login-form .login-media{
-    width: fit-content;
-    height: fit-content;
-    display: flex;
-    gap: 25px;
     align-self: center;
-    position: relative;
-    bottom: -25px
 }
 
-main #login-box .login-form .login-media a { 
-    border-radius: 60px;
-    text-decoration: none;
-}
-
-main #login-box .login-form .login-media img{
-   display: block;
-   width: 30px;
-   height: 30px;
-   object-fit: contain;
-}
-
-main #login-box .login-form .login-media a:hover {
-    outline-offset: 0.5vh;
-    outline: solid #5B2BAE 2.5px;
+main .login-form .container #button-login:hover {
+    background: #f9f9f9;
+    outline-offset: 0.3vh;
+    outline: solid #656d78 2.5px;
     transition: all 0.33s ease;
+    color: #50e3c2;
+    box-shadow: -5px 5px 12px 4px #d3d3d3;
+    transition: all 0.33s ease;
+    transform: translateY(-2.5px);
 }
 
-main #login-box .login-form .signup-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: solid red 1px;
+main .login-form  .container a { 
+    text-decoration: none;
+    color: #070707;
 }
 
-main #login-box .login-form .signup-container h4 {
-    letter-spacing: 0.5px;
+main .login-form  .container a:hover { 
+    color: #50e3c2;
 }
 
-main #login-box  .login-form .signup-container #button-signup {
-    display: block;
-    border: none;
-    width: fit-content;
-    height: fit-content;
-    background: transparent;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
-}
 
-main #login-box  .login-form #button-signup a, main #login-box  .login-form #button-forgot a {
-    
-    color: #261247;
-}
 
 /*---------------------------MEDIA QUERY-----------------------------*/
 
@@ -293,6 +234,15 @@ main #login-box  .login-form #button-signup a, main #login-box  .login-form #but
 
 @media (max-width: 768px) {
 
+    main .login-form {
+        box-shadow: none;
+        border: none;
+    }
+
+    header .button {
+
+        right: 35px;
+    }
 
 }
 /* END RESPONSIVE main 768 */
