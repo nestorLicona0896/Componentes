@@ -98,6 +98,7 @@ main .login-form .container {
     height: auto;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 18px;
 }
 
@@ -148,7 +149,7 @@ main .login-form .container input[type=email],
 main .login-form .container input[type=password] {
     margin: 0px;
     padding: 0px 5px 0px 12px;
-    width: 400px;
+    width: 100%;
     height: 55px;
     border-radius: 2.5px;
     background: transparent;
@@ -175,7 +176,7 @@ main .login-form .container #button-login {
     display: block;
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
-    width: 400px;
+    width: 100%;
     height: 55px;
     border-radius: 5.5px;
     background: transparent;
@@ -240,6 +241,11 @@ main .login-form  .container a:hover {
     main .login-form {
         box-shadow: none;
         border: none;
+        width: 100%;
+    }
+
+    main .login-form .container{
+        width: 80%;
     }
 
     header .button {

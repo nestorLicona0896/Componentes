@@ -214,3 +214,17 @@ footer h6 a:hover {
     text-decoration: underline;
     color: #50e3c2;
 }
+
+/* RESPONSIVE FORM 728PX */
+
+@media (max-width:728px) {
+    main .register-form {
+        box-shadow: none;
+        border: none;
+        width: 100%;
+    }
+
+    main .register-form .container{
+        width: 80%;
+    }
+}
