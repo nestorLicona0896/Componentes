@@ -15,38 +15,49 @@
 </head>
 
 <body>
-    <header>
 
+    <!-- HEADER -->
+    <header class="header-container">
+        <div class="img-container">
+            <img src="../IMAGENES/logo.png" id="logo" alt="">
+        </div>
+        <div class="button" id="close-button">
+            <div class="bar" id="bar-1"></div>
+            <div class="bar" id="bar-2"></div>
+        </div>
     </header>
 
+    <!-- MAIN -->
     <main class="main-container">
-        <div class="register container" id="register-container">
-            <form action="" method="get" class="register-form" id="form-box">
-                <h1>Sign up</h1>
 
-                <label for=""></label>
-                <input type="text" placeholder="Full name" id="text-name">
-                <input type="text" placeholder="Email"  id="text-email"></input>
-                <input type="text" placeholder="Password"  id="text-password"></input>
+            <form action="" method="get" class="register-form">
                 
-                <button type="button">Register</button>
+                <div class="container" id="register-container">
 
-                <div class="spacer">
-                    <div></div><p>or use</p><div></div>
-                </div>
-                
-                <div class="login-media" id="login-media-box">
-                    <a class="social-media-link" href="#"><img src="../IMAGENES/google.png"></a>
-                    <a class="social-media-link" href="#"><img src="../IMAGENES/facebook.png"></a>
-                    <a class="social-media-link" href="#"><img src="../IMAGENES/twitter.png"></a>
-                    <a class="social-media-link" href="#"><img src="../IMAGENES/github.png"></a>
-                </div>
+                    <h1>Bienvenido!</h1>
+                    <h3>Completa los datos para continuar</h3>
+
+                    <label for="name" id="label-name"><b>Nombre</b></label>
+                    <input type="text" placeholder="Nombre Apellido" id="text-name" name="name">
+                    <label for="email" id="label-email"><b>Correo</b></label>
+                    <input type="email" placeholder="ejemplo@hotmail.com"  id="text-email" name="email"></input>
+                    <label for="password" id="label-password"><b>Contraseña</b></label>
+                    <input type="password" placeholder="********"  id="text-password" name="password"></input>
+
+                    <div class="spacer">
+                        <div></div><div></div>
+                    </div>
+                    
+                    <button type="submit">Crear cuenta</button>
+
+                    <h5> Ya tienes una cuenta? <a href="#">Inicia sesión</a></h5> 
+                </div>   
             </form>
-        </div>
+        
     </main>
 
     <footer>
-
+        <h6>Al crear una cuenta, acepta los <a href="#">Términos de servicio</a>. Para obtener más información sobre las prácticas de privacidad de Web Market, consulte la <a href="#">Declaración de privacidad</a>  de Web Market. Ocasionalmente le enviaremos correos electrónicos relacionados con la cuenta.</h6>
     </footer>
 </body>
 

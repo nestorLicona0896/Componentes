@@ -118,7 +118,8 @@ main .login-form .container h5:last-child {
     top: 10px;
 }
 
-main .login-form .container #label-email,  main .login-form .container #label-password{
+main .login-form .container #label-email,  
+main .login-form .container #label-password {
     color: #656d78;
     position: relative;
     top: 10px;
@@ -143,7 +144,8 @@ main .login-form .container .password-option input[type=checkbox]:hover  {
 }
 
 
-main .login-form .container input[type=email], main .login-form .container input[type=password] {
+main .login-form .container input[type=email], 
+main .login-form .container input[type=password] {
     margin: 0px;
     padding: 0px 5px 0px 12px;
     width: 400px;
@@ -201,11 +203,12 @@ main .login-form .container #button-login:hover {
 
 main .login-form  .container a { 
     text-decoration: none;
-    color: #070707;
+    color: #656d78;
 }
 
 main .login-form  .container a:hover { 
     color: #50e3c2;
+    text-decoration: underline;
 }
 
 
