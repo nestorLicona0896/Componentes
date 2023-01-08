@@ -123,13 +123,16 @@ main .login-form .container #label-password {
 main .login-form .container .password-option{
     display: flex;
     flex-direction: row;
+    justify-content:c enter;
+    align-items: center;
+    width: 100%;
 }
 
 main .login-form .container .password-option #label-remember {
     color: #656d78;
     position: absolute;
     right: 50px;
-
+    font-size: 14px;
 }
 
 main .login-form .container .password-option #label-remember:hover,
