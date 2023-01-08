@@ -42,18 +42,15 @@ header .img-container #logo {
 }
 
 header .button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0px;
-    padding: 0px;
-    width: 55px;
-    height: 55px;
     position: absolute;
     right: 15px;
 }
 
-header .button .bar {
+header .button a {
+    display: flex;
+}
+
+header .button a .bar {
     margin: 0px;
     padding: 0px;
     width: 25px;
@@ -63,12 +60,12 @@ header .button .bar {
     cursor: pointer;
 }
 
-header .button #bar-1 {
+header .button a  #bar-1 {
     transform:  translateX(13px) rotate(45deg);
     
 }
 
-header .button #bar-2 {
+header .button a #bar-2 {
     transform:  translateX(-13px) rotate(-45deg);
 }
 
@@ -149,6 +146,10 @@ main .register-form .container input:focus {
     border: none;
 }
 
+main .register-form .container input::placeholder {
+    opacity: 85%;
+}
+
 
 main .register-form .container button[type=submit] {
     width: 100%;
@@ -174,14 +175,14 @@ main .register-form .container button[type=submit]:hover {
 }
 
 main .register-form .container h5 a {
- text-decoration: none;
- color: #656d78;
+    text-decoration: none;
+    color: #656d78;
 }
 
 main .register-form .container h5 a:hover{
     text-decoration: underline;
     color: #50e3c2;
-   }
+}
 
 
 

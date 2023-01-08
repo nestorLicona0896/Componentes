@@ -35,18 +35,16 @@ header #logo {
 }
 
 header .button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0px;
-    padding: 0px;
-    width: 55px;
-    height: 55px;
     position: absolute;
     right: 15px;
 }
 
-header .button .bar {
+header .button a {
+    display: flex;
+}
+
+
+header .button a .bar {
     margin: 0px;
     padding: 0px;
     width: 25px;
@@ -56,12 +54,12 @@ header .button .bar {
     cursor: pointer;
 }
 
-header .button #bar-1 {
+header .button a #bar-1 {
     transform:  translateX(13px) rotate(45deg);
     
 }
 
-header .button #bar-2 {
+header .button a #bar-2 {
     transform:  translateX(-13px) rotate(-45deg);
 }
 
@@ -80,7 +78,7 @@ main {
 
 main .login-form {
     width: 500px;
-    height: 500px;
+    height: 550px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,7 +97,7 @@ main .login-form .container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 18px;
+    gap: 22px;
 }
 
 main .login-form .container h1 {
@@ -110,20 +108,16 @@ main .login-form .container h1 {
 main .login-form .container h3 {
     color: #656d78;
     position: relative;
-    top: -12px;
+    top: -15px;
 }
 
 main .login-form .container h5:last-child {
     color: #070707;
-    position: relative;
-    top: 10px;
 }
 
 main .login-form .container #label-email,  
 main .login-form .container #label-password {
     color: #656d78;
-    position: relative;
-    top: 10px;
 }
 
 main .login-form .container .password-option{
@@ -157,6 +151,8 @@ main .login-form .container input[type=password] {
     font-size: 16px;
     border: 1px solid #ccc;
     letter-spacing: 1.2px;
+    position: relative;
+    top: -15px;
 }
 
 
@@ -174,12 +170,9 @@ main .login-form .container input::placeholder {
 
 main .login-form .container #button-login {
     display: block;
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
     width: 100%;
     height: 55px;
     border-radius: 5.5px;
-    background: transparent;
     outline: none;
     cursor: pointer;
     background: #50e3c2;
@@ -187,8 +180,7 @@ main .login-form .container #button-login {
     color: #f9f9f9;
     font-size: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    position: relative;
-    align-self: center;
+    
 }
 
 main .login-form .container #button-login:hover {
