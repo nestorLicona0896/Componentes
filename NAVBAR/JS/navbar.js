@@ -48,9 +48,7 @@ function displaySearch () {
     } else {
       bar[0].style.display="flex";
     }
-    
   }
-  
 }
 
 

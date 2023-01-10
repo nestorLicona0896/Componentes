@@ -75,12 +75,11 @@ main {
     align-items: center;
 }
 
-/* LOGIN */
-
+/* PORTAL */
 
 main .portal-form {
     width: 500px;
-    height: 450px;
+    padding: 45px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -88,15 +87,13 @@ main .portal-form {
     background: rgba(255, 255, 255, 0.55);
     backdrop-filter: blur(2px) saturate(15%);
     transition: all 0.33s ease;
-    gap: 35px;
     border-radius: 15px;
     border: solid #d3d3d3 1px;
     box-shadow: -10.5px 12px 22px 5.5px #d3d3d3;
 }
 
 main .portal-form .container {
-    width: 400px;
-    height: auto;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -140,6 +137,7 @@ main .portal-form .container a {
 }
 
 main .portal-form .container .spacer {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -148,9 +146,9 @@ main .portal-form .container .spacer {
 }
 
 main .portal-form .container .spacer div {
-    width: 160px;
+    width: 135px;
     height: 0.65px;
-    background: #656d78;
+    background: #ccc;
 }
 
 main .portal-form .container .spacer p {
