@@ -103,7 +103,7 @@ main .register-form .container {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 18px;
+    gap: 10px;
 }
 
 main .register-form .container h1 {
@@ -114,7 +114,7 @@ main .register-form .container h1 {
 main .register-form .container h3 {
     color: #656d78;
     position: relative;
-    top: -12px;
+    top: -15px;
 }
 
 main .register-form .container #label-name,
@@ -122,11 +122,47 @@ main .register-form .container #label-email ,
 main .register-form .container #label-password {
     color: #656d78;
     position: relative;
-    top: 10px;
 }
 
-main .register-form .container input[type=text], 
-main .register-form .container input[type=email],
+main .register-form .container #label-name-message,
+main .register-form .container #label-email-message ,
+main .register-form .container #label-password-message {
+    color: #656d78;
+    position: relative;
+    font-size: 12px;
+    display: none;
+}
+
+main .register-form .container .input-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+main .register-form .container .input-container div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 65px;
+    height: 55px;
+    border-radius: 5.5px;
+    border: solid #d3d3d3 1px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+main .register-form .container .input-container div #icon {
+    display: block;
+    width: 25px;
+    height: 25px;
+    filter: opacity(55%);
+}
+
+main .register-form .container .input-container input[type=text], 
+main .register-form .container .input-container input[type=email],
 main .register-form .container input[type=password] {
     padding: 0px 8px 0px 10px;
     border: solid #d3d3d3 1px;
@@ -134,19 +170,24 @@ main .register-form .container input[type=password] {
     height: 55px;
     border-radius: 5.5px;
     font-size: 16px;
+    line-height: 55px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-left: none;
 }
 
-main .register-form .container input[type=text]:hover,
-main .register-form .container input[type=email]:hover,
-main .register-form .container input[type=password]:hover {
-    border: solid #50e3c2 1px;
+
+main .register-form .container .input-container:hover div,
+main .register-form .container .input-container:hover input {
+    border-color: #50e3c2;
+    
 }
 
-main .register-form .container input:focus {
-    border: none;
+main .register-form .container .input-container:hover #icon {
+    filter: invert(96%) sepia(98%) saturate(810%) hue-rotate(83deg) brightness(103%) contrast(78%);
 }
 
-main .register-form .container input::placeholder {
+main .register-form .container .input-container input::placeholder {
     opacity: 85%;
 }
 

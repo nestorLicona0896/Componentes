@@ -97,7 +97,7 @@ main .login-form .container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 22px;
+    gap: 10px;
 }
 
 main .login-form .container h1 {
@@ -120,30 +120,51 @@ main .login-form .container #label-password {
     color: #656d78;
 }
 
-main .login-form .container .password-option{
+main .login-form .container #label-email-message ,
+main .login-form .container #label-password-message {
+    color: #656d78;
+    position: relative;
+    font-size: 12px;
+    display: none;
+}
+
+
+
+main .login-form .container .input-container {
     display: flex;
     flex-direction: row;
-    justify-content:c enter;
+    justify-content: center;
     align-items: center;
     width: 100%;
 }
 
-main .login-form .container .password-option #label-remember {
-    color: #656d78;
-    position: absolute;
-    right: 50px;
-    font-size: 14px;
+main .login-form .container .input-container div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 65px;
+    height: 55px;
+    border-radius: 5.5px;
+    border: solid #d3d3d3 1px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
 
-main .login-form .container .password-option #label-remember:hover,
-main .login-form .container .password-option input[type=checkbox]:hover  {
-    color: #50e3c2;
-    cursor: pointer;
+main .login-form .container .input-container div #icon {
+    display: block;
+    width: 25px;
+    height: 25px;
+    filter: opacity(55%);
+}
+
+main .login-form .container .input-container:hover #icon {
+    filter: invert(96%) sepia(98%) saturate(810%) hue-rotate(83deg) brightness(103%) contrast(78%);
 }
 
 
-main .login-form .container input[type=email], 
-main .login-form .container input[type=password] {
+main .login-form .container .input-container input[type=email], 
+main .login-form .container .input-container input[type=password] {
     margin: 0px;
     padding: 0px 5px 0px 12px;
     width: 100%;
@@ -152,19 +173,19 @@ main .login-form .container input[type=password] {
     background: transparent;
     outline: none;
     font-size: 16px;
-    border: 1px solid #ccc;
+    border: solid #d3d3d3 1px ;
     letter-spacing: 1.2px;
-    position: relative;
-    top: -15px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-left: none;
 }
 
-
-main .login-form .container input:hover ,
-main .login-form .container input:focus {
-    border: solid #50e3c2 0.2px;
-    background: #f9f9f9;
-    transition: all 0.33s ease;
+main .login-form .container .input-container:hover div,
+main .login-form .container .input-container:hover input {
+    border-color: #50e3c2;
+    
 }
+
 
 main .login-form .container input::placeholder {
     opacity: 85%;
@@ -195,6 +216,28 @@ main .login-form .container #button-login:hover {
     box-shadow: -5px 5px 12px 4px #d3d3d3;
     transition: all 0.33s ease;
     transform: translateY(-2.5px);
+}
+
+
+main .login-form .container .password-option{
+    display: flex;
+    flex-direction: row;
+    justify-content:c enter;
+    align-items: center;
+    width: 100%;
+}
+
+main .login-form .container .password-option #label-remember {
+    color: #656d78;
+    position: absolute;
+    right: 50px;
+    font-size: 14px;
+}
+
+main .login-form .container .password-option #label-remember:hover,
+main .login-form .container .password-option input[type=checkbox]:hover  {
+    color: #50e3c2;
+    cursor: pointer;
 }
 
 main .login-form  .container a { 

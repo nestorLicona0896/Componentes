@@ -40,10 +40,19 @@
                 <h3>Inicia sesión para continuar</h3>
 
                 <label for="mail" id="label-email"><b>Correo</b></label>
-                <input type="email" placeholder="" name="mail" id="login_email">
+                <div class="input-container">
+                    <div><img src="../IMAGENES/github.png" id="icon" alt=""></div><input type="email" placeholder="" name="mail" id="login_email">
+                </div>
+                <label for="" id="label-email-message"><b>Mensaje sobre el campo correo!</b></label>
                 <label for="pass" id="label-password"><b>Contraseña</b></label>
-                <input type="password" placeholder="" id="login_password" name="pass">
+                <div class="input-container">
+                    <div><img src="../IMAGENES/github.png" id="icon" alt=""></div><input type="password" placeholder="" id="login_password" name="pass">
+                </div>
+                <label for="" id="label-password-message"><b>Mensaje sobre el campo contraseña!</b></label>
 
+                <div class="captcha-container">
+                    <div></div>
+                </div>
                 <button type="submit" id="button-login"> Iniciar sesión </button>
 
                 <div class="password-option">
