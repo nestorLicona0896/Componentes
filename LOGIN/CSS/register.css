@@ -132,7 +132,7 @@ main .register-form .container input[type=password] {
     border: solid #d3d3d3 1px;
     width: 100%;
     height: 55px;
-    border-radius: 2.5x;
+    border-radius: 5.5px;
     font-size: 16px;
 }
 
