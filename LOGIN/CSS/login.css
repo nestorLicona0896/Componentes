@@ -156,6 +156,7 @@ main .login-form .container .input-container div #icon {
     width: 25px;
     height: 25px;
     filter: opacity(55%);
+    object-fit: contain;
 }
 
 main .login-form .container .input-container:hover #icon {

@@ -159,6 +159,7 @@ main .register-form .container .input-container div #icon {
     width: 25px;
     height: 25px;
     filter: opacity(55%);
+    object-fit: contain;
 }
 
 main .register-form .container .input-container input[type=text], 
@@ -191,6 +192,12 @@ main .register-form .container .input-container input::placeholder {
     opacity: 85%;
 }
 
+main .register-form .container .g-recaptcha {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
 
 main .register-form .container button[type=submit] {
     width: 100%;
@@ -224,8 +231,6 @@ main .register-form .container h5 a:hover{
     text-decoration: underline;
     color: #50e3c2;
 }
-
-
 
 /* FOOTER */
 
