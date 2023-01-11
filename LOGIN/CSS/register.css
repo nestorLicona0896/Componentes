@@ -175,16 +175,16 @@ main .register-form .container input[type=password] {
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
     border-left: none;
+    
 }
 
 
 main .register-form .container .input-container:hover div,
 main .register-form .container .input-container:hover input {
     border-color: #50e3c2;
-    
 }
 
-main .register-form .container .input-container:hover #icon {
+main .register-form .container .input-container:hover div #icon {
     filter: invert(96%) sepia(98%) saturate(810%) hue-rotate(83deg) brightness(103%) contrast(78%);
 }
 
