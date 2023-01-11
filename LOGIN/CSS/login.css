@@ -254,27 +254,9 @@ main .login-form  .container a:hover {
 
 /*---------------------------MEDIA QUERY-----------------------------*/
 
-/* RESPONSIVE 1200PX */
-
-@media (max-width: 1200px) {
-
-
-}
-
-/* END RESPONSIVE 1200 */
-
-/* RESPONSIVE 980PX */
+/* RESPONSIVE 900PX */
 
 @media (max-width: 900px) {
-
-   
-}
-
-/* END RESPONSIVE 980 */
-
-/* RESPONSIVE 768PX */
-
-@media (max-width: 768px) {
 
     main .login-form {
         box-shadow: none;
@@ -282,16 +264,12 @@ main .login-form  .container a:hover {
         width: 100%;
     }
 
-    main .login-form .container{
-        width: 80%;
-    }
-
     header .button {
         right: 35px;
     }
 
 }
-/* END RESPONSIVE main 768 */
+/* END RESPONSIVE main 900 */
 
 
 

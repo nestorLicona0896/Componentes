@@ -234,36 +234,14 @@ footer a:hover {
 
 /*---------------------------MEDIA QUERY-----------------------------*/
 
-/* RESPONSIVE 1200PX */
-
-@media (max-width: 1200px) {
-
-
-}
-
-/* END RESPONSIVE 1200 */
-
-/* RESPONSIVE 980PX */
+/* RESPONSIVE 900PX */
 
 @media (max-width: 900px) {
-
-   
-}
-
-/* END RESPONSIVE 980 */
-
-/* RESPONSIVE 768PX */
-
-@media (max-width: 768px) {
 
     main .portal-form {
         box-shadow: none;
         border: none;
         width: 100%;
-    }
-
-    main .portal-form .container{
-        width: 80%;
     }
 
     header .button {
@@ -273,7 +251,7 @@ footer a:hover {
 
 
 }
-/* END RESPONSIVE main 768 */
+/* END RESPONSIVE main 900 */
 
 
 

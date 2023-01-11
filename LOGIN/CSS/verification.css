@@ -81,7 +81,7 @@ main .verification-form .container h1 {
 main .verification-form .container h3 {
     color: #656d78;
     position: relative;
-    top: -15px;
+    top: -25px;
 }
 
 main .verification-form .container h3 #label-email-direction{
@@ -115,7 +115,7 @@ main .verification-form .container #code-container input[type=text] {
     background: #f9f9f9;
     font-size: 22px;
     color: #696969;
-    border: solid #656d78 1px;
+    border: solid #d3d3d3 1px;
     text-align: center;
 }
 
@@ -174,7 +174,5 @@ main .verification-form .container h5 a:hover {
         width: 100%;
     }
 
-    main .verification-form .container{
-        width: 80%;
-    }
+    
 }
