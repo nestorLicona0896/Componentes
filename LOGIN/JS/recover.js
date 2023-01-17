@@ -9,7 +9,7 @@ function digitFieldFocus() {
 }
 
 /* This function add to every code field that is next to the current field a focus,
-but before that, it checks that the value also is numeric */ 
+but before that, it checks that the value also is numeric*/ 
 function changeFieldFocus(field) {
 
     var id = field.getAttribute('id');
@@ -21,7 +21,7 @@ function changeFieldFocus(field) {
                     document.getElementById(id).nextElementSibling.focus();
                 }
             } else {
-                document.getElementById("button-verification").focus();
+                document.getElementById("button-reset").focus();
             }
         } else {
             field.value = "";
@@ -31,14 +31,22 @@ function changeFieldFocus(field) {
 
 /* this function makes that the needed section appear, so that the user can see a new panel to continue the recovering process */
 function showSection () {
-    var actionButton1 = document.getElementById("button-verification");
-    actionButton1.onclick = function() { showResultSection() };
+    var actionButton1 = document.getElementById("button-send");
+    actionButton1.onclick = function() { showCodeSection() };
 
+    var actionButton2 = document.getElementById("button-reset");
+    actionButton2.onclick = function() { showResultSection() };
 
 }
 
 /* make the code section visible */
+function showCodeSection() {
+    document.getElementById("email-section").style.display = "none";
+    document.getElementById("code-section").style.display = "flex";
+}
+
+/* make the result section visible */
 function showResultSection() {
-    document.getElementById("verification-section").style.display = "none";
+    document.getElementById("code-section").style.display = "none";
     document.getElementById("result-section").style.display = "flex";
 }

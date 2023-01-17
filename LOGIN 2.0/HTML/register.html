@@ -6,21 +6,24 @@
     <meta name="viewpport" content="width=device-width, initial-sacale=1.0"> 
 
     <!--TITLE-->
-    <link rel="icon" href="../IMAGENES/icon.png">
-    <title>Registro</title>
+    <link rel="icon" href="../IMAGENES/logo.png">
+    <title>REGISTER</title>
 
     <!--STYLE LINKS-->
     <link rel="stylesheet" href="../CSS/register.css">
 
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
+
+  
+
 </head>
 
 <body>
 
     <!-- HEADER -->
-    <header>
-        <div class="logo-container">
+    <header class="header-container">
+        <div class="img-container">
             <img src="../IMAGENES/logo.png" id="logo" alt="">
         </div>
         <div class="button" id="close-button">
@@ -33,7 +36,7 @@
     </header>
 
     <!-- MAIN -->
-    <main>
+    <main class="main-container">
 
             <form action="" method="get" class="register-form">
                 
@@ -42,29 +45,26 @@
                     <h1>Bienvenido!</h1>
                     <h3>Completa los datos para continuar</h3>
 
-                    <label id="label-name"><b>Nombre</b></label>
-                    <div class="input-field" id="name-field">
-                        <div><img src="../IMAGENES/user.png" id="user-icon" alt=""></div>
-                        <input type="text" placeholder="Nombre Apellido" id="input-name" name="name">
+                    <label for="name" id="label-name"><b>Nombre</b></label>
+                    <div class="input-container">
+                        <div><img src="../IMAGENES/user.png" id="icon" alt=""></div><input type="text" placeholder="Nombre Apellido" id="text-name" name="name">
                     </div>
-                    <label id="label-name-message"><b>Mensaje sobre el campo nombre!</b></label>
+                    <label for="" id="label-name-message"><b>Mensaje sobre el campo nombre!</b></label>
 
-                     <label id="label-email"><b>Correo</b></label>
-                    <div class="input-field" id="email-field">
-                        <div><img src="../IMAGENES/mail.png" id="email-icon" alt=""></div>
-                        <input type="email" placeholder="ejemplo@hotmail.com"  id="input-email" name="email"></input>
+                     <label for="email" id="label-email"><b>Correo</b></label>
+                    <div class="input-container">
+                        <div><img src="../IMAGENES/mail.png" id="icon" alt=""></div><input type="email" placeholder="ejemplo@hotmail.com"  id="text-email" name="email"></input>
                     </div>
-                    <label id="label-email-message"><b>Mensaje sobre el campo correo!</b></label>
+                    <label for="" id="label-email-message"><b>Mensaje sobre el campo correo!</b></label>
 
-                    <label id="label-password"><b>Contraseña</b></label>
-                    <div class="input-field" id="password-field">
-                        <div><img src="../IMAGENES/padlock.png" id="padlock-icon" alt=""></div>
-                        <input type="password" placeholder="********"  id="input-password" name="password"></input>
+                    <label for="password" id="label-password"><b>Contraseña</b></label>
+                    <div class="input-container">
+                        <div><img src="../IMAGENES/padlock.png" id="icon" alt=""></div><input type="password" placeholder="********"  id="text-password" name="password"></input>
                     </div>
-                    <label id="label-password-message"><b>Mensaje sobre el campo contraseña!</b></label>
+                    <label for="" id="label-password-message"><b>Mensaje sobre el campo contraseña!</b></label>
 
-                    <div class="recaptcha-container">
-                        <div class="g-recaptcha" data-sitekey="6LfAP-ojAAAAADEdWZPydAY6zA4cbl10LK1FcN9g">
+                    <div class="captcha-container">
+                        <div class="g-recaptcha" data-sitekey="6LfBT-ojAAAAADPRmD9jRHvZQJ8Bq0BhFga7MFKe">
                         </div>
                     </div>
                     

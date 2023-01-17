@@ -2,13 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /*font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;*/
     font-family: 'Poppins', sans-serif;
 }
 
 body {
     padding: 0;
     margin: 0;
-    
+    background-color: #f9f9f9;
 }
 
 body div {
@@ -62,6 +63,7 @@ header .button a #bar-2 {
     transform:  translateX(-13px) rotate(-45deg);
 }
 
+
 /* MAIN  */
 
 main {
@@ -73,31 +75,30 @@ main {
     align-items: center;
 }
 
-/* PORTAL FORM */
+/* PORTAL */
 
 main .portal-form {
     width: 500px;
+    padding: 45px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(2px) saturate(15%);
+    transition: all 0.33s ease;
     border-radius: 15px;
+    border: solid #d3d3d3 1px;
     box-shadow: -10.5px 12px 22px 5.5px #d3d3d3;
 }
 
 main .portal-form #portal-container {
-    width: 500px;
-    height: auto;
-    padding: 45px;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 20px;
-    background: rgba(255, 255, 255, 0.55%);
-    backdrop-filter: blur(2px) saturate(55%);
-    border: solid #d3d3d3 1px;
-    border-radius: 15px;
-    text-align: justify;
+    gap: 25px;
 }
 
 main .portal-form #portal-container #user-icon {
@@ -119,8 +120,7 @@ main .portal-form #portal-container button[type=button] {
     font-size: 20px;
 }
 
-main .portal-form #portal-container button[type=button]:hover,
-main .portal-form #portal-container button[type=button]:focus {
+main .portal-form #portal-container button[type=button]:hover {
     background: #f9f9f9;
     outline-offset: 0.3vh;
     outline: solid #656d78 2.5px;
@@ -165,12 +165,13 @@ main .portal-form #portal-container .login-media {
     gap: 35px;
 }
 
-main .portal-form #portal-container .login-media button[type=button]{
+main .portal-form #portal-container .login-media button[type=submit]{
     width: 55px;
     height: 40px;
     justify-content: center;
     align-items: center;
     background: #d1e1e8;
+    border: none;
     border-radius: 5.5px;
     cursor: pointer;
 }
@@ -187,13 +188,12 @@ main .portal-form #portal-container .login-media  img {
     filter: brightness(0%);
 }
 
-main .portal-form #portal-container .login-media button[type=button]:hover {
+main .portal-form #portal-container .login-media button:hover {
     box-shadow: -5px 5px 12px 4px #d3d3d3;
     background-color: azure;
-    border: solid #d3d3d3 1px;
+    border: solid #d3d3d3 0.5px;
     transition: all 0.33s ease;
     transform: translateY(-2.5px);
-    outline: none;
 }
 
 main .portal-form #portal-container .login-media button:hover a img {
@@ -205,15 +205,19 @@ main .portal-form #portal-container .login-media button:hover a img {
 footer {
     width: 100%;
     height: auto;
+    margin: 0px 0px 10px 0px;
+    padding: 0px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
     font-size: 14px;
     color: #696969;
-    z-index: -1;
     position: fixed;
     bottom: 10px;
+    z-index: -1;
 }
 
 footer a {
@@ -226,20 +230,26 @@ footer a:hover {
 
 }
 
-/* RESPONSIVE 900px*/
+/*---------------------------MEDIA QUERY-----------------------------*/
+
+/* RESPONSIVE 900PX */
 
 @media (max-width: 900px) {
 
     main .portal-form {
         box-shadow: none;
-        width: 100%;
-    }
-
-    main .portal-form #portal-container {
         border: none;
         width: 100%;
     }
 
+    header .button {
+
+        right: 35px;
+    }
+
+
 }
+/* END RESPONSIVE main 900 */
+
 
 

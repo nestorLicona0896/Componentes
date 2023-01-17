@@ -1,0 +1,274 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #f9f9f9;
+}
+
+body div {
+    float: none;
+}
+
+
+/* HEADER */ 
+
+header {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+header .img-container {
+    width: fit-content;
+    height: 100%;
+}
+
+header .img-container #logo {
+    display: block;
+    width: 150px;
+    height: 100%;
+    margin: 0px;
+    padding: 5px 0px 5px 0px;
+    object-fit: contain;
+}
+
+header .button {
+    position: absolute;
+    right: 15px;
+}
+
+header .button a {
+    display: flex;
+}
+
+header .button a .bar {
+    margin: 0px;
+    padding: 0px;
+    width: 25px;
+    height: 2.5px;
+    background-color: #696969;
+    border-radius: 2.5px;
+    cursor: pointer;
+}
+
+header .button a  #bar-1 {
+    transform:  translateX(13px) rotate(45deg);
+    
+}
+
+header .button a #bar-2 {
+    transform:  translateX(-13px) rotate(-45deg);
+}
+
+/* MAIN */
+
+main  {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* REGISTER FORM */
+
+main .register-form {
+    width: 500px;
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid #d3d3d3 1px;
+    border-radius: 15px;
+    transition: all 0.33s ease;
+    background-color: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(4px);
+    box-shadow: -10.5px 12px 22px 5.5px #d3d3d3;
+}
+
+main .register-form .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+main .register-form .container h1 {
+    letter-spacing: 3.5px;
+    color: #50e3c2;
+}
+
+main .register-form .container h3 {
+    color: #656d78;
+    position: relative;
+    top: -15px;
+}
+
+main .register-form .container #label-name,
+main .register-form .container #label-email ,
+main .register-form .container #label-password {
+    color: #656d78;
+    position: relative;
+}
+
+main .register-form .container #label-name-message,
+main .register-form .container #label-email-message ,
+main .register-form .container #label-password-message {
+    color: #656d78;
+    position: relative;
+    font-size: 12px;
+    display: none;
+}
+
+main .register-form .container .input-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+main .register-form .container .input-container div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 65px;
+    height: 55px;
+    border-radius: 5.5px;
+    border: solid #d3d3d3 1px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+main .register-form .container .input-container div #icon {
+    display: block;
+    width: 25px;
+    height: 25px;
+    filter: opacity(55%);
+    object-fit: contain;
+}
+
+main .register-form .container .input-container input[type=text], 
+main .register-form .container .input-container input[type=email],
+main .register-form .container input[type=password] {
+    padding: 0px 8px 0px 10px;
+    border: solid #d3d3d3 1px;
+    width: 100%;
+    height: 55px;
+    border-radius: 5.5px;
+    font-size: 16px;
+    line-height: 55px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-left: none;
+    
+}
+
+
+main .register-form .container .input-container:hover div,
+main .register-form .container .input-container:hover input {
+    border-color: #50e3c2;
+}
+
+main .register-form .container .input-container:hover div #icon {
+    filter: invert(96%) sepia(98%) saturate(810%) hue-rotate(83deg) brightness(103%) contrast(78%);
+}
+
+main .register-form .container .input-container input::placeholder {
+    opacity: 85%;
+}
+
+main .register-form .container .g-recaptcha {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+main .register-form .container button[type=submit] {
+    width: 100%;
+    height: 55px;
+    border: none;
+    background: #50e3c2;
+    color: #f9f9f9;
+    font-size: 16px;
+    border-radius: 5.5px;
+    cursor: pointer;
+}
+
+main .register-form .container button[type=submit]:hover {
+    
+    background: #f9f9f9;
+    outline-offset: 0.3vh;
+    outline: solid #656d78 2.5px;
+    transition: all 0.33s ease;
+    color: #50e3c2;
+    box-shadow: -5px 5px 12px 4px #d3d3d3;
+    transition: all 0.33s ease;
+    transform: translateY(-2.5px);
+}
+
+main .register-form .container h5 a {
+    text-decoration: none;
+    color: #656d78;
+}
+
+main .register-form .container h5 a:hover{
+    text-decoration: underline;
+    color: #50e3c2;
+}
+
+/* FOOTER */
+
+footer {
+    position: relative;
+    top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+footer h6 {
+    width: 500px;
+    text-align: justify;
+    color: #656d78;
+    font-weight: lighter;
+    letter-spacing: 0.2px;
+}
+
+footer h6 a {
+    text-decoration: none;
+    color: aqua;
+}
+
+footer h6 a:hover {
+    text-decoration: underline;
+    color: #50e3c2;
+}
+
+/* RESPONSIVE FORM 900PX */
+
+@media (max-width:900px) {
+    main .register-form {
+        box-shadow: none;
+        border: none;
+        width: 100%;
+    }
+
+}

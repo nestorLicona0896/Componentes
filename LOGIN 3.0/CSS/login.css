@@ -1,5 +1,5 @@
 
-main #login-container {
+main #login-section {
     width: 500px;
     height: auto;
     padding: 45px;
@@ -14,33 +14,33 @@ main #login-container {
     text-align: justify;
 }
 
-main #login-container h1 {
+main #login-section h1 {
     color: #50e3c2;
 }
 
-main #login-container h3 {
+main #login-section h3 {
     color: #656d78;
     position: relative;
     top: -10px
 }
 
-main #login-container h5:last-child {
+main #login-section h5:last-child {
     color: #070707;
 }
 
-main #login-container #label-email,  
-main #login-container #label-password {
+main #login-section #label-email,  
+main #login-section #label-password {
     color: #656d78;
 }
 
-main #login-container #label-email-message ,
-main #login-container #label-password-message {
+main #login-section #label-email-message ,
+main #login-section #label-password-message {
     color: #656d78;
     font-size: 12px;
     display: none;
 }
 
-main #login-container .input-field {
+main #login-section .input-field {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -48,7 +48,7 @@ main #login-container .input-field {
     width: 100%;
 }
 
-main #login-container .input-field div {
+main #login-section .input-field div {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -61,8 +61,8 @@ main #login-container .input-field div {
     border-bottom-right-radius: 0px;
 }
 
-main #login-container .input-field div #email-icon,
-main #login-container .input-field div #padlock-icon {
+main #login-section .input-field div #email-icon,
+main #login-section .input-field div #padlock-icon {
     display: block;
     width: 25px;
     height: 25px;
@@ -70,14 +70,14 @@ main #login-container .input-field div #padlock-icon {
     object-fit: contain;
 }
 
-main #login-container .input-field:hover #email-icon,
-main #login-container .input-field:hover #padlock-icon {
+main #login-section .input-field:hover #email-icon,
+main #login-section .input-field:hover #padlock-icon {
     filter: invert(96%) sepia(98%) saturate(810%) hue-rotate(83deg) brightness(103%) contrast(78%);
 }
 
 
-main #login-container .input-field input[type=email], 
-main #login-container .input-field input[type=password] {
+main #login-section .input-field input[type=email], 
+main #login-section .input-field input[type=password] {
     padding: 0px 5px 0px 12px;
     width: 100%;
     height: 55px;
@@ -92,27 +92,27 @@ main #login-container .input-field input[type=password] {
     border-left: none;
 }
 
-main #login-container .input-field:hover div,
-main #login-container .input-field:hover input {
+main #login-section .input-field:hover div,
+main #login-section .input-field:hover input {
     border-color: #50e3c2;
 }
 
-main #login-container input::placeholder {
+main #login-section input::placeholder {
     opacity: 85%;
 }
 
-main .container .recaptcha-container {
+main #login-section #recaptcha-section {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
 
-main .container .recaptcha-container .g-recaptcha {
+main #login-section #recaptcha-section .g-recaptcha {
     display: none;
 }
 
-main #login-container #button-login {
+main #login-section #login-button {
     display: block;
     width: 100%;
     height: 55px;
@@ -126,8 +126,8 @@ main #login-container #button-login {
     
 }
 
-main #login-container #button-login:hover,
-main #login-container #button-login:focus {
+main #login-section #login-button:hover,
+main #login-section #login-button:focus {
     background: #f9f9f9;
     outline-offset: 0.3vh;
     outline: solid #656d78 2.5px;
@@ -139,7 +139,7 @@ main #login-container #button-login:focus {
 }
 
 
-main #login-container .password-option{
+main #login-section #password-option-section {
     display: flex;
     flex-direction: row;
     justify-content:c enter;
@@ -147,43 +147,34 @@ main #login-container .password-option{
     width: 100%;
 }
 
-main #login-container .password-option #label-remember {
+main #login-section #password-option-section #label-remember {
     color: #656d78;
     position: absolute;
     right: 50px;
     font-size: 14px;
 }
 
-main #login-container .password-option #label-remember:hover,
-main #login-container .password-option input[type=checkbox]:hover  {
+main #login-section #password-option-section #label-remember:hover,
+main #login-section #password-option-section input[type=checkbox]:hover  {
     color: #50e3c2;
     cursor: pointer;
 }
 
-main  #login-container a { 
+main  #login-section a { 
     text-decoration: none;
     color: #656d78;
 }
 
-main  #login-container a:hover { 
+main  #login-section a:hover { 
     color: #50e3c2;
     text-decoration: underline;
 }
-
-
-
-/*---------------------------MEDIA QUERY-----------------------------*/
 
 /* RESPONSIVE 900px */
 
 @media (max-width: 900px) {
 
-    main {
-        box-shadow: none;
-        width: 100%;
-    }
-
-    main #login-container {
+    main #login-section {
         border: none;
         width: 100%;
     }

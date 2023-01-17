@@ -12,19 +12,20 @@
 
     <!-- STYLESHEETS LINKS -->
     <link rel="stylesheet" type="text/css" href="../CSS/portal.css">
-    <link rel="stylesheet" type="text/css" href="../CSS/login.css">
-    <link rel="stylesheet" type="text/css" href="../CSS/register.css">
+    
 
     <!-- JAVASCRIPT LINKS -->
-    <script src="../JS/portal.js"></script>
+    <script src="../JS/portal.js"></script>    
+    <script src="../JS/login.js"></script> 
+    <script src="../JS/register.js"></script> 
 
 </head>
 
 <body>
 
     <!-- HEADER -->
-    <header class="header-container">
-        <div id="logo-container">
+    <header>
+        <div class="container" id="logo-container">
             <a class="header-link" href="../HTML/navbar.html">
                 <img src="../IMAGENES/logo.png" alt="" id="logo">
             </a>
@@ -39,7 +40,7 @@
     </header>
 
     <!-- MAIN -->
-    <main class="main-container">
+    <main>
 
         <!-- PORTAL FORM -->
         <form action="" method="get" class="portal-form" id="portal">
@@ -50,8 +51,8 @@
                     <img src="../IMAGENES/user.png" alt="" id="user-icon">
                 </div>
 
-                <button type="button" id="button-signup"> Registrarse </button>
-                <button type="button" id="button-login"> Iniciar sesion </button>
+                <button type="button" id="signup-button"> Registrarse </button>
+                <button type="button" id="login-button"> Iniciar sesion </button>
 
                 <div class="spacer">
                     <div></div>
@@ -59,33 +60,40 @@
                     <div></div>
                 </div>
 
-                <div class="login-media" id="login-media-box">
-                    <button type="button">
-                        <a class="social-media-link" href="#"><img src="../IMAGENES/google.png"></a>
+                <div class="container" id="login-media-section">
+                    <button type="button" id="google-button">
+                        <a class="social-media-link" href="#" id="google-link"><img src="../IMAGENES/google.png"
+                                alt="Google" id="google-icon"></a>
                     </button>
-                    <button type="button">
-                        <a class="social-media-link" href="#"><img src="../IMAGENES/facebook.png"></a>
+                    <button type="button" id="facebook-button">
+                        <a class="social-media-link" href="#" id="facebook-link"><img src="../IMAGENES/facebook.png"
+                                alt="Facebook" id="facebook-icon"></a>
                     </button>
-                    <button type="button">
-                        <a class="social-media-link" href="#"><img src="../IMAGENES/twitter.png"></a>
+                    <button type="button" id="twitter-button">
+                        <a class="social-media-link" href="#" id="twitter-link"><img src="../IMAGENES/twitter.png"
+                                alt="Twitter" id="twitter-icon"></a>
                     </button>
-                    <button type="button">
-                        <a class="social-media-link" href="#"><img src="../IMAGENES/github.png"></a>
+                    <button type="button" id="github-button">
+                        <a class="social-media-link" href="#" id="github-link"><img src="../IMAGENES/github.png"
+                                alt="Github" id="github-icon"></a>
                     </button>
                 </div>
             </div>
 
-            <script>
-                displaySection();
-            </script>
+            
         </form>
+
+        <script>
+            displaySection();  
+        </script>
 
     </main>
 
     <!--FOOTER-->
     <footer>
         <p>© 2023 <a href="#">Web Market</a>. Todos los derechos reservados. <a href="#">Poliza de cookies</a> , <a
-                href="#">Privacidad</a> y <a href="#">Terminos</a>.</p>
+                href="#">Privacidad</a> y <a href="#">Terminos</a>.
+        </p>
     </footer>
 
 </body>

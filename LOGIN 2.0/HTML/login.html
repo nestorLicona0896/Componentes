@@ -7,24 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
     <!--Title-->
-    <link rel="icon" href="../IMAGENES/icon.png">
+    <link rel="icon" href="../IMAGENES/logo.png">
     <title>Inicio sesion</title>
 
     <!--Stylesheets-->
     <link rel="stylesheet" type="text/css" href="../CSS/login.css">
     <script src="../JS/login.js"></script>
-
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
 
     <!--HEADER -->
-    <header>
-        <div class="logo-container">
-            <img src="../IMAGENES/logo.png" alt="" id="logo">
-        </div>
-        
+    <header class="header-container">
+        <img src="../IMAGENES/logo.png" alt="" id="logo">
         <div class="button" id="close-button">
             <a href="../HTML/portal.html">
                 <div class="bar" id="bar-1"></div>
@@ -35,7 +30,7 @@
     </header>
 
     <!--MAIN-->
-    <main>
+    <main class="main-container" id="main">
 
         <!--LOGIN-->
         <form action="" method="get" class="login-form">
@@ -44,25 +39,20 @@
                 <h1>Hola!</h1>
                 <h3>Inicia sesión para continuar</h3>
 
-                <label id="label-email"><b>Correo</b></label>
-                <div class="input-field" id="email-field">
-                    <div><img src="../IMAGENES/mail.png" id="email-icon" alt=""></div>
-                    <input type="email" placeholder="" name="mail" id="input-email">
+                <label for="mail" id="label-email"><b>Correo</b></label>
+                <div class="input-container">
+                    <div><img src="../IMAGENES/mail.png" id="icon" alt=""></div><input type="email" placeholder="" name="mail" id="login_email">
                 </div>
-                <label id="label-email-message"><b>Mensaje sobre el campo correo!</b></label>
-                <label id="label-password"><b>Contraseña</b></label>
-                <div class="input-field" id="password-field">
-                    <div><img src="../IMAGENES/padlock.png" id="padlock-icon" alt=""></div>
-                    <input type="password" placeholder="" id="input-password" name="pass">
+                <label for="" id="label-email-message"><b>Mensaje sobre el campo correo!</b></label>
+                <label for="pass" id="label-password"><b>Contraseña</b></label>
+                <div class="input-container">
+                    <div><img src="../IMAGENES/padlock.png" id="icon" alt=""></div><input type="password" placeholder="" id="login_password" name="pass">
                 </div>
-                <label id="label-password-message"><b>Mensaje sobre el campo contraseña!</b></label>
+                <label for="" id="label-password-message"><b>Mensaje sobre el campo contraseña!</b></label>
 
-                <div class="recaptcha-container">
-                    <div class="g-recaptcha" data-sitekey="6LfAP-ojAAAAADEdWZPydAY6zA4cbl10LK1FcN9g">
-                    </div>
+                <div class="">
                 </div>
-                
-                <button type="button" id="button-login"> Iniciar sesión </button>
+                <button type="submit" id="button-login"> Iniciar sesión </button>
 
                 <div class="password-option">
                     <h5><a href="#">Olvidaste la contraseña?</a></h5>
@@ -79,11 +69,6 @@
         </form>
 
     </main>
-
-    <!--FOOTER-->
-    <footer>
-        
-    </footer>
 
 </body>
 

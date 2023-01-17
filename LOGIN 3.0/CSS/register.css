@@ -106,14 +106,14 @@ main #register-container .input-field input::placeholder {
     opacity: 85%;
 }
 
-main #register-container .recaptcha-container {
+main #register-container #recaptcha-section {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
 
-main #register-container .recaptcha-container .g-recaptcha {
+main #register-container #recaptcha-section .g-recaptcha {
     display: none;
 }
 
@@ -152,43 +152,15 @@ main #register-container h5 a:hover{
 }
 
 /* FOOTER */
-
 footer {
-    width: 100%;
     position: relative;
     top: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-footer h6 {
-    width: 500px;
-    text-align: justify;
-    color: #656d78;
-    font-weight: lighter;
-    letter-spacing: 0.2px;
-}
-
-footer h6 a {
-    text-decoration: none;
-    color: aqua;
-}
-
-footer h6 a:hover {
-    text-decoration: underline;
-    color: #50e3c2;
+    padding: 0px 0px 10px 0px;
 }
 
 /* RESPONSIVE 900PX */
 
 @media (max-width:900px) {
-
-    main {
-        box-shadow: none;
-        width: 100%;
-    }
 
     main #register-container {
         border: none;

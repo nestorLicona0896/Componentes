@@ -28,17 +28,3 @@ function changeFieldFocus(field) {
         }
     }
 }
-
-/* this function makes that the needed section appear, so that the user can see a new panel to continue the recovering process */
-function showSection () {
-    var actionButton1 = document.getElementById("button-verification");
-    actionButton1.onclick = function() { showResultSection() };
-
-
-}
-
-/* make the code section visible */
-function showResultSection() {
-    document.getElementById("verification-section").style.display = "none";
-    document.getElementById("result-section").style.display = "flex";
-}

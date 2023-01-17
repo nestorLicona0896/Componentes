@@ -6,8 +6,7 @@
 }
 
 body {
-    padding: 0;
-    margin: 0;
+    background-color: #f9f9f9;
     
 }
 
@@ -66,7 +65,7 @@ header .button a #bar-2 {
 
 main {
     width: 100%;
-    height: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -78,7 +77,6 @@ main {
 main .portal-form {
     width: 500px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 15px;
@@ -92,6 +90,7 @@ main .portal-form #portal-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 20px;
     background: rgba(255, 255, 255, 0.55%);
     backdrop-filter: blur(2px) saturate(55%);
@@ -157,7 +156,7 @@ main .portal-form #portal-container .spacer p {
     
 }
 
-main .portal-form #portal-container .login-media {
+main .portal-form #portal-container #login-media-section {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -165,29 +164,30 @@ main .portal-form #portal-container .login-media {
     gap: 35px;
 }
 
-main .portal-form #portal-container .login-media button[type=button]{
+main .portal-form #portal-container #login-media-section button[type=button]{
     width: 55px;
     height: 40px;
-    justify-content: center;
-    align-items: center;
     background: #d1e1e8;
     border-radius: 5.5px;
     cursor: pointer;
 }
 
-main .portal-form #portal-container .login-media a { 
+main .portal-form #portal-container #login-media-section a { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     border-radius: 25px;
 }
 
-main .portal-form #portal-container .login-media  img {
+main .portal-form #portal-container #login-media-section  img {
     width: 30px;
     height: 30px;
     object-fit: contain;
     filter: brightness(0%);
 }
 
-main .portal-form #portal-container .login-media button[type=button]:hover {
+main .portal-form #portal-container #login-media-section button[type=button]:hover {
     box-shadow: -5px 5px 12px 4px #d3d3d3;
     background-color: azure;
     border: solid #d3d3d3 1px;
@@ -196,7 +196,7 @@ main .portal-form #portal-container .login-media button[type=button]:hover {
     outline: none;
 }
 
-main .portal-form #portal-container .login-media button:hover a img {
+main .portal-form #portal-container #login-media-section button:hover a img {
     filter: none;
 }
 
@@ -206,7 +206,8 @@ footer {
     width: 100%;
     height: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
     text-align: center;
     font-size: 14px;

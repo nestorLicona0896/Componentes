@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale=1.0, user-scalable=0" >
+        
+        <link rel="icon" href="../IMAGENES/logo.png">
+        <title>Account verification</title>
+
+        <link rel="stylesheet" type="text/css" href="../CSS/verification.css">
+        <script src="../JS/verification.js"></script>
+
+    </head>
+
+    <body>
+        <!-- HEADER-->
+        <header>
+            <header class="header-container">
+                <img src="../IMAGENES/logo.png" alt="" id="logo">
+            </header>
+        </header>
+        <!--MAIN-->
+        <main>
+            <!--verification-->
+            <form action="" method="get" class="verification-form">
+
+                <div class="container" id="verification-container">
+                    <h1>Verificación de la cuenta!</h1>
+                    <h3>Ingresa el código enviado a la dirección de correo: <label id="label-email-direction">ejemplo@hotmail.com</label></h3>
+
+                    <label for="" id="label-code"><b>Código</b></label>
+
+                    <div id="code-container">
+                        <input type="text" maxlength="1" class="digit" id="code-digit-1">
+                        <input type="text" maxlength="1" class="digit" id="code-digit-2">
+                        <input type="text" maxlength="1" class="digit" id="code-digit-3">
+                        <input type="text" maxlength="1" class="digit" id="code-digit-4">
+                        <input type="text" maxlength="1" class="digit" id="code-digit-5">
+                        <input type="text" maxlength="1" class="digit" id="code-digit-6">
+                    </div>
+                    <div></div>
+                    <button type="submit" id="button-verification"> Verificar </button>
+                   
+                    <h5>En caso de no recibir el código de verificación puede <a href="#">Enviarlo de nuevo!</a> o puede <a href="#">Cambiar la dirección de correo</a></h5>
+                    
+                </div>
+
+                <script> digitFieldFocus() </script>
+
+            </form>
+            
+        </main>
+        <!--FOOTER-->
+        <footer></footer>
+    </body>
+
+
+</html>

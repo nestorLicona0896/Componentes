@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<HTML lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <!--responsive tag-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <!--Title-->
+    <link rel="icon" href="../IMAGENES/logo.png">
+    <title>Portal</title>
+
+    <!--Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="../CSS/portal.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/login.css">
+
+    <script src="../JS/portal.js"></script>
+    
+</head>
+
+<body>
+
+    <!--HEADER -->
+    <header class="header-container">
+        <div id="logo-box">
+            <a class="header-link" href="../HTML/navbar.html">
+                <img src="../IMAGENES/logo.png" alt="" id="logo">
+            </a>            
+        </div>
+        <div class="button" id="close-button">
+            <a href="../../NAVBAR/HTML/navbar.html">
+                <div class="bar" id="bar-1"></div>
+                <div class="bar" id="bar-2"></div>
+            </a>
+            
+        </div>
+    </header>
+
+    <!--MAIN-->
+    <main class="main-container">
+
+        <!--PORTAL-->
+        <form action="" method="get" class="portal-form">
+
+            <!--PORTAL-->
+            <div class="container" id="portal-container">
+                <img src="../IMAGENES/user.png" alt="" id="user-icon">
+                <button type="button" id="button-signup"> Registrarse </button>
+                <button type="button" id="button-login-1"> Iniciar sesion </button>
+
+                <div class="spacer">
+                    <div></div>
+                    <p>o usar</p>
+                    <div></div>
+                </div>
+
+                <div class="login-media" id="login-media-box">
+                    <button type="submit">
+                        <a class="social-media-link" href="#"><img src="../IMAGENES/google.png"></a>
+                    </button>
+                    <button type="submit">
+                        <a class="social-media-link" href="#"><img src="../IMAGENES/facebook.png"></a>
+                    </button>
+                    <button type="submit">
+                        <a class="social-media-link" href="#"><img src="../IMAGENES/twitter.png"></a>
+                    </button >
+                    <button type="submit">
+                        <a class="social-media-link" href="#"><img src="../IMAGENES/github.png"></a>
+                    </button>
+                </div>
+            </div>
+
+            <!--LOGIN-->
+            <div class="container" id="login-container" style="display:none;">
+                <h1>Hola!</h1>
+                <h3>Inicia sesión para continuar</h3>
+
+                <label for="mail" id="label-email"><b>Correo</b></label>
+                <div class="input-container">
+                    <div><img src="../IMAGENES/mail.png" id="icon" alt=""></div><input type="email" placeholder="" name="mail" id="login_email">
+                </div>
+                <label for="" id="label-email-message"><b>Mensaje sobre el campo correo!</b></label>
+                <label for="pass" id="label-password"><b>Contraseña</b></label>
+                <div class="input-container">
+                    <div><img src="../IMAGENES/padlock.png" id="icon" alt=""></div><input type="password" placeholder="" id="login_password" name="pass">
+                </div>
+                <label for="" id="label-password-message"><b>Mensaje sobre el campo contraseña!</b></label>
+
+                <div class="g-recaptcha" key>
+                </div>
+                <button type="submit" id="button-login"> Iniciar sesión </button>
+
+                <div class="password-option">
+                    <h5><a href="#">Olvidaste la contraseña?</a></h5>
+
+                    <label id="label-remember">
+                        <input type="checkbox" title="remember account" id="remember-me"> Recuerdame?
+                    </label>
+                </div>
+                
+
+                <h5>No tienes una cuenta? <a href="../HTML/register.html">Registrarse</a> </h5>
+            </div>
+            <script>displayLogin()</script>
+        </form>
+
+    </main>
+
+    <!--FOOTER-->
+    <footer>
+        <p>© 2023 <a href="#">Web Market</a>. Todos los derechos reservados. <a href="#">Poliza de cookies</a> , <a
+                href="#">Privacidad</a> y <a href="#">Terminos</a>.</p>
+    </footer>
+
+</body>
+
+</HTML>

@@ -1,46 +1,44 @@
+/* LOGIN */
 
-main #login-container {
-    width: 500px;
+main .portal-form #login-container {
+    width: 100%;
     height: auto;
-    padding: 45px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: flex-start;
     gap: 10px;
-    background: rgba(255, 255, 255, 0.55);
-    backdrop-filter: blur(2px) saturate(15%);
-    border: solid #d3d3d3 1px;
-    border-radius: 15px;
-    text-align: justify;
 }
 
-main #login-container h1 {
+main .portal-form #login-container h1 {
+    letter-spacing: 3.5px;
     color: #50e3c2;
 }
 
-main #login-container h3 {
+main .portal-form #login-container h3 {
     color: #656d78;
     position: relative;
-    top: -10px
+    top: -15px;
 }
 
-main #login-container h5:last-child {
+main .portal-form #login-container h5:last-child {
     color: #070707;
 }
 
-main #login-container #label-email,  
-main #login-container #label-password {
+main .portal-form #login-container #label-email,  
+main .portal-form #login-container #label-password {
     color: #656d78;
 }
 
-main #login-container #label-email-message ,
-main #login-container #label-password-message {
+main .portal-form #login-container #label-email-message ,
+main .portal-form #login-container #label-password-message {
     color: #656d78;
+    position: relative;
     font-size: 12px;
     display: none;
 }
 
-main #login-container .input-field {
+main .portal-form #login-container .input-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -48,7 +46,7 @@ main #login-container .input-field {
     width: 100%;
 }
 
-main #login-container .input-field div {
+main .portal-form #login-container .input-container div {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -61,8 +59,7 @@ main #login-container .input-field div {
     border-bottom-right-radius: 0px;
 }
 
-main #login-container .input-field div #email-icon,
-main #login-container .input-field div #padlock-icon {
+main .portal-form #login-container .input-container div #icon {
     display: block;
     width: 25px;
     height: 25px;
@@ -70,14 +67,14 @@ main #login-container .input-field div #padlock-icon {
     object-fit: contain;
 }
 
-main #login-container .input-field:hover #email-icon,
-main #login-container .input-field:hover #padlock-icon {
+main .portal-form #login-container .input-container:hover #icon {
     filter: invert(96%) sepia(98%) saturate(810%) hue-rotate(83deg) brightness(103%) contrast(78%);
 }
 
 
-main #login-container .input-field input[type=email], 
-main #login-container .input-field input[type=password] {
+main .portal-form #login-container .input-container input[type=email], 
+main .portal-form #login-container .input-container input[type=password] {
+    margin: 0px;
     padding: 0px 5px 0px 12px;
     width: 100%;
     height: 55px;
@@ -92,27 +89,19 @@ main #login-container .input-field input[type=password] {
     border-left: none;
 }
 
-main #login-container .input-field:hover div,
-main #login-container .input-field:hover input {
+main .portal-form #login-container .input-container:hover div,
+main .portal-form #login-container .input-container:hover input {
     border-color: #50e3c2;
+    
 }
 
-main #login-container input::placeholder {
+
+main .portal-form #login-container input::placeholder {
     opacity: 85%;
 }
 
-main .container .recaptcha-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
 
-main .container .recaptcha-container .g-recaptcha {
-    display: none;
-}
-
-main #login-container #button-login {
+main .portal-form #login-container #button-login {
     display: block;
     width: 100%;
     height: 55px;
@@ -123,11 +112,11 @@ main #login-container #button-login {
     border: none;
     color: #f9f9f9;
     font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     
 }
 
-main #login-container #button-login:hover,
-main #login-container #button-login:focus {
+main .portal-form #login-container #button-login:hover {
     background: #f9f9f9;
     outline-offset: 0.3vh;
     outline: solid #656d78 2.5px;
@@ -139,7 +128,7 @@ main #login-container #button-login:focus {
 }
 
 
-main #login-container .password-option{
+main .portal-form #login-container .password-option{
     display: flex;
     flex-direction: row;
     justify-content:c enter;
@@ -147,25 +136,25 @@ main #login-container .password-option{
     width: 100%;
 }
 
-main #login-container .password-option #label-remember {
+main .portal-form #login-container .password-option #label-remember {
     color: #656d78;
     position: absolute;
     right: 50px;
     font-size: 14px;
 }
 
-main #login-container .password-option #label-remember:hover,
-main #login-container .password-option input[type=checkbox]:hover  {
+main .portal-form #login-container .password-option #label-remember:hover,
+main .portal-form #login-container .password-option input[type=checkbox]:hover  {
     color: #50e3c2;
     cursor: pointer;
 }
 
-main  #login-container a { 
+main .portal-form  #login-container a { 
     text-decoration: none;
     color: #656d78;
 }
 
-main  #login-container a:hover { 
+main .portal-form  #login-container a:hover { 
     color: #50e3c2;
     text-decoration: underline;
 }
@@ -174,22 +163,22 @@ main  #login-container a:hover {
 
 /*---------------------------MEDIA QUERY-----------------------------*/
 
-/* RESPONSIVE 900px */
+/* RESPONSIVE 900PX */
 
 @media (max-width: 900px) {
 
-    main {
+    main .portal-form {
         box-shadow: none;
-        width: 100%;
-    }
-
-    main #login-container {
         border: none;
         width: 100%;
     }
 
+    header .button {
+        right: 35px;
+    }
+
 }
-/* END RESPONSIVE 900px */
+/* END RESPONSIVE main 900 */
 
 
 
