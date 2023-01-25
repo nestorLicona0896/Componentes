@@ -4,7 +4,7 @@ function displayLogin() {
         var form = document.getElementById("portal");
         var xhtml = new XMLHttpRequest();
     
-        xhtml.open('GET', 'login.html', true);
+        xhtml.open('GET', 'login_section.html', true);
         xhtml.onreadystatechange = function () {
             form.innerHTML = this.responseText;
             var script = document.createElement("script");

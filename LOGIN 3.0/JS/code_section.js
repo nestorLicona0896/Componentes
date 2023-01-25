@@ -9,7 +9,7 @@ function digitFieldFocus() {
 }
 
 /* This function add to every code field that is next to the current field a focus,
-but before that, it checks that the value also is numeric*/ 
+but before that, it checks that the value also is numeric */ 
 function changeFieldFocus(field) {
 
     var id = field.getAttribute('id');
@@ -21,7 +21,7 @@ function changeFieldFocus(field) {
                     document.getElementById(id).nextElementSibling.focus();
                 }
             } else {
-                document.getElementById("button-reset").focus();
+                document.getElementById("verify-button").focus();
             }
         } else {
             field.value = "";
@@ -29,24 +29,26 @@ function changeFieldFocus(field) {
     }
 }
 
-/* this function makes that the needed section appear, so that the user can see a new panel to continue the recovering process */
-function showSection () {
-    var actionButton1 = document.getElementById("button-send");
-    actionButton1.onclick = function() { showCodeSection() };
+// verifies the validation of the code sended to the registered email:
+function verifyCode(){
+    //validations....if(verify() == true) {....}
 
-    var actionButton2 = document.getElementById("button-reset");
-    actionButton2.onclick = function() { showResultSection() };
-
+    displayResultSection();
 }
 
-/* make the code section visible */
-function showCodeSection() {
-    document.getElementById("email-section").style.display = "none";
-    document.getElementById("code-section").style.display = "flex";
-}
+// make the result section visible with the propper message according to the verification status:
+function displayResultSection() {
+    document.getElementById("verify-button").onclick = function () {
+        var form = document.getElementById("portal");
+        var xhtml = new XMLHttpRequest();
 
-/* make the result section visible */
-function showResultSection() {
-    document.getElementById("code-section").style.display = "none";
-    document.getElementById("result-section").style.display = "flex";
+        xhtml.open('GET', 'result_section.html', true);
+        xhtml.onreadystatechange = function () {
+            form.innerHTML = this.responseText;
+            var script = document.createElement("script");
+            script.innerHTML = "displayLoginSection();";
+            form.appendChild(script);
+        };
+        xhtml.send();
+    };
 }
