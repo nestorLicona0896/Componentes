@@ -6,7 +6,6 @@ function sendVerificationCode(){
        }
     */
     displayCodeSection();
-
 }
 
 // proceeds to validate and verify the registered email direction:
@@ -24,8 +23,7 @@ function  displayCodeSection() {
         xhtml.onreadystatechange = function () {
             form.innerHTML = this.responseText;
             var script = document.createElement("script");
-            script.innerHTML = "digitFieldFocus();";
-            script.innerHTML += "verifyCode();";
+            script.innerHTML = "digitFieldFocus(); verifyCode();";
             form.appendChild(script);
         };
         xhtml.send();

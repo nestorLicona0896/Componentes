@@ -8,7 +8,7 @@ function displayLogin() {
         xhtml.onreadystatechange = function () {
             form.innerHTML = this.responseText;
             var script = document.createElement("script");
-            script.innerHTML = "displayRegister();";
+            script.innerHTML = "displayRegister(); displayEmailSection();";
             form.appendChild(script);
         };
         xhtml.send();
