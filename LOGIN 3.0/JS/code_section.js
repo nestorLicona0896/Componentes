@@ -5,45 +5,36 @@ function digitFieldFocus() {
     var fields = header.getElementsByClassName("digit");
 
     for (var i = 0; i < fields.length; i++) {
-        fields[i].oninput = function() { changeFieldFocus(this) };
-        
+        //fields[i].oninput =  function(){ changeFieldFocus(this) };
+        fields[i].addEventListener('keyup',  function(event) { 
+            const key = event.key; // const {key} = event; ES6+
+            if (key === "Delete" || key === "Backspace" ) {
+                this.previousElementSibling.focus(); 
+            } else {
+                changeFieldFocus(this);
+            }
+        });
     }
 }
 
 /* This function add to every code field that is next to the current field a focus,
-but before that, it checks that the value also is numeric */ 
+but before that, it checks that the value also is numeric */
 function changeFieldFocus(field) {
-
     var id = field.getAttribute('id');
-    if (field.value != "") {
-
-        document.getElementById(id).addEventListener('keydown', function(event) {
-            const key = event.key;
-            if (key === "Backspace" || key === "Delete") {
-                document.getElementById(id).value = "";
-                document.getElementById(id).previousElementSibling.focus();
-                //alert(key + ' is Pressed!');
-            }
-        });
-            
-        if (field.value == 0 || field.value == 1 || field.value == 2 || field.value == 3 || field.value == 4 || field.value == 5 || field.value == 6 || field.value == 7 || field.value == 8 || field.value == 9  ) {
-            
-            if(document.getElementById(id).nextElementSibling != null) {
-                if(document.getElementById(id).nextElementSibling.value == ""){
-                    document.getElementById(id).nextElementSibling.focus();
-                }
-            } else {
-                document.getElementById("verify-button").focus();
-            }
+    if (document.getElementById(id).value == 0  || document.getElementById(id).value == 1 || document.getElementById(id).value == 2 || document.getElementById(id).value == 3 || document.getElementById(id).value == 4 || document.getElementById(id).value== 5 || document.getElementById(id).value == 6 || document.getElementById(id).value == 7 || document.getElementById(id).value == 8 || document.getElementById(id).value == 9) {
+        if(document.getElementById(id).value != "" && document.getElementById(id).value != " "){
+            document.getElementById(id).nextElementSibling.focus();
         } else {
-            field.value = "";
+            document.getElementById(id).value = "";
         }
+    } else {
+        document.getElementById(id).value = "";
     }
 }
 
 // verifies the validation of the code sended to the registered email:
 function verifyCode(){
-    //validations....if(verify() == true) {....}
+    //validations....if(verify() == true) {.......}
 
     displayResultSection();
 }
@@ -66,5 +57,5 @@ function displayResultSection() {
 }
 
 /* 
-detects if the backspace or delete button is pressed on the keyboard when a digit-field is focus so 
+detects if the backspace or delete button is pressed on the document.getElementById(id)board when a digit-field is focus so 
 its erase the value, but also turn the focus onto the previus digit field*/
