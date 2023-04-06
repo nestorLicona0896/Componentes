@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register Form</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/gpt.css">
+	<style>
+		body {
+			background-color: #f2f2f2;
+		}
+		form {
+			background-color: white;
+			max-width: 500px;
+			margin: 0 auto;
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		}
+		h1 {
+			text-align: center;
+			margin-bottom: 30px;
+			color: #333;
+		}
+		label {
+			display: block;
+			font-size: 18px;
+			margin-bottom: 10px;
+			color: #333;
+		}
+		input[type="text"],
+		input[type="email"],
+		input[type="password"] {
+			width: 500px;
+            margin: -10px;
+			padding: 10px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			margin-bottom: 20px;
+			font-size: 16px;
+		}
+		button {
+			background-color: #ffc107;
+			color: white;
+			padding: 10px 20px;
+			border-radius: 5px;
+			border: none;
+			font-size: 18px;
+			cursor: pointer;
+		}
+		button:hover {
+			background-color: #ffb300;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<h1>Register Form</h1>
+		<label for="username">Username</label>
+		<input type="text" id="username" name="username" required>
+		<label for="email">Email</label>
+		<input type="email" id="email" name="email" required>
+		<label for="password">Password</label>
+		<input type="password" id="password" name="password" required>
+		<label for="confirm_password">Confirm Password</label>
+		<input type="password" id="confirm_password" name="confirm_password" required>
+		<button type="submit">Register</button>
+	</form>
+</body>
+</html>

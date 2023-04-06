@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<HTML lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <!-- RESPONSIVE TAG -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <!-- TITLE -->
+    <link rel="icon" href="../IMAGENES/icon.png">
+    <title>Portal</title>
+
+    <!-- STYLESHEETS LINKS -->
+    <link type="text/css" rel="stylesheet" href="../CSS/portal_section.css">
+    <link type="text/css" rel="stylesheet" href="../CSS/form.css">
+
+    <!-- JAVASCRIPT LINKS -->
+    <script src="../JS/portal_section.js"></script>
+    <script src="../JS/login_section.js"></script>
+    <script src="../JS/register_section.js"></script>
+    <script src="../JS/email_section.js"></script>
+    <script src="../JS/code_section.js"></script>
+    <script src="../JS/result_section.js"></script>
+    <script src="../JS/mysql_connection.js"></script>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container" id="logo-container">
+            <a class="header-link" href="../HTML/navbar.html">
+                <img src="../IMAGENES/logo.png" alt="" id="logo">
+            </a>
+        </div>
+        <div id="close-button">
+            <a href="../../NAVBAR/HTML/navbar.html">
+                <div class="bar" id="bar-1"></div>
+                <div class="bar" id="bar-2"></div>
+            </a>
+
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- MAIN PORTAL SECTION -->
+        <div class="portal" id="portal-section">
+            <!--carousel-->
+            <div class="carousel" id="carousel-portal">
+                <!-- HOME SECTION LOGIN/REGISTER FORM-->
+                <form action="" method="get" id="portal-form" class="form active-form">
+
+                    <div class="img-container">
+                        <img src="../IMAGENES/user.png" alt="" id="user-icon">
+                    </div>
+
+                    <button type="button" id="signup-button" onclick="displayRegisterSection()">Registrarse</button>
+                    <button type="button" id="login-button" onclick="displayLoginSection()">Iniciar sesion</button>
+
+                    <div class="spacer">
+                        <div></div>
+                        <p>o ingresa usando</p>
+                        <div></div>
+                    </div>
+
+                    <div class="container" id="login-media-section">
+                        <button type="button" id="google-button" onclick="displayGoogleAccountSection()">
+                            <a class="social-media-link" href="#" id="google-link" onclick=""><img
+                                    src="../IMAGENES/google.png" alt="Google" id="google-icon"></a>
+                        </button>
+                        <button type="button" id="facebook-button" onclick="displayFacebookAccountSection()">
+                            <a class="social-media-link" href="#" id="facebook-link" onclick=""><img
+                                    src="../IMAGENES/facebook.png" alt="Facebook" id="facebook-icon"></a>
+                        </button>
+                        <button type="button" id="twitter-button" onclick="displayTwitterAccountSection()">
+                            <a class="social-media-link" href="#" id="twitter-link" onclick=""><img
+                                    src="../IMAGENES/twitter.png" alt="Twitter" id="twitter-icon"></a>
+                        </button>
+                        <button type="button" id="github-button" onclick="displayGithubAccountSection()">
+                            <a class="social-media-link" href="#" id="github-link" onclick=""><img
+                                    src="../IMAGENES/github.png" alt="Github" id="github-icon"></a>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <!--Load scripts-->
+        <script>
+            loadForms();
+        </script>
+    </main>
+
+    <!--FOOTER-->
+    <footer>
+        <p>© 2023 <a href="#">Web Market</a>. Todos los derechos reservados. <a href="#">Poliza de cookies</a> , <a
+                href="#">Privacidad</a> y <a href="#">Terminos</a>.
+        </p>
+    </footer>
+
+</body>
+
+</HTML>

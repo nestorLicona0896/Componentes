@@ -16,7 +16,7 @@ function validateEmail(){
 // charges insede the form the code section and its functions:
 function  displayCodeSection() {
     document.getElementById("send-button").onclick = function () {
-        var form = document.getElementById("portal");
+        var form = document.getElementById("portal-section");
         var xhtml = new XMLHttpRequest();
 
         xhtml.open('GET', 'code_section.html', true);

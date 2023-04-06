@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    
+}
+
+body div {
+    float: none;
+}
+
+/* HEADER */
+
+header {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header #logo {
+    display: block;
+    width: 150px;
+    height: 100%;
+    margin: 0px;
+    padding: 8px;
+    object-fit: contain;
+}
+
+header #close-button {
+    position: absolute;
+    right: 15px;
+}
+
+header #close-button a {
+    display: flex;
+}
+
+header #close-button a .bar {
+    margin: 0px;
+    padding: 0px;
+    width: 25px;
+    height: 2.5px;
+    background-color: #696969;
+    border-radius: 2.5px;
+    cursor: pointer;
+}
+
+header #close-button a #bar-1 {
+    transform:  translateX(13px) rotate(45deg);
+    
+}
+
+header #close-button a #bar-2 {
+    transform:  translateX(-13px) rotate(-45deg);
+}
+
+/* MAIN  */
+
+main {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* PORTAL FORM */
+
+main .portal {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: -10.5px 12px 22px 5.5px #d3d3d3;
+}   
+
+main .portal #portal-form {
+    width: 500px;
+    height: auto;
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.55%);
+    backdrop-filter: blur(2px) saturate(55%);
+    border: solid #d3d3d3 1px;
+    border-radius: 15px;
+    text-align: justify;
+}
+
+main .portal #portal-form .img-container #user-icon {
+    display: block;
+    object-fit: contain;
+    width: 85px;
+    filter: opacity(0.55);
+}
+
+main .portal #portal-form button[type=button] {
+    width: 100%;
+    height: 55px;
+    border-radius: 5.5px;
+    outline: none;
+    cursor: pointer;
+    background: #50e3c2;
+    border: none;
+    color: #f9f9f9;
+    font-size: 20px;
+}
+
+main .portal #portal-form button[type=button]:hover,
+main .portal #portal-form button[type=button]:focus {
+    background: #f9f9f9;
+    outline-offset: 0.3vh;
+    outline: solid #656d78 2.5px;
+    transition: all 0.33s ease;
+    color: #50e3c2;
+    box-shadow: -5px 5px 12px 4px #d3d3d3;
+    transition: all 0.33s ease;
+    transform: translateY(-2.5px);
+}
+
+main .portal #portal-form a { 
+    text-decoration: none;
+}
+
+main .portal #portal-form .spacer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+main .portal #portal-form .spacer div {
+    width: 135px;
+    height: 0.65px;
+    background: #ccc;
+}
+
+main .portal #portal-form .spacer p {
+    color: #656d78;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+main .portal #portal-form #login-media-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+
+main .portal #portal-form #login-media-section button[type=button]{
+    width: 55px;
+    height: 40px;
+    background: #d1e1e8;
+    border-radius: 5.5px;
+    cursor: pointer;
+}
+
+main .portal #portal-form #login-media-section a { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 25px;
+}
+
+main .portal #portal-form #login-media-section img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    filter: brightness(0%);
+}
+
+main .portal #portal-form #login-media-section button[type=button]:hover {
+    box-shadow: -5px 5px 12px 4px #d3d3d3;
+    background-color: azure;
+    border: solid #d3d3d3 1px;
+    transition: all 0.33s ease;
+    transform: translateY(-2.5px);
+    outline: none;
+}
+
+main .portal #portal-form #login-media-section button:hover a img {
+    filter: none;
+}
+
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    color: #696969;
+    z-index: -1;
+    position: fixed;
+    bottom: 10px;
+}
+
+footer a {
+    color: #696969;
+
+}
+
+footer a:hover {
+    color: #48cfad;
+
+}
+
+/* RESPONSIVE 900px*/
+
+@media (max-width: 900px) {
+
+    main .portal {
+        box-shadow: none;
+        width: 100%;
+    }
+
+    main .portal #portal-form {
+        border: none;
+        width: 100%;
+    }
+
+}
+
+

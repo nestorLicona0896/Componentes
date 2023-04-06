@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Transition Animation</title>
+    <style>
+        /* Styling for forms */
+        .form {
+            width: 400px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin: 20px auto;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        /* Styling for the active form */
+        .active-form {
+            opacity: 1;
+            z-index: 1;
+        }
+
+        /* Styling for the inactive forms */
+        .inactive-form {
+            opacity: 0;
+            z-index: -100;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="form1" class="form active-form">
+        <h2>Form 1</h2>
+        <p>This is form 1.</p>
+    </div>
+
+    <div id="form2" class="form inactive-form">
+        <h2>Form 2</h2>
+        <p>This is form 2.</p>
+    </div>
+
+    <div id="form3" class="form inactive-form">
+        <h2>Form 3</h2>
+        <p>This is form 3.</p>
+    </div>
+
+    <script>
+        // Get all forms by their id
+        const form1 = document.getElementById('form1');
+        const form2 = document.getElementById('form2');
+        const form3 = document.getElementById('form3');
+
+        // Set the active form to form1
+        let activeForm = form1;
+
+        // Show the active form and hide the others
+        const showActiveForm = () => {
+            form1.classList.toggle('inactive-form', form1 !== activeForm);
+            form2.classList.toggle('inactive-form', form2 !== activeForm);
+            form3.classList.toggle('inactive-form', form3 !== activeForm);
+            activeForm.classList.toggle('active-form', true);
+        };
+
+        // Show the next form when the current form is clicked
+        form1.addEventListener('click', () => {
+            activeForm = form2;
+            showActiveForm();
+        });
+        form2.addEventListener('click', () => {
+            activeForm = form3;
+            showActiveForm();
+        });
+        form3.addEventListener('click', () => {
+            activeForm = form1;
+            showActiveForm();
+        });
+
+        // Show the first form when the page is loaded
+        showActiveForm();
+    </script>
+</body>
+
+</html>

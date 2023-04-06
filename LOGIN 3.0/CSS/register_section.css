@@ -1,7 +1,7 @@
 
 /* REGISTER FORM */
 
-main #register-container {
+main #register-form {
     width: 500px;
     height: auto;
     padding: 45px;
@@ -16,33 +16,33 @@ main #register-container {
     text-align: justify;
 }
 
-main #register-container h1 {
+main #register-form h1 {
     color: #50e3c2;
 }
 
-main #register-container h3 {
+main #register-form h3 {
     color: #656d78;
     position: relative;
     top: -10px;
 }
 
-main #register-container #label-name,
-main #register-container #label-email ,
-main #register-container #label-password {
+main #register-form #label-name,
+main #register-form #label-email ,
+main #register-form #label-password {
     color: #656d78;
     position: relative;
 }
 
-main #register-container #label-name-message,
-main #register-container #label-email-message ,
-main #register-container #label-password-message {
+main #register-form #label-name-message,
+main #register-form #label-email-message ,
+main #register-form #label-password-message {
     color: #656d78;
     position: relative;
     font-size: 12px;
     display: none;
 }
 
-main #register-container .input-field {
+main #register-form .input-field {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -50,7 +50,7 @@ main #register-container .input-field {
     width: 100%;
 }
 
-main #register-container .input-field div {
+main #register-form .input-field div {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -63,9 +63,9 @@ main #register-container .input-field div {
     border-bottom-right-radius: 0px;
 }
 
-main #register-container .input-field div #user-icon,
-main #register-container .input-field div #email-icon,
-main #register-container .input-field div #padlock-icon {
+main #register-form .input-field #user-icon,
+main #register-form .input-field #email-icon,
+main #register-form .input-field #padlock-icon {
     display: block;
     width: 25px;
     height: 25px;
@@ -73,9 +73,9 @@ main #register-container .input-field div #padlock-icon {
     object-fit: contain;
 }
 
-main #register-container .input-field input[type=text], 
-main #register-container .input-field input[type=email],
-main #register-container input[type=password] {
+main #register-form .input-field input[type=text], 
+main #register-form .input-field input[type=email],
+main #register-form input[type=password] {
     padding: 0px 8px 0px 10px;
     border: solid #d3d3d3 1px;
     width: 100%;
@@ -90,34 +90,34 @@ main #register-container input[type=password] {
 }
 
 
-main #register-container .input-field:hover div,
-main #register-container .input-field:hover input {
+main #register-form .input-field:hover div,
+main #register-form .input-field:hover input {
     border-color: #50e3c2;
     outline: none;
 }
 
-main #register-container .input-field:hover div #user-icon,
-main #register-container .input-field:hover div #email-icon ,
-main #register-container .input-field:hover div #padlock-icon {
+main #register-form .input-field:hover #user-icon,
+main #register-form .input-field:hover #email-icon ,
+main #register-form .input-field:hover #padlock-icon {
     filter: invert(96%) sepia(98%) saturate(810%) hue-rotate(83deg) brightness(103%) contrast(78%);
 }
 
-main #register-container .input-field input::placeholder {
-    opacity: 85%;
+main #register-form .input-field input::placeholder {
+    opacity: 55%; 
 }
 
-main #register-container #recaptcha-section {
+main #register-form #recaptcha-section {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
 
-main #register-container #recaptcha-section .g-recaptcha {
+main #register-form #recaptcha-section .g-recaptcha {
     display: none;
 }
 
-main #register-container button[type=button] {
+main #register-form button[type=submit] {
     width: 100%;
     height: 55px;
     border: none;
@@ -128,8 +128,8 @@ main #register-container button[type=button] {
     cursor: pointer;
 }
 
-main #register-container button[type=button]:hover,
-main #register-container button[type=button]:focus {
+main #register-form button[type=submit]:hover,
+main #register-form button[type=submit]:focus {
     
     background: #f9f9f9;
     outline-offset: 0.3vh;
@@ -141,12 +141,12 @@ main #register-container button[type=button]:focus {
     transform: translateY(-2.5px);
 }
 
-main #register-container h5 a {
+main #register-form h5 a {
     text-decoration: none;
     color: #656d78;
 }
 
-main #register-container h5 a:hover{
+main #register-form h5 a:hover{
     text-decoration: underline;
     color: #50e3c2;
 }
@@ -162,7 +162,7 @@ footer {
 
 @media (max-width:900px) {
 
-    main #register-container {
+    main #register-form {
         border: none;
         width: 100%;
     }

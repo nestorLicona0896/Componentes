@@ -1,5 +1,5 @@
 
-main #login-form {
+main #portal-section #login-form {
     width: 500px;
     height: auto;
     padding: 45px;
@@ -14,33 +14,34 @@ main #login-form {
     text-align: justify;
 }
 
-main #login-form h1 {
+
+main #portal-section #login-form h1 {
     color: #50e3c2;
 }
 
-main #login-form h3 {
+main #portal-section #login-form h3 {
     color: #656d78;
     position: relative;
     top: -10px
 }
 
-main #login-form h5:last-child {
+main #portal-section #login-form h5:last-child {
     color: #070707;
 }
 
-main #login-form #label-email,  
-main #login-form #label-password {
+main #portal-section #login-form #label-email,  
+main #portal-section #login-form #label-password {
     color: #656d78;
 }
 
-main #login-form #label-email-message ,
-main #login-form #label-password-message {
+main #portal-section #login-form #label-email-message ,
+main #portal-section #login-form #label-password-message {
     color: #656d78;
     font-size: 12px;
     display: none;
 }
 
-main #login-form .input-field {
+main #portal-section #login-form .input-field {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -48,7 +49,7 @@ main #login-form .input-field {
     width: 100%;
 }
 
-main #login-form .input-field div {
+main #portal-section #login-form .input-field div {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -59,25 +60,27 @@ main #login-form .input-field div {
     border: solid #d3d3d3 1px;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
+    transition: all 0.3s;
 }
 
-main #login-form .input-field #email-icon,
-main #login-form .input-field #padlock-icon {
+main #portal-section #login-form .input-field #email-icon,
+main #portal-section #login-form .input-field #padlock-icon {
     display: block;
     width: 25px;
     height: 25px;
     filter: opacity(55%);
     object-fit: contain;
+    transition: all 0.3s;
 }
 
-main #login-form .input-field:hover #email-icon,
-main #login-form .input-field:hover #padlock-icon {
-    filter: invert(96%) sepia(98%) saturate(810%) hue-rotate(83deg) brightness(103%) contrast(78%);
+main #portal-section #login-form .input-field:hover #email-icon,
+main #portal-section #login-form .input-field:hover #padlock-icon {
+    filter: invert(96%) sepia(98%) saturate(810%) hue-rotate(83deg) brightness(103%) contrast(78%) !important;
 }
 
 
-main #login-form .input-field input[type=email], 
-main #login-form .input-field input[type=password] {
+main #portal-section #login-form .input-field input[type=email], 
+main #portal-section #login-form .input-field input[type=password] {
     padding: 0px 5px 0px 12px;
     width: 100%;
     height: 55px;
@@ -90,29 +93,30 @@ main #login-form .input-field input[type=password] {
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
     border-left: none;
+    transition: all 0.3s;
 }
 
-main #login-form .input-field:hover div,
-main #login-form .input-field:hover input {
-    border-color: #50e3c2;
+main #portal-section #login-form .input-field:hover div,
+main #portal-section #login-form .input-field:hover input {
+    border-color: #50e3c2 !important;
 }
 
-main #login-form .input-field input::placeholder {
+main #portal-section #login-form .input-field input::placeholder {
     opacity: 55%;
 }
 
-main #login-form #recaptcha-section {
+main #portal-section #login-form #recaptcha-section {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
 
-main #login-form #recaptcha-section .g-recaptcha {
+main #portal-section #login-form #recaptcha-section .g-recaptcha {
     display: none;
 }
 
-main #login-form #login-button {
+main #portal-section #login-form #login-button {
     display: block;
     width: 100%;
     height: 55px;
@@ -123,49 +127,50 @@ main #login-form #login-button {
     border: none;
     color: #f9f9f9;
     font-size: 20px;
-    
+    transition: all 0.3s;
 }
 
-main #login-form #login-button:hover,
-main #login-form #login-button:focus {
+main #portal-section #login-form #login-button:hover,
+main #portal-section #login-form #login-button:focus {
     background: #f9f9f9;
     outline-offset: 0.3vh;
     outline: solid #656d78 2.5px;
-    transition: all 0.33s ease;
     color: #50e3c2;
     box-shadow: -5px 5px 12px 4px #d3d3d3;
-    transition: all 0.33s ease;
     transform: translateY(-2.5px);
 }
 
 
-main #login-form #password-option-section {
+main #portal-section #login-form #password-option-section {
     display: flex;
     flex-direction: row;
     justify-content:c enter;
     align-items: center;
     width: 100%;
+    transition: all 0.3s;
 }
 
-main #login-form #password-option-section #label-remember {
+main #portal-section #login-form #password-option-section #label-remember {
     color: #656d78;
     position: absolute;
     right: 50px;
     font-size: 14px;
+    transition: all 0.3s;
 }
 
-main #login-form #password-option-section #label-remember:hover,
-main #login-form #password-option-section input[type=checkbox]:hover  {
+main #portal-section #login-form #password-option-section #label-remember:hover,
+main #portal-section #login-form #password-option-section input[type=checkbox]:hover  {
     color: #50e3c2;
     cursor: pointer;
 }
 
-main  #login-form a { 
+main  #portal-section #login-form a { 
     text-decoration: none;
     color: #656d78;
+    transition: all 0.3s;
 }
 
-main  #login-form a:hover { 
+main  #portal-section #login-form a:hover, main  #portal-section #login-form a:focus { 
     color: #50e3c2;
     text-decoration: underline;
 }
@@ -174,7 +179,7 @@ main  #login-form a:hover {
 
 @media (max-width: 900px) {
 
-    main #login-form {
+    main #portal-section #login-form {
         border: none;
         width: 100%;
     }

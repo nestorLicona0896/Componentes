@@ -1,55 +1,31 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-        <link rel="icon" src="../IMAGENES/logo.png">
-        <title>chat GPT navbar</title>
+<head>
+    <meta charset="utf-8">
+	<title>Portal Form</title>
+	<link rel="stylesheet" type="text/css" href="../CSS/style.css">
+    <script src="../JS/app.js"></script>
+</head>
+<body>
+	<header>
+		<h1>Portal Form</h1>
+	</header>
+	<main>
+		<section class="login-register">
+			<h2>Login/Register</h2>
+			<form>
+				<label for="username">Username:</label>
+				<input type="text" id="username" name="username" placeholder="username">
 
-        <link rel="stylesheet" href="../CSS/gpt.css">
-        <script src="../JS/gpt.js"></script>
-    </head>
+				<label for="password">Password:</label>
+				<input type="password" id="password" name="password" placeholder="********">
 
-    <body>
-        <header>
-            <nav>
-                <a href="/home">Home</a>
-                <a href="/about">About</a>
-                <a href="/services">Services</a>
-                <a href="/contact">Contact
-                  </a>
-                  <select>
-                    <option value="option1">Option 1</option>
-                    <option value="option2">Option 2</option>
-                    <option value="option3">Option 3</option>
-                  </select>
-                  <input type="range" min="0" max="100" value="50">
-              </nav>
-        </header>
+				<input type="submit" value="Login">
+				<button>Register</button>
+			</form>
+		</section>
+	</main>
 
-        <main>
-            <div id="slider">
-                <img src="../IMAGENES/user.png" alt="image 1">
-                <img src="../IMAGENES/github.png" alt="image 2">
-                <img src="../IMAGENES/twitter.png" alt="image 3">
-            </div>
-
-            <script>
-                var images = document.querySelectorAll("#slider img");
-var current = 0;
-
-function next() {
-    images[current].classList.remove("active");
-    current = (current + 1) % images.length;
-    images[current].classList.add("active");
-}
-
-setInterval(next, 3000);
-            </script>
-        </main>
-        
-          
-    </body>
-    
-    
+  
+</body>
 </html>
