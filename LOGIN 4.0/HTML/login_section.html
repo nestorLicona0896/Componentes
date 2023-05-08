@@ -1,40 +1,44 @@
-
-<!--LOGIN-->
+<!-- LOGIN FORM -->
 <form action="" method="get" id="login-form" class="form inactive-form">
 
     <link rel="stylesheet" type="text/css" href="../CSS/login_section.css">
-    
+
     <h1>Hola!</h1>
     <h3>Inicia sesión para continuar</h3>
 
-    <label id="label-email"><b>Correo</b></label>
+    <label>Correo</label>
     <div class="input-field" id="email-field">
-        <div><img src="../IMAGENES/mail.png" alt="" id="email-icon"></div>
-        <input type="email" placeholder="ejemplo@hotmail.com" id="input-email" name="input-email" required onfocus="highlightField(this)" onfocusout="unhighlightField(this)">
+        <img class="input-icon" src="../IMAGENES/mail.png" alt="" id="email-icon">
+        <input type="email" placeholder="ejemplo@hotmail.com" maxlength="50" id="input-email" required onfocus="highlightField()"
+            onfocusout="unhighlightField()">
     </div>
-    <label id="label-email-message"><b>Mensaje sobre el campo correo!</b></label>
+    <label class="message" id="label-email-message"><b>Mensaje sobre el campo correo!</b></label>
 
-    <label id="label-password"><b>Contraseña</b></label>
+    <label>Contraseña</label>
     <div class="input-field" id="password-field">
-        <div><img src="../IMAGENES/padlock.png" id="padlock-icon" alt=""></div>
-        <input type="password" placeholder="******" id="input-password" name="input-password" required onfocus="highlightField(this)" onfocusout="unhighlightField(this)">
+        <img class="input-icon" src="../IMAGENES/padlock.png" id="padlock-icon" alt="">
+        <input type="password" placeholder="******" maxlength="28" id="input-password" name="input-password" required
+            onfocus="highlightField()" onfocusout="unhighlightField()">
     </div>
-    <label id="label-password-message"><b>Mensaje sobre el campo contraseña!</b></label>
+    <label class="message" id="label-password-message"><b>Mensaje sobre el campo contraseña!</b></label>
 
-    <div class="container" id="recaptcha-section">
+    <div class="recaptcha-container">
         <div class="g-recaptcha" data-sitekey="6LfAP-ojAAAAADEdWZPydAY6zA4cbl10LK1FcN9g">
         </div>
     </div>
 
-    <button type="button" id="login-button" onclick="login()"> Iniciar sesión </button>
+    <input class="button" type="submit" id="login-button" onclick="login()" value="Iniciar sesión">
 
-    <div class="container" id="password-option-section">
-        <h5><a href="#" id="forgot-link" onclick="recoverPassword()">Olvidaste la contraseña?</a></h5>
+    <div id="password-option-section">
+        <label><b onclick="recoverPassword()">Olvidaste la contraseña?</b></label>
 
-        <label id="label-remember">
-            <input type="checkbox" title="remember account" id="remember-me"> Recuerdame?
-        </label>
+        <div>
+            <input type="checkbox" title="remember account" id="remember-me-chkbox" value="remember">
+            <label for="remember-me-chkbox">Remember account</label>
+        </div>
+        
     </div>
 
-    <h5>No tienes una cuenta? <a href="#" id="register-link" onclick="displayRegisterSection()">Registrarse</a> </h5>
+    <label>No tienes una cuenta?<b onclick="displayRegisterSection()"> Registrarse</b></label>
+
 </form>

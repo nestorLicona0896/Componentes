@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<HTML lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <!-- RESPONSIVE TAG -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <!-- TITLE -->
+    <link rel="icon" href="../IMAGENES/geometric.png">
+    <title>Portal</title>
+
+    <!-- STYLESHEETS LINKS -->
+    <link type="text/css" rel="stylesheet" href="../CSS/global.css">
+    <link type="text/css" rel="stylesheet" href="../CSS/form.css">
+
+    <!-- JAVASCRIPT LINKS -->
+    <script src="../JS/portal_section.js"></script>
+    <script src="../JS/login_section.js"></script>
+    <script src="../JS/register_section.js"></script>
+    <script src="../JS/email_section.js"></script>
+    <script src="../JS/code_section.js"></script>
+    <script src="../JS/result_section.js"></script>
+    <script src="../JS/mysql_connection.js"></script>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div id="logo-container">
+            <a class="header-link" href="../HTML/navbar.html">
+                <img src="../IMAGENES/geometric.png" alt="" id="logo">
+            </a>
+        </div>
+        <div id="close-button">
+            <a href="../../NAVBAR/HTML/home.html">
+                <div class="bar" id="bar-1"></div>
+                <div class="bar" id="bar-2"></div>
+            </a>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT-->
+    <main>
+        <!-- PORTAL ´SCENE´ -->
+        <div id="portal-section">
+            <!-- CAROUSEL -->
+            <div class="carousel">
+                <!-- HOME SECTION LOGIN/REGISTER FORM -->
+                <div class="form-div" id="home-div" include-html="home_section.html">
+    
+                </div>
+                <!-- REGISTER SECTION -->
+                <div class="form-div" id="register-div" include-html="register_section.html">
+
+                </div>
+                <!-- SECTION LOGIN -->
+                <div class="form-div" id="login-div" include-html="login_section.html">
+                    
+                </div>
+                <!-- EMAIL SECTION -->
+                <div class="form-div" id="email-div" include-html="email_section.html">
+                    
+                </div>
+                <!-- CODE SECTION -->
+                <div class="form-div" id="code-div" include-html="code_section.html">
+                    
+                </div>
+                <!-- RESULT SECTION -->
+                <div class="form-div" id="result-div" include-html="result_section.html">
+                    
+                </div>
+            </div>
+        </div>
+
+        <!--LOAD-->
+        <script>
+            loadForms();
+            disableInputsAndButtons();
+
+        </script>
+    </main>
+
+    <!--FOOTER-->
+    <footer>
+        <p>© 2023 <a href="#">Web Market</a>. Todos los derechos reservados. <a href="#">Poliza de cookies</a> , <a
+                href="#">Privacidad</a> y <a href="#">Terminos</a>.
+        </p>
+    </footer>
+
+</body>
+
+</HTML>

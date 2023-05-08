@@ -1,0 +1,158 @@
+/* BODY SECTION */
+body {
+    width: 100%;
+    background-color: #fff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%2350e3c2' fill-opacity='0.33' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-size: 55%;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body div {
+    margin: 0;
+    padding: 0;
+    float: none;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    height: 85px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: stretch;
+}
+
+header #logo {
+    width: 100px;
+    object-fit: contain;
+}
+
+header #close-button {
+    position: absolute;
+    right: 15px;
+}
+
+header #close-button a {
+    display: flex;
+}
+
+header #close-button a .bar {
+    margin: 0px;
+    padding: 0px;
+    width: 25px;
+    height: 2.5px;
+    background-color: #696969;
+    border-radius: 2.5px;
+    cursor: pointer;
+}
+
+header #close-button a #bar-1 {
+    transform:  translateX(13px) rotate(45deg);
+}
+
+header #close-button a #bar-2 {
+    transform:  translateX(-13px) rotate(-45deg);
+}
+
+/* MAIN */
+main {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* PORTAL ESCENE FOR THE hex PORTAL DESIGN*/
+
+#portal-section {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top:200px;
+}   
+
+/* CAROUSEL */
+.carousel {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transform: translateZ(-288px);
+    transform-style: preserve-3d;
+    transition: transform 1.3s;
+}
+
+/* FORM DIVISOR/PANEL */
+.form-div {
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.8s, opacity 0.8s;
+}
+
+/* POSITION OF 6 PANELS SO IT CAN LOOK LIKE A HEXAGONAL PORTAL */
+.form-div:nth-child(1) { transform: rotateY( 0deg) translateZ(433px); }
+.form-div:nth-child(2) { transform: rotateY( 60deg) translateZ(433px); }
+.form-div:nth-child(3) { transform: rotateY( 120deg) translateZ(433px); } 
+.form-div:nth-child(4) { transform: rotateY( 180deg) translateZ(433px); }
+.form-div:nth-child(5) { transform: rotateY( 240deg) translateZ(433px); }
+.form-div:nth-child(6) { transform: rotateY( 300deg) translateZ(433px); } 
+
+/* FOOTER */
+footer {
+    width: fit-content;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    color: #696969;
+    z-index: -1;
+    bottom: -600px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+footer a {
+    color: #696969;
+
+}
+
+footer a:hover {
+    color: #48cfad;
+
+}
+
+/* RESPONSIVE 900px*/
+@media (max-width: 900px) {
+
+    /* CHANGE FORM STYLE */
+    .form {
+        box-shadow: none !important;
+        border: none !important;
+        max-width: 100% !important;
+    }
+}

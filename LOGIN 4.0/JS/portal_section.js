@@ -1,106 +1,117 @@
+//const carousel = document.querySelectorAll('.carousel');
+ //var rotateFn = isHorizontal ? 'rotateY' : 'rotateX';
+var selectedIndex = 0;
+var cellCount = 6;
+var cellSize = 500;
+var radius, theta;
+var idActiveForm = '';
+
 // makes that the register-section of the portal gets displayed:
 function displayRegisterSection (){
-    
     const carousel = document.querySelector('.carousel');
-    const activeForm = document.querySelector('.active-form');
-    var selectedIndex = 0;
-    var cellCount = 6;
-    var cellSize = 500;
-    var radius, theta;
-
-    selectedIndex++;
-    //var rotateFn = isHorizontal ? 'rotateY' : 'rotateX';
-    theta = 360 / cellCount;
-    radius = Math.round( ( cellSize / 2) / Math.tan( Math.PI / cellCount ) );
-    var angle = theta * selectedIndex * -1;
-    carousel.style.transform = 'translateZ(' + -radius + 'px) ' + 'rotateY' + '(' + angle + 'deg)';
+   
+    const activeForm = carousel.querySelector('.active-form');
+    idActiveForm = activeForm.getAttribute('id');
+    idActiveForm == 'login-form' ? selectedIndex --:selectedIndex ++;
+   
    
     activeForm.classList.toggle('inactive-form', true); 
     activeForm.classList.toggle('active-form', false);
 
     document.getElementById('register-form').classList.toggle('active-form', true);
     document.getElementById('register-form').classList.toggle('inactive-form', false);
+    rotatePortal();
 }
 
 
 // makes that the login-section of the portal gets displayed:
 function displayLoginSection() {
-    const carousel = document.querySelector('.carousel');
-    const activeForm = document.querySelector('.active-form');
-    var selectedIndex = 0;
-    var cellCount = 6;
-    var cellSize = 500;
-    var radius, theta;
-
-    selectedIndex++;
-    selectedIndex++;
-    //var rotateFn = isHorizontal ? 'rotateY' : 'rotateX';
-    theta = 360 / cellCount;
-    radius = Math.round( ( cellSize / 2) / Math.tan( Math.PI / cellCount ) );
-    var angle = theta * selectedIndex * -1;
-    carousel.style.transform = 'translateZ(' + -radius + 'px) ' + 'rotateY' + '(' + angle + 'deg)';
+    var carousel = document.querySelector('.carousel');
    
-   
+    const activeForm = carousel.querySelector('.active-form');
+    idActiveForm = activeForm.getAttribute('id');
+    idActiveForm == 'register-form' ? selectedIndex ++:selectedIndex +=2;
+    
+    
     activeForm.classList.toggle('inactive-form', true); 
     activeForm.classList.toggle('active-form', false);
 
     document.getElementById('login-form').classList.toggle('active-form', true);
     document.getElementById('login-form').classList.toggle('inactive-form', false);
+    rotatePortal();
+}
+
+/* rotates the hexagon allowing to see the active form */
+function rotatePortal(){
+    
+    const carousel = document.querySelector('.carousel');
+    theta = 360 / cellCount;
+    radius = Math.round( ( cellSize / 2) / Math.tan( Math.PI / cellCount ) );
+    var angle = theta * selectedIndex * -1;
+    carousel.style.transform = 'rotateY(' + angle + 'deg)';    
+    
+  }
+
+/* rotates the hexagon allowing to see the active form */
+function rotatePortal2(){
+    const carousel = document.querySelector('.carousel');
+    selectedIndex++;
+    theta = 360 / cellCount;
+    radius = Math.round( ( cellSize / 2) / Math.tan( Math.PI / cellCount ) );
+    var angle = theta * selectedIndex * -1;
+    carousel.style.transform = 'rotateY(' + angle + 'deg)';
 }
 
 /* this code section uses html DOM properties to change the border color on some elements 
 on the input field section on the login section form, whenever the input is clicked; the icon & 
 the borders will change color: */
-
-function highlightField (field){ 
-    var parentId = field.parentElement.getAttribute('id');
-    document.getElementById(parentId).firstElementChild.style = "border-color: #50e3c2;";
-    document.getElementById(parentId).lastElementChild.style = "border-color: #50e3c2;";
-    (document.getElementById(parentId).firstElementChild).firstElementChild.style = "filter: invert(96%) sepia(98%) saturate(810%) hue-rotate(83deg) brightness(103%) contrast(78%);";
+function highlightField(){ 
+    
 }
 
 /* this code section uses html DOM properties to change the border color on some elements 
 on the input field section on the login section form, whenever the input lost its focus; the icon & 
 its borders will change color: */
 
-function unhighlightField(field){
-    var parentId = field.parentElement.getAttribute('id');
-    document.getElementById(parentId).firstElementChild.style = "border-color: #d3d3d3;";
-    document.getElementById(parentId).lastElementChild.style = "border-color: #d3d3d3;";
-    (document.getElementById(parentId).firstElementChild).firstElementChild.style = "filter: opacity(55%);";
-
+function unhighlightField(){
 }
 
 /* Loads the forms from the portal*/
 function loadForms() {
-    var portal = document.getElementById("carousel-portal");
-
-    var registerHtml = new XMLHttpRequest();
-    registerHtml.open('GET', 'register_section.html', true);
-
-    var loginHtml = new XMLHttpRequest();
-    loginHtml.open('GET', 'login_section.html', true);
-
-    var emailHtml = new XMLHttpRequest();
-    emailHtml.open('GET', 'email_section.html', true);
-
-    var codeHtml = new XMLHttpRequest();
-    codeHtml.open('GET', 'code_section.html', true);
-
-    var resultHtml = new XMLHttpRequest();
-    resultHtml.open('GET', 'result_section.html', true);
-
-    registerHtml.onload, loginHtml.onload, emailHtml.onload, codeHtml.onload, resultHtml.onload = function () {
-        portal.insertAdjacentHTML("beforeend", registerHtml.responseText);
-        portal.insertAdjacentHTML("beforeend", loginHtml.responseText);
-        portal.insertAdjacentHTML("beforeend", emailHtml.responseText);
-        portal.insertAdjacentHTML("beforeend", codeHtml.responseText);
-        portal.insertAdjacentHTML("beforeend", resultHtml.responseText);
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain attribute:*/
+    file = elmnt.getAttribute("include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("include-html");
+          loadForms();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
     }
-    
-    registerHtml.send();
-    loginHtml.send();
-    emailHtml.send();
-    codeHtml.send();
-    resultHtml.send();
+  }
+
+}
+
+/* disable the buttons and the inputs from the inactive forms */
+function disableInputsAndButtons() {
+   /*  const header = document.getElementById('carousel-portal');
+    const inactiveForms = header.getElementsByClassName("form");
+    for(var index = 0; index < inactiveForms.length; index ++){
+       
+        //alert(inactiveForms[index].getAttribute('id'));
+    } */
 }

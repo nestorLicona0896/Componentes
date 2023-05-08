@@ -1,191 +1,38 @@
-
-main #portal-section #login-form {
-    width: 500px;
-    height: auto;
-    padding: 45px;
+#password-option-section {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    background: rgba(255, 255, 255, 0.55);
-    backdrop-filter: blur(2px) saturate(15%);
-    border: solid #d3d3d3 1px;
-    border-radius: 15px;
-    text-align: justify;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    width: 100%;
+    transition: all 0.3s;
 }
 
-
-main #portal-section #login-form h1 {
-    color: #50e3c2;
+#password-option-section div{
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    gap: 5.5px;
 }
 
-main #portal-section #login-form h3 {
-    color: #656d78;
+#password-option-section #remember-me-chkbox{
+    display: flex;
     position: relative;
-    top: -10px
-}
-
-main #portal-section #login-form h5:last-child {
-    color: #070707;
-}
-
-main #portal-section #login-form #label-email,  
-main #portal-section #login-form #label-password {
-    color: #656d78;
-}
-
-main #portal-section #login-form #label-email-message ,
-main #portal-section #login-form #label-password-message {
-    color: #656d78;
-    font-size: 12px;
-    display: none;
-}
-
-main #portal-section #login-form .input-field {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-main #portal-section #login-form .input-field div {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 65px;
-    height: 55px;
-    border-radius: 5.5px;
-    border: solid #d3d3d3 1px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-    transition: all 0.3s;
-}
-
-main #portal-section #login-form .input-field #email-icon,
-main #portal-section #login-form .input-field #padlock-icon {
-    display: block;
-    width: 25px;
-    height: 25px;
-    filter: opacity(55%);
-    object-fit: contain;
-    transition: all 0.3s;
-}
-
-main #portal-section #login-form .input-field:hover #email-icon,
-main #portal-section #login-form .input-field:hover #padlock-icon {
-    filter: invert(96%) sepia(98%) saturate(810%) hue-rotate(83deg) brightness(103%) contrast(78%) !important;
-}
-
-
-main #portal-section #login-form .input-field input[type=email], 
-main #portal-section #login-form .input-field input[type=password] {
-    padding: 0px 5px 0px 12px;
-    width: 100%;
-    height: 55px;
-    border-radius: 5.5px;
-    background: transparent;
-    outline: none;
-    font-size: 16px;
-    border: solid #d3d3d3 1px ;
-    letter-spacing: 1.2px;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-left: none;
-    transition: all 0.3s;
-}
-
-main #portal-section #login-form .input-field:hover div,
-main #portal-section #login-form .input-field:hover input {
-    border-color: #50e3c2 !important;
-}
-
-main #portal-section #login-form .input-field input::placeholder {
-    opacity: 55%;
-}
-
-main #portal-section #login-form #recaptcha-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-main #portal-section #login-form #recaptcha-section .g-recaptcha {
-    display: none;
-}
-
-main #portal-section #login-form #login-button {
-    display: block;
-    width: 100%;
-    height: 55px;
-    border-radius: 5.5px;
-    outline: none;
     cursor: pointer;
-    background: #50e3c2;
-    border: none;
-    color: #f9f9f9;
-    font-size: 20px;
-    transition: all 0.3s;
+    top: 5px;
 }
 
-main #portal-section #login-form #login-button:hover,
-main #portal-section #login-form #login-button:focus {
-    background: #f9f9f9;
-    outline-offset: 0.3vh;
-    outline: solid #656d78 2.5px;
-    color: #50e3c2;
-    box-shadow: -5px 5px 12px 4px #d3d3d3;
-    transform: translateY(-2.5px);
-}
-
-
-main #portal-section #login-form #password-option-section {
-    display: flex;
-    flex-direction: row;
-    justify-content:c enter;
-    align-items: center;
-    width: 100%;
-    transition: all 0.3s;
-}
-
-main #portal-section #login-form #password-option-section #label-remember {
+#password-option-section #label-remember {
+    display: block;
     color: #656d78;
-    position: absolute;
-    right: 50px;
-    font-size: 14px;
     transition: all 0.3s;
 }
 
-main #portal-section #login-form #password-option-section #label-remember:hover,
-main #portal-section #login-form #password-option-section input[type=checkbox]:hover  {
+#password-option-section label:hover, #password-option-section div:hover label {
     color: #50e3c2;
     cursor: pointer;
 }
-
-main  #portal-section #login-form a { 
-    text-decoration: none;
-    color: #656d78;
-    transition: all 0.3s;
-}
-
-main  #portal-section #login-form a:hover, main  #portal-section #login-form a:focus { 
-    color: #50e3c2;
-    text-decoration: underline;
-}
-
-/* RESPONSIVE 900px */
-
-@media (max-width: 900px) {
-
-    main #portal-section #login-form {
-        border: none;
-        width: 100%;
-    }
-
-}
-/* END RESPONSIVE 900px */
 
 
 

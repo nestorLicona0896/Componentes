@@ -1,0 +1,52 @@
+.container {
+  width: 400px;
+  margin: 50px auto;
+}
+
+.tabs {
+  margin-bottom: 20px;
+}
+
+.tab {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  border: none;
+  cursor: pointer;
+}
+
+.section {
+  display: none;
+  margin-bottom: 20px;
+}
+
+.section form {
+  margin-bottom: 10px;
+}
+
+.section input[type="text"],
+.section input[type="email"],
+.section input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.section button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.social-media button {
+  display: block;
+  margin-bottom: 10px;
+}
+
+h2, h3 {
+  margin-top: 0;
+}

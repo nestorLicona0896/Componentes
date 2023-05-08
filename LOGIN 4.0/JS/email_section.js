@@ -15,12 +15,15 @@ function validateEmail(){
 
 // charges insede the form the code section and its functions:
 function  displayCodeSection() {
-    const activeForm = document.getElementsByClassName('active-form');
-    var formId = activeForm[0].getAttribute('id');
-    document.getElementById(formId).classList.toggle('inactive-form', true);
-    document.getElementById(formId).classList.toggle('active-form', false);
-        
-    document.getElementById('code-form').classList.toggle('inactive-form', false);
-    document.getElementById('code-form').classList.toggle('active-form', true);     
+   
+    const activeForm = document.querySelector('.active-form');
+    
+    activeForm.classList.toggle('inactive-form', true); 
+    activeForm.classList.toggle('active-form', false);
+
+    document.getElementById('code-form').classList.toggle('active-form', true);
+    document.getElementById('code-form').classList.toggle('inactive-form', false);     
+
+    rotatePortal2();
 }
 

@@ -1,46 +1,10 @@
 
-
-/* VERIFICATION FORM */
-
-main #code-form {
-    width: 500px;
-    height: auto;
-    padding: 45px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    background: rgba(255, 255, 255, 0.55);
-    backdrop-filter: blur(2px) saturate(15%);
-    border: solid #d3d3d3 1px;
-    border-radius: 15px;
-    text-align: justify;
-    gap: 10px;
-}
-
-main #code-form h1 {
+#label-email-direction {
     color: #50e3c2;
+    font-size: 22px;
 }
 
-main #code-form h3 {
-    color: #656d78;
-    position: relative;
-    top: -10px;
-}
-
-main #code-form h3 #label-email-direction{
-    color: #50e3c2;
-}
-
-main #code-form h5:last-child {
-    color: #070707;
-}
-
-main #code-form #label-code {
-    color: #656d78;
-}
-
-main #code-form #code-container {
+#code-form #code-container {
     width: 100%;
     display: flex;
     flex: colum;
@@ -50,7 +14,7 @@ main #code-form #code-container {
     gap: 25px;
 }
 
-main #code-form #code-container input[type=text] {
+#code-form #code-container input[type=text] {
     margin: 0px;
     padding: 0px;
     width: 100%;
@@ -61,56 +25,5 @@ main #code-form #code-container input[type=text] {
     color: #696969;
     border: solid #d3d3d3 1px;
     text-align: center;
-}
-
-
-main #code-form #code-container input[type=text]:hover ,
-main #code-form #code-container input[type=text]:focus {
-    border: solid #50e3c2 0.5px;
-    background: #f9f9f9;
-    transition: all 0.33s ease;
-}
-
-main #code-form #verify-button {
-    display: block;
-    width: 100%;
-    height: 55px;
-    border-radius: 5.5px;
-    outline: none;
-    cursor: pointer;
-    background: #50e3c2;
-    border: none;
-    color: #f9f9f9;
-    font-size: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    
-}
-
-main #code-form #verify-button:hover,
-main #code-form #verify-button:focus {
-    background: #f9f9f9;
-    outline-offset: 0.3vh;
-    outline: solid #656d78 2.5px;
-    transition: all 0.33s ease;
-    color: #50e3c2;
-    box-shadow: -5px 5px 12px 4px #d3d3d3;
-    transition: all 0.33s ease;
-    transform: translateY(-2.5px);
-}
-
-main #code-form h5 a {
-    text-decoration: none;
-    color: #656d78;  
-}
-
-main #code-form h5 a:hover {
-    color: #50e3c2;
-    text-decoration: underline;
-}
-
-main #code-form #label-code-message {
-    color: #656d78;
-    font-size: 12px;
-    display: none;
 }
 

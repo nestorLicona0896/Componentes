@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Portal</title>
+  <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="tabs">
+      <button class="tab" onclick="toggleSection('register')">Register</button>
+      <button class="tab" onclick="toggleSection('login')">Login</button>
+    </div>
+    <div id="register" class="section">
+      <h2>Registration</h2>
+      <form>
+        <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <button type="submit">Register</button>
+      </form>
+    </div>
+    <div id="login" class="section">
+      <h2>Login</h2>
+      <form>
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <button type="submit">Login</button>
+      </form>
+    </div>
+    <div class="social-media">
+      <h3>Or sign in with:</h3>
+      <button onclick="socialLogin('google')">Google</button>
+      <button onclick="socialLogin('facebook')">Facebook</button>
+      <button onclick="socialLogin('twitter')">Twitter</button>
+    </div>
+  </div>
+
+  <script src="../JS/script.js"></script>
+</body>
+</html>

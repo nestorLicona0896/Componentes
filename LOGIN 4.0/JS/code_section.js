@@ -1,7 +1,7 @@
 /* This function add to every code field on form an oninput event and a event listener when the user requires to 
 delete or erase a digit from a field */ 
 function digitFieldFocus() {
-    var header = document.getElementById("code-container");
+    const header = [...document.getElementById("code-container")];
     var fields = header.getElementsByClassName("digit");
     const arrayValues = [];
     
@@ -54,13 +54,15 @@ function verifyCode() {
 
 // make the result section visible with the propper message according to the verification status:
 function displayResultSection() {
-    const activeForm = document.getElementsByClassName('active-form');
-    var formId = activeForm[0].getAttribute('id');
-    document.getElementById(formId).classList.toggle('inactive-form', true);
-    document.getElementById(formId).classList.toggle('active-form', false);
-        
-    document.getElementById('result-form').classList.toggle('inactive-form', false);
-    document.getElementById('result-form').classList.toggle('active-form', true); 
+    const activeForm = document.querySelector('.active-form');
+
+    activeForm.classList.toggle('inactive-form', true); 
+    activeForm.classList.toggle('active-form', false);
+
+    document.getElementById('result-form').classList.toggle('active-form', true);
+    document.getElementById('result-form').classList.toggle('inactive-form', false); 
+
+    rotatePortal2();
 }
 
 

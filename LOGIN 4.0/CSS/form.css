@@ -1,0 +1,209 @@
+/* HOME-REGISTER-LOGIN-EMAIL-CODE-RESULT FORM */
+.form {
+    width: 400px;
+    height: auto;
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(2px) saturate(55%);
+    border: solid #d3d3d3 1px;
+    border-radius: 5.5px;
+    text-align: left;
+    align-items: center;
+    transition: transform 1.3s, opacity 1.3s, ease-in-out 0.3s;
+}
+
+/* REGISTER-LOGIN-EMAIL-CODE-RESULT FORM ALIGN */
+#register-form, #login-form, #email-form, #code-form, #result-form  {
+    align-items: flex-start !important;
+}
+
+/* ACTIVE FORM */
+.active-form {
+    opacity: 1;
+    box-shadow: -10.5px 12px 22px 5.5px #d3d3d3;
+}
+
+/* INACTIVE FORM h1 */
+.inactive-form {
+    opacity: 0;
+    box-shadow: none;
+    visibility: hidden;
+}
+
+/* INACTIVE FORM ELEMENTS */
+.inactive-form input, .inactive-form #user-icon, .inactive-form .input-field, .inactive-form .button,
+.inactive-form .input-field img, .inactive-form a, .inactive-form a img, .inactive-form img {
+    transition: transform 0.8s, opacity 0.8s, visibility 0.8s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.inactive-form h1, .inactive-form h3, .inactive-form label { 
+    transition: transform 0.8s, opacity 0.8s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* ACTIVE FORM ELEMENTS */
+.active-form input, .active-form #user-icon, .active-form .input-field, .active-form .button,
+.active-form .input-field img, .active-form a, .active-form a img, .active-form img {
+    transition: transform 0.8s, opacity 0.8s;
+    animation-duration: 0.9s;
+    animation-name: pop;
+    animation-delay: 0.4s;
+    opacity: 1;
+}
+
+.active-form h1, .active-form h3, .active-form label { 
+    transition: transform 0.8s, opacity 0.8s;
+    animation-duration: 0.9s;
+    animation-name: pop;
+    animation-delay: 0.4s;
+    opacity: 1;
+}
+
+/* The animation code */
+@keyframes pop {
+    0% {-webkit-transform: scale(1.1,.9);
+        transform: scale(1.1,.9);}
+   50% { -webkit-transform: scale(.9,1.1) translateY(-.5rem)}
+   70% { -webkit-transform: scale(1);
+         transform: scale(1);}
+}
+
+@keyframes slide {
+   
+}
+
+/* FORM FONTS border: solid red 1px;*/
+h1 {
+    color: #50e3c2;
+    font-size: 32px;
+    margin: 0px;
+    padding: 0px;
+}
+
+h3 {
+    font-size: 18px;
+    color: #5f6671;
+    text-align: left;
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+}
+
+/* FORMS FIELD LABELS */
+.form label {
+    color: #5f6671;
+    font-size: 16px;
+    
+}
+
+.form label b{
+    color: #50e3c2;
+    font-size: 14px;
+    cursor: pointer;
+    transition: ease-in-out 0.8s;
+}
+
+label b:hover{
+    text-decoration: underline;
+}
+
+/* FORMS FIELD MESSAGE LABELS */
+.message {
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    display: none;
+}
+
+.message b{
+    color: #5f6671 !important;
+    text-decoration: none !important;
+    cursor: default !important;
+}
+
+
+
+/* FORM BUTTONS */
+.button {
+    width: 100%;
+    height: 55px;
+    border-radius: 3.5px;
+    outline: none;
+    cursor: pointer;
+    background: #50e3c2;
+    border: none;
+    color: #f9f9f9;
+    font-size: 18px;
+    transition: all 0.3s;
+    margin-top: 5px;
+}
+
+.button:hover, .button:focus {
+    transform: translateY(-2.5px);
+    background: #f9f9f9;
+    outline-offset: 0.3vh;
+    outline: solid #5f6671 2px;
+    color: #50e3c2;
+    box-shadow: -5px 5px 12px 4px #d3d3d3;
+    font-size: 22px;
+}
+
+/* INPUTS FIELDS */
+.input-field {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.input-field input {
+    padding: 0px 65px 0px 12px;
+    border: solid #c3c3c3 1px;
+    width: 100%;
+    height: 40px;
+    border-radius: 3.5px;
+    font-size: 16px;
+    line-height: 55px;
+    transition: all 0.3s;
+    letter-spacing: 1.2px;    
+}
+
+.input-icon  {
+    position: absolute;
+    width: 25px !important;
+    height: 25px ;
+    filter: opacity(55%);
+    object-fit: contain;
+    transition: all 0.3s;
+    right: 60px;
+}
+
+.input-field:hover input {
+    border-color: #50e3c2 !important;
+    outline: none !important;
+}
+
+.input-field input::placeholder {
+    font-size: 14px;
+    opacity: 52%; 
+}
+
+.input-field:hover img {
+    filter: invert(96%) sepia(98%) saturate(810%) hue-rotate(83deg) brightness(103%) contrast(78%) !important;
+}
+
+/* RECAPTCHA SECTION */
+#recaptcha-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#register-form #recaptcha-section .g-recaptcha {
+    display: none;
+}
