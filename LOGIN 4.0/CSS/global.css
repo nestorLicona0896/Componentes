@@ -6,7 +6,7 @@ body {
     background-size: 55%;
     margin: 0;
     padding: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+   
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -95,7 +95,7 @@ main {
     position: absolute;
     transform: translateZ(-288px);
     transform-style: preserve-3d;
-    transition: transform 1.3s;
+    transition: transform 1s;
 }
 
 /* FORM DIVISOR/PANEL */
@@ -107,7 +107,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: transform 0.8s, opacity 0.8s;
+    transition: 1s transform, 2s opacity;
 }
 
 /* POSITION OF 6 PANELS SO IT CAN LOOK LIKE A HEXAGONAL PORTAL */

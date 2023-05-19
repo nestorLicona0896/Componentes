@@ -1,5 +1,5 @@
 <!-- REGISTER FORM -->
-<form action="" method="get" id="register-form" class="form inactive-form">
+<form action="http://localhost:4000/api/users" method="POST" id="register-form" class="form inactive-form">
 
     <h1>Bienvenido!</h1>
     <h3>Completa los datos para continuar</h3>
@@ -7,7 +7,7 @@
     <label>Nombre</label>
     <div class="input-field" id="name-field">
         <img class="input-icon"  src="../IMAGENES/user.png" alt="" id="user-icon">
-        <input type="text" placeholder="Nombre Apellido"  maxlength="50" id="input-name" name="input-name" required
+        <input type="text" placeholder="Nombre Apellido"  maxlength="50" id="username" name="username" required
             onfocus="highlightField()" onfocusout="unhighlightField()">
     </div>
     <label class="message" id="label-name-message"><b>Mensaje sobre el campo nombre!</b></label>
@@ -15,7 +15,7 @@
     <label>Correo</label>
     <div class="input-field" id="email-field">
         <img class="input-icon"  src="../IMAGENES/mail.png" alt="" id="email-icon">
-        <input type="email" placeholder="ejemplo@hotmail.com" maxlength="50" id="input-email" name="input-email" required
+        <input type="email" placeholder="ejemplo@hotmail.com" maxlength="50" id="email_address" name="email_address" required
             onfocus="highlightField()" onfocusout="unhighlightField()">
     </div>
     <label class="message" id="label-email-message"><b>Mensaje sobre el campo correo!</b></label>
@@ -34,6 +34,6 @@
     </div>
 
     <button class="button" type="submit" id="button-create-account" onclick="register()">Crear cuenta</button>
-
+    
     <label> Ya tienes una cuenta? <b onclick="displayLoginSection()"> Inicia sesión </b></label>
 </form>
